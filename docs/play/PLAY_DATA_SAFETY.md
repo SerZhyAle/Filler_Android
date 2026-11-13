@@ -66,3 +66,35 @@ Answered by the facts (owner decision of 2026-11-13); a fresh questionnaire, nev
 | Online content | content outside the package: No - no network access |
 | Age-restricted products | No |
 | Miscellaneous | location sharing: No; digital purchases: No; cash rewards or NFTs: No; web browser or search engine: No; news or educational: No |
+
+## Console record (2026-11-13)
+
+Filled in the owner's personal developer account (8446656778368889827) on the owner's order, with the owner's yes of
+the same day for each one-way step (the package name, Free, the Developer Program Policies, the US export laws, the
+IARC terms of use). Nothing is uploaded, nothing is sent for review.
+
+### `com.sza.filler` (app 4975443931674740940, "Filler: Fill Storage Space")
+
+| Item | State | Answer |
+| --- | --- | --- |
+| Privacy policy | saved | `https://serzhyale.github.io/Filler_Android/privacy.html` (answered 200 the same day) |
+| Sign in details | saved | No - no part restricted |
+| Ads | saved | No |
+| Advertising ID | saved | No |
+| Government apps | saved | No |
+| Financial features | saved | My app doesn't provide any financial features; no documentation step asked |
+| Health apps | saved | My app does not have any health features; no regional requirement asked |
+| Target audience | saved | 18 and over (the "restrict minors" option left off) |
+| Data safety | saved | collects or shares: No; the store preview reads "No data collection declared / No data shared with third parties" |
+| Content rating | saved, fresh IARC questionnaire (submitted 2026-11-13 18:03) | category All Other App Types, contact `sza@ukr.net`, every answer No (the table above). Ratings seen on the summary: ClassInd all ages (L), ESRB Everyone |
+
+Overview after these: "You're all caught up" (10 actioned declarations).
+
+### An earlier app of the same name in the account
+
+The account also holds "Filler" `ua.od.sza.filler` (app 4975199606187837309), last updated 2018-06-07 and **removed by
+Google** on that date for "Not adhering to Google Play Developer Program policies" (rejected the same day; target API
+notices of 2023 follow). Its listing promised that deleted files "CAN NOT BE restored" after a fill of the free space.
+The owner confirmed on 2026-11-13 that `com.sza.filler` is its new version and chose to create the new app as a draft;
+before the first "Send for review" the 2018 notice is read and the new listing is checked against it (the release
+ticket's step). The current texts make no erasure or unrecoverability claim (FastMediaSorter S4521 non-goals).

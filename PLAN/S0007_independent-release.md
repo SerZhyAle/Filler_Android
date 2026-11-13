@@ -32,8 +32,10 @@ Owner's order of 2026-11-13, relayed by the deviceinfo-mob session: "Сейча�
 | Channel | Google Play only, the Android app and the watch app in one listing; no sideload channel, so no install-trust contract |
 | Public remote | `SerZhyAle/Filler_Android`, public, `PLAN/` public, issues on, wiki and projects off; README carries the privacy link, the contact and the AI-assistance line |
 | Site and privacy page | GitHub Pages from `site/`: hand-written privacy pages in en, ru and uk with the vendored family kit, `sitemap.xml`, `robots.txt`; no landing yet, so the site root answers 404 and the listing website stays empty |
-| Store name and branding | "Filler: Fill Free Space" (the brand and the in-app name stay "Filler"); launcher glyph a memory card filled from the bottom; listing graphics rendered by `tools/store/render-store-assets.ps1` |
+| Store name and branding | "Filler: Fill Storage Space" (the brand and the in-app name stay "Filler"); launcher glyph a memory card filled from the bottom; listing graphics rendered by `tools/store/render-store-assets.ps1` |
 | Store settings | category Tools, contact `sza@ukr.net` |
 | App content | Sign in details No; target audience 18 and over; Data safety no data collected or shared; IARC answered by the facts (`docs/play/PLAY_DATA_SAFETY.md`) |
 | Account-level policy risk (S0016 question 1) | A: the listing is built around the single purpose and differs from FastMediaSorter's |
 | Wear OS | the form factor is added in the console now; the review-policy opt-in, the screenshots and the bundles wait for the release |
+
+Renamed the same day: the console flagged "Filler: Fill Free Space" and the short description ("free space") as keywords that indicate price ("app name: Should not use keywords that indicate price or promotion"; "Your app may not be promoted on Google Play because your short description does not meet the following guidelines"). The owner chose "Filler: Fill Storage Space"; the English short description now reads "empty space". The flags were gone after the save. The console's own header keeps the old name until the listing changes go out with the first review.

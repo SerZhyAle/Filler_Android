@@ -21,3 +21,4 @@ S0018_wear-module-skeleton                                     26-11-13 16:55  B
 S0019_watch-filler-flow                                        26-11-13 16:55  BlockByOtherTask
 S0020_watch-device-check                                       26-11-13 16:55  BlockByOtherTask
 S0021_any-android-device-reach                                 26-11-13 16:55  BlockByOtherTask
+S0022_play-publication-remaining-steps                         26-11-13 18:09  Draft
