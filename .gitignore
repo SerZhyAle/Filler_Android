@@ -1,0 +1,28 @@
+.gradle/
+.kotlin/
+build/
+**/build/
+.idea/
+*.iml
+local.properties
+temp/
+*.apk
+*.aab
+*.jks
+*.keystore
+*.p12
+*.pem
+*.pfx
+*.snk
+*token*
+*secret*
+keystore.properties
+signing.properties
+google-services.json
+play-service-account*.json
+.env
+.env.*
+
+# The two name globs above are for secret files; they must not hide product source (canon S0060: in StreamsPlayer_mob
+# they hid UiSizeTokens.kt and RoomSecretStore.kt from the public remote).
+!**/src/**/*.kt
