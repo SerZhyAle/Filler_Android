@@ -86,7 +86,8 @@
         </LinearLayout>
 
         <!-- About (ABOUT-PAGE rules 1 to 7, FILLER-0075 and FILLER-0076): the description, the running version, the
-             author block and the mention of the phone app; the site address is text only and opens nothing. -->
+             author block, the addresses of the product's page, documentation and privacy policy, and the phone app
+             with its address; every address is text only and opens nothing. -->
         <LinearLayout
             android:id="@+id/fillerAboutGroup"
             android:layout_width="match_parent"
@@ -114,12 +115,23 @@
                 style="@style/FillerWatch.Body"
                 android:text="@string/filler_about_site" />
 
-            <!-- The phone app of this product (rule 7, FILLER-0076): plain text while neither its store listing nor
-                 a page of its own answers. -->
+            <TextView
+                android:id="@+id/txtFillerAboutProductPage"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                android:id="@+id/txtFillerAboutDocumentation"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                android:id="@+id/txtFillerAboutPrivacy"
+                style="@style/FillerWatch.Body" />
+
+            <!-- The phone app of this product (rule 7, FILLER-0076), followed by the address of its store listing or
+                 of the product's page. -->
             <TextView
                 android:id="@+id/txtFillerAboutPhoneApp"
-                style="@style/FillerWatch.Body"
-                android:text="@string/filler_about_phone_app" />
+                style="@style/FillerWatch.Body" />
 
             <Button
                 android:id="@+id/btnFillerAboutClose"

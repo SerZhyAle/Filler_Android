@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">نتیجہ</string>
     <string name="filler_help_result_text">چلنے کے بعد بتاتا ہے کہ یہ کیسے ختم ہوا: مکمل، روکا گیا، یا کیا غلط ہوا اور آگے کیا کرنا ہے۔</string>
     <string name="filler_help_watch_label">گھڑی کی اسکرین</string>
-    <string name="filler_help_watch_text">یہی ایپ Wear OS گھڑی پر اپنی الگ اسکرین پر چلتی ہے۔ گھڑی کی اسکرین پر مدد کا بٹن نہیں ہے، اس لیے یہ وضاحت وہاں کی مدد بھی ہے۔ اس کا “کے بارے میں” بٹن چلتا ہوا ورژن اور مصنف دکھاتا ہے اور فون ایپ کا ذکر کرتا ہے۔ گھڑی عارضی فائلیں صرف گھڑی کے اسٹوریج میں لکھتی ہے، فولڈر چننے کا اختیار نہیں ہے۔ بھرنا نوٹیفکیشن کے ساتھ پس منظر میں چلتا ہے، اور نوٹیفکیشن کا روکیں بٹن بھرنا بند کرتا ہے اور فائلیں حذف کر دیتا ہے۔</string>
+    <string name="filler_help_watch_text">یہی ایپ Wear OS گھڑی پر اپنی الگ اسکرین پر چلتی ہے۔ گھڑی کی اسکرین پر مدد کا بٹن نہیں ہے، اس لیے یہ وضاحت وہاں کی مدد بھی ہے۔ اس کا “کے بارے میں” بٹن چلتا ہوا ورژن، مصنف اور پروڈکٹ کے صفحے، دستاویزات اور رازداری کی پالیسی کے پتے دکھاتا ہے اور فون ایپ کا ذکر کرتا ہے۔ گھڑی عارضی فائلیں صرف گھڑی کے اسٹوریج میں لکھتی ہے، فولڈر چننے کا اختیار نہیں ہے۔ بھرنا نوٹیفکیشن کے ساتھ پس منظر میں چلتا ہے، اور نوٹیفکیشن کا روکیں بٹن بھرنا بند کرتا ہے اور فائلیں حذف کر دیتا ہے۔</string>
     <string name="filler_help_help_text">یہ وضاحت کھولتا ہے۔ واپس، فہرست سے باہر ٹیپ، Esc یا F1 سے بند کریں۔</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">رنگ کا تھیم</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">ورژن: %1$s</string>
     <string name="filler_about_author">مصنف: %1$s</string>
     <string name="filler_about_watch_app">Wear OS گھڑیوں کے لیے بھی Filler ایپ موجود ہے۔ یہ گھڑی کے اسٹوریج کی خالی جگہ بھرتی ہے۔</string>
-    <string name="filler_help_about_text">اس ایپ کے بارے میں ایک ونڈو کھولتا ہے: یہ کیا کرتی ہے، کون سا ورژن چل رہا ہے، اسے کس نے بنایا، مصنف کی سائٹ کا پتہ اور گھڑی والا ورژن۔</string>
+    <string name="filler_about_product_page">پروڈکٹ کا صفحہ</string>
+    <string name="filler_about_documentation">دستاویزات</string>
+    <string name="filler_about_privacy">رازداری کی پالیسی</string>
+    <string name="filler_about_license">لائسنس (MIT)</string>
+    <string name="filler_about_source">سورس کوڈ</string>
+    <string name="filler_about_support">معاونت</string>
+    <string name="filler_help_about_text">اس ایپ کے بارے میں ایک ونڈو کھولتا ہے: یہ کیا کرتی ہے، کون سا ورژن چل رہا ہے، اسے کس نے بنایا، مصنف کی سائٹ کا پتہ، پروڈکٹ کے صفحے، دستاویزات، رازداری کی پالیسی، لائسنس، سورس کوڈ اور معاونت کے لنکس اور گھڑی والا ورژن۔</string>
 </resources>

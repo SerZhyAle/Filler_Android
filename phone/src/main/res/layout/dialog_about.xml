@@ -3,9 +3,9 @@
      product description (the screen's intro string reused, its one source), the running version read from
      the build's own package metadata at runtime, and the author block - a localized label with the Latin
      name, then the site address as text the browser opens only on a tap (autoLink; a device with no browser
-     still reads it), and the mention of the watch app (rule 7). No product-site row while this program's own
-     page does not answer (rule 5), so no row here leads nowhere.The sides take the dialog's preferred padding, which a custom view does not get by
-     itself; the column scrolls where a low window or a large font leaves too little height. -->
+     still reads it), then the resource links and the mention of the watch app (rule 7). The sides take the
+     dialog's preferred padding, which a custom view does not get by itself; the column scrolls where a low window
+     or a large font leaves too little height. -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -48,14 +48,45 @@
             android:text="@string/filler_about_site"
             android:textAppearance="?attr/textAppearanceBodyMedium" />
 
-        <!-- The watch version of this product (rule 7, FILLER-0076): plain text while neither its store listing
-             nor a page of its own answers. -->
+        <!-- The product's own page, its documentation and the other resources (rules 2 and 5). Each row opens its
+             address only on a tap. -->
+        <TextView
+            android:id="@+id/txtAboutProductPage"
+            style="@style/Widget.Filler.AboutLink"
+            android:layout_marginTop="@dimen/filler_spacing_8"
+            android:text="@string/filler_about_product_page" />
+
+        <TextView
+            android:id="@+id/txtAboutDocumentation"
+            style="@style/Widget.Filler.AboutLink"
+            android:text="@string/filler_about_documentation" />
+
+        <TextView
+            android:id="@+id/txtAboutPrivacy"
+            style="@style/Widget.Filler.AboutLink"
+            android:text="@string/filler_about_privacy" />
+
+        <TextView
+            android:id="@+id/txtAboutLicense"
+            style="@style/Widget.Filler.AboutLink"
+            android:text="@string/filler_about_license" />
+
+        <TextView
+            android:id="@+id/txtAboutSource"
+            style="@style/Widget.Filler.AboutLink"
+            android:text="@string/filler_about_source" />
+
+        <TextView
+            android:id="@+id/txtAboutSupport"
+            style="@style/Widget.Filler.AboutLink"
+            android:text="@string/filler_about_support" />
+
+        <!-- The watch version of this product (rule 7, FILLER-0076): the mention is the link to its store listing or
+             to the product's page. -->
         <TextView
             android:id="@+id/txtAboutWatchApp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/filler_spacing_16"
-            android:text="@string/filler_about_watch_app"
-            android:textAppearance="?attr/textAppearanceBodyMedium" />
+            style="@style/Widget.Filler.AboutLink"
+            android:layout_marginTop="@dimen/filler_spacing_8"
+            android:text="@string/filler_about_watch_app" />
     </LinearLayout>
 </ScrollView>

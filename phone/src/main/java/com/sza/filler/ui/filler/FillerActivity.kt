@@ -1,11 +1,14 @@
 package com.sza.filler.ui.filler
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
@@ -18,6 +21,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.sza.filler.FillerApplication
 import com.sza.filler.R
+import com.sza.filler.about.FillerProductLinks
 import com.sza.filler.databinding.ActivityFillerBinding
 import com.sza.filler.databinding.DialogAboutBinding
 import com.sza.filler.ui.help.HelpOpenManager
@@ -152,8 +156,9 @@ class FillerActivity : AppCompatActivity() {
     }
 
     /**
-     * The About window: the description, the version this install was built with, the author block, and the way to
-     * the screen's help. Showing it contacts nothing; the site opens only when its address is tapped.
+     * The About window: the description, the version this install was built with, the author block, the product's
+     * page, documentation and other resources, the watch app, and the way to the screen's help. Showing it contacts
+     * nothing; an address opens only when its row is tapped.
      */
     private fun showAbout() {
         Log.d("Probe", "FILLER-0075: phone About opened")
@@ -167,12 +172,33 @@ class FillerActivity : AppCompatActivity() {
         about.txtAboutVersion.text = getString(R.string.filler_about_version, version)
         about.txtAboutAuthor.text =
             getString(R.string.filler_about_author, getString(R.string.filler_about_author_name))
+        val language = resources.configuration.locales[0].language
+        val fromPlay = FillerProductLinks.installedFromPlay(this)
+        listOf(
+            about.txtAboutProductPage to FillerProductLinks.productPage(language),
+            about.txtAboutDocumentation to FillerProductLinks.DOCUMENTATION,
+            about.txtAboutPrivacy to FillerProductLinks.privacyPolicy(language),
+            about.txtAboutLicense to FillerProductLinks.LICENSE,
+            about.txtAboutSource to FillerProductLinks.REPOSITORY,
+            about.txtAboutSupport to FillerProductLinks.SUPPORT,
+            about.txtAboutWatchApp to FillerProductLinks.companionPage(fromPlay, language),
+        ).forEach { (row, address) -> row.setOnClickListener { openLink(address) } }
         builder
             .setTitle(R.string.filler_about)
             .setView(about.root)
             .setNeutralButton(R.string.help) { _, _ -> HelpOpenManager.open(this, HELP_SURFACE_ID) }
             .setPositiveButton(android.R.string.ok, null)
             .show()
+    }
+
+    /** Hands an address to the browser; a device with none shows the address itself. */
+    private fun openLink(address: String) {
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(address)))
+        } catch (e: ActivityNotFoundException) {
+            Log.w("Filler", "No application opens $address", e)
+            Toast.makeText(this, address, Toast.LENGTH_LONG).show()
+        }
     }
 
     /** Start is the obvious next action once the default place is measured; a disabled button cannot hold focus. */

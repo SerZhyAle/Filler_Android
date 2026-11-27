@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">النتيجة</string>
     <string name="filler_help_result_text">بعد التشغيل، يقول كيف انتهى: تم، أو توقف، أو ما الذي حدث خطأ وما الخطوة التالية.</string>
     <string name="filler_help_watch_label">شاشة الساعة</string>
-    <string name="filler_help_watch_text">يعمل التطبيق نفسه على ساعة Wear OS، على شاشة خاصة به. لا يوجد على شاشة الساعة زر مساعدة، لذلك يعمل هذا الشرح مساعدةً لها أيضًا. زر «حول» فيها يعرض الإصدار الجاري والمؤلف، ويذكر تطبيق الهاتف. تكتب الساعة الملفات المؤقتة في تخزين الساعة فقط، دون اختيار مجلد. يعمل الملء في الخلفية مع إشعار، وزر «إيقاف» في الإشعار يوقف الملء ويحذف الملفات.</string>
+    <string name="filler_help_watch_text">يعمل التطبيق نفسه على ساعة Wear OS، على شاشة خاصة به. لا يوجد على شاشة الساعة زر مساعدة، لذلك يعمل هذا الشرح مساعدةً لها أيضًا. زر «حول» فيها يعرض الإصدار الجاري والمؤلف وعناوين صفحة المنتج والتوثيق وسياسة الخصوصية، ويذكر تطبيق الهاتف. تكتب الساعة الملفات المؤقتة في تخزين الساعة فقط، دون اختيار مجلد. يعمل الملء في الخلفية مع إشعار، وزر «إيقاف» في الإشعار يوقف الملء ويحذف الملفات.</string>
     <string name="filler_help_help_text">يفتح هذا الشرح. أغلقه بزر الرجوع أو بلمسة خارج القائمة أو بمفتاح Esc أو F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">مظهر الألوان</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">الإصدار: %1$s</string>
     <string name="filler_about_author">المؤلف: %1$s</string>
     <string name="filler_about_watch_app">يوجد أيضًا تطبيق Filler لساعات Wear OS. يملأ المساحة الفارغة في تخزين الساعة.</string>
-    <string name="filler_help_about_text">يفتح نافذة عن هذا التطبيق: ما يفعله، وأي إصدار يعمل، ومن صنعه، وعنوان موقع المؤلف، ونسخة الساعة.</string>
+    <string name="filler_about_product_page">صفحة المنتج</string>
+    <string name="filler_about_documentation">التوثيق</string>
+    <string name="filler_about_privacy">سياسة الخصوصية</string>
+    <string name="filler_about_license">الترخيص (MIT)</string>
+    <string name="filler_about_source">الشيفرة المصدرية</string>
+    <string name="filler_about_support">الدعم</string>
+    <string name="filler_help_about_text">يفتح نافذة عن هذا التطبيق: ما يفعله، وأي إصدار يعمل، ومن صنعه، وعنوان موقع المؤلف، وروابط صفحة المنتج والتوثيق وسياسة الخصوصية والترخيص والشيفرة المصدرية والدعم، ونسخة الساعة.</string>
 </resources>

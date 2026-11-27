@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">结果</string>
     <string name="filler_help_result_text">运行结束后说明结果：已完成、已停止，或出了什么问题以及下一步该做什么。</string>
     <string name="filler_help_watch_label">手表屏幕</string>
-    <string name="filler_help_watch_text">同一应用以独立屏幕的形式在 Wear OS 手表上运行。手表屏幕没有帮助按钮，因此本说明也是它的帮助。手表上的“关于”按钮会显示当前运行的版本和作者，并提到手机应用。手表只把临时文件写入手表存储，不提供选择文件夹的功能。填充在后台运行并显示通知，通知中的“停止”按钮会停止填充并删除文件。</string>
+    <string name="filler_help_watch_text">同一应用以独立屏幕的形式在 Wear OS 手表上运行。手表屏幕没有帮助按钮，因此本说明也是它的帮助。手表上的“关于”按钮会显示当前运行的版本、作者以及产品页面、文档和隐私政策的地址，并提到手机应用。手表只把临时文件写入手表存储，不提供选择文件夹的功能。填充在后台运行并显示通知，通知中的“停止”按钮会停止填充并删除文件。</string>
     <string name="filler_help_help_text">打开此说明。按返回、点按列表外部、按 Esc 或 F1 可关闭。</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">配色主题</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">版本：%1$s</string>
     <string name="filler_about_author">作者：%1$s</string>
     <string name="filler_about_watch_app">另有适用于 Wear OS 手表的 Filler 应用，用于填满手表存储的可用空间。</string>
-    <string name="filler_help_about_text">打开一个关于本应用的窗口：应用的功能、当前运行的版本、制作者、作者的网站地址以及手表版。</string>
+    <string name="filler_about_product_page">产品页面</string>
+    <string name="filler_about_documentation">文档</string>
+    <string name="filler_about_privacy">隐私政策</string>
+    <string name="filler_about_license">许可证（MIT）</string>
+    <string name="filler_about_source">源代码</string>
+    <string name="filler_about_support">支持</string>
+    <string name="filler_help_about_text">打开一个关于本应用的窗口：应用的功能、当前运行的版本、制作者、作者的网站地址，产品页面、文档、隐私政策、许可证、源代码和支持的链接，以及手表版。</string>
 </resources>

@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">परिणाम</string>
     <string name="filler_help_result_text">रन के बाद बताता है कि वह कैसे ख़त्म हुआ: पूरा हुआ, रोका गया, या क्या गड़बड़ हुई और आगे क्या करें।</string>
     <string name="filler_help_watch_label">घड़ी की स्क्रीन</string>
-    <string name="filler_help_watch_text">वही ऐप Wear OS घड़ी पर अपनी अलग स्क्रीन पर चलता है। घड़ी की स्क्रीन पर मदद का बटन नहीं है, इसलिए यह व्याख्या वहाँ की मदद भी है। उसका “के बारे में” बटन चल रहा संस्करण और लेखक दिखाता है और फ़ोन ऐप के बारे में बताता है। घड़ी अस्थायी फ़ाइलें केवल घड़ी के स्टोरेज में लिखती है, फ़ोल्डर चुनने का विकल्प नहीं है। भरना सूचना के साथ बैकग्राउंड में चलता है, और सूचना का रोकें बटन भरना बंद करता है और फ़ाइलें हटा देता है।</string>
+    <string name="filler_help_watch_text">वही ऐप Wear OS घड़ी पर अपनी अलग स्क्रीन पर चलता है। घड़ी की स्क्रीन पर मदद का बटन नहीं है, इसलिए यह व्याख्या वहाँ की मदद भी है। उसका “के बारे में” बटन चल रहा संस्करण, लेखक और उत्पाद पृष्ठ, दस्तावेज़ तथा निजता नीति के पते दिखाता है और फ़ोन ऐप के बारे में बताता है। घड़ी अस्थायी फ़ाइलें केवल घड़ी के स्टोरेज में लिखती है, फ़ोल्डर चुनने का विकल्प नहीं है। भरना सूचना के साथ बैकग्राउंड में चलता है, और सूचना का रोकें बटन भरना बंद करता है और फ़ाइलें हटा देता है।</string>
     <string name="filler_help_help_text">यह व्याख्या खोलता है। वापस, सूची के बाहर टैप, Esc या F1 से बंद करें।</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">रंग थीम</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">संस्करण: %1$s</string>
     <string name="filler_about_author">लेखक: %1$s</string>
     <string name="filler_about_watch_app">Wear OS घड़ियों के लिए भी Filler ऐप है। यह घड़ी के स्टोरेज की खाली जगह भरता है।</string>
-    <string name="filler_help_about_text">इस ऐप के बारे में एक विंडो खोलता है: यह क्या करता है, कौन सा संस्करण चल रहा है, इसे किसने बनाया, लेखक की साइट का पता और घड़ी वाला संस्करण।</string>
+    <string name="filler_about_product_page">उत्पाद पृष्ठ</string>
+    <string name="filler_about_documentation">दस्तावेज़</string>
+    <string name="filler_about_privacy">निजता नीति</string>
+    <string name="filler_about_license">लाइसेंस (MIT)</string>
+    <string name="filler_about_source">सोर्स कोड</string>
+    <string name="filler_about_support">सहायता</string>
+    <string name="filler_help_about_text">इस ऐप के बारे में एक विंडो खोलता है: यह क्या करता है, कौन सा संस्करण चल रहा है, इसे किसने बनाया, लेखक की साइट का पता, उत्पाद पृष्ठ, दस्तावेज़, निजता नीति, लाइसेंस, सोर्स कोड और सहायता के लिंक और घड़ी वाला संस्करण।</string>
 </resources>

@@ -21,6 +21,8 @@
     <dimen name="filler_button_padding_horizontal">16dp</dimen>
     <dimen name="filler_button_glyph_size">20dp</dimen>
     <dimen name="filler_button_glyph_gap">8dp</dimen>
+    <!-- The hit target of a text link row (the About window, FILLER-0075). -->
+    <dimen name="filler_link_min_height">48dp</dimen>
 
     <!-- Ported from FastMediaSorter (values/dimens.xml, S4460; FILLER-0067): gap between the toolbar title glyph
          and the screen title on StandardToolbar. -->

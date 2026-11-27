@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">Resultado</string>
     <string name="filler_help_result_text">Tras un relleno, dice cómo terminó: hecho, detenido, o qué falló y qué hacer a continuación.</string>
     <string name="filler_help_watch_label">Pantalla del reloj</string>
-    <string name="filler_help_watch_text">La misma aplicación funciona en un reloj Wear OS, en una pantalla propia. La pantalla del reloj no tiene botón de ayuda, así que esta explicación también es su ayuda. Su botón Acerca de muestra la versión en ejecución y el autor, y menciona la aplicación para teléfonos. El reloj escribe los archivos temporales solo en el almacenamiento del reloj, sin elegir carpeta. El relleno se ejecuta en segundo plano con una notificación, y el botón Detener de la notificación detiene el relleno y elimina los archivos.</string>
+    <string name="filler_help_watch_text">La misma aplicación funciona en un reloj Wear OS, en una pantalla propia. La pantalla del reloj no tiene botón de ayuda, así que esta explicación también es su ayuda. Su botón Acerca de muestra la versión en ejecución, el autor y las direcciones de la página del producto, la documentación y la política de privacidad, y menciona la aplicación para teléfonos. El reloj escribe los archivos temporales solo en el almacenamiento del reloj, sin elegir carpeta. El relleno se ejecuta en segundo plano con una notificación, y el botón Detener de la notificación detiene el relleno y elimina los archivos.</string>
     <string name="filler_help_help_text">Abre esta explicación. Se cierra con Atrás, un toque fuera de la lista, Esc o F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">Tema de color</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">Versión: %1$s</string>
     <string name="filler_about_author">Autor: %1$s</string>
     <string name="filler_about_watch_app">También existe la aplicación Filler para relojes Wear OS. Rellena el espacio libre del almacenamiento del reloj.</string>
-    <string name="filler_help_about_text">Abre una ventana sobre esta aplicación: qué hace, qué versión se está ejecutando, quién la creó, la dirección del sitio del autor y la versión para relojes.</string>
+    <string name="filler_about_product_page">Página del producto</string>
+    <string name="filler_about_documentation">Documentación</string>
+    <string name="filler_about_privacy">Política de privacidad</string>
+    <string name="filler_about_license">Licencia (MIT)</string>
+    <string name="filler_about_source">Código fuente</string>
+    <string name="filler_about_support">Soporte</string>
+    <string name="filler_help_about_text">Abre una ventana sobre esta aplicación: qué hace, qué versión se está ejecutando, quién la creó, la dirección del sitio del autor, enlaces a la página del producto, la documentación, la política de privacidad, la licencia, el código fuente y el soporte, y la versión para relojes.</string>
 </resources>

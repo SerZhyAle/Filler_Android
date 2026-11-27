@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">ফলাফল</string>
     <string name="filler_help_result_text">রানের পরে জানায় সেটি কীভাবে শেষ হলো: সম্পন্ন, থামানো, বা কী ভুল হয়েছে ও এরপর কী করতে হবে।</string>
     <string name="filler_help_watch_label">ঘড়ির স্ক্রিন</string>
-    <string name="filler_help_watch_text">একই অ্যাপ Wear OS ঘড়িতে নিজস্ব স্ক্রিনে চলে। ঘড়ির স্ক্রিনে সাহায্য বোতাম নেই, তাই এই ব্যাখ্যাই সেখানকার সাহায্য। সেখানকার সম্পর্কে বোতাম চলমান সংস্করণ ও লেখককে দেখায় এবং ফোনের অ্যাপের কথা জানায়। ঘড়ি অস্থায়ী ফাইল শুধু ঘড়ির স্টোরেজে লেখে, কোনো ফোল্ডার বেছে নেওয়া যায় না। ভরা ব্যাকগ্রাউন্ডে নোটিফিকেশনের সঙ্গে চলে, এবং নোটিফিকেশনের থামান বোতাম ভরা থামায় ও ফাইল মুছে দেয়।</string>
+    <string name="filler_help_watch_text">একই অ্যাপ Wear OS ঘড়িতে নিজস্ব স্ক্রিনে চলে। ঘড়ির স্ক্রিনে সাহায্য বোতাম নেই, তাই এই ব্যাখ্যাই সেখানকার সাহায্য। সেখানকার সম্পর্কে বোতাম চলমান সংস্করণ, লেখক এবং পণ্যের পৃষ্ঠা, নথিপত্র ও গোপনীয়তা নীতির ঠিকানা দেখায় এবং ফোনের অ্যাপের কথা জানায়। ঘড়ি অস্থায়ী ফাইল শুধু ঘড়ির স্টোরেজে লেখে, কোনো ফোল্ডার বেছে নেওয়া যায় না। ভরা ব্যাকগ্রাউন্ডে নোটিফিকেশনের সঙ্গে চলে, এবং নোটিফিকেশনের থামান বোতাম ভরা থামায় ও ফাইল মুছে দেয়।</string>
     <string name="filler_help_help_text">এই ব্যাখ্যা খোলে। ফিরে যান, তালিকার বাইরে ট্যাপ, Esc বা F1 দিয়ে বন্ধ করুন।</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">রঙের থিম</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">সংস্করণ: %1$s</string>
     <string name="filler_about_author">লেখক: %1$s</string>
     <string name="filler_about_watch_app">Wear OS ঘড়ির জন্যও একটি Filler অ্যাপ আছে। এটি ঘড়ির স্টোরেজের খালি জায়গা ভরে।</string>
-    <string name="filler_help_about_text">এই অ্যাপ সম্পর্কে একটি উইন্ডো খোলে: এটি কী করে, কোন সংস্করণ চলছে, কে এটি তৈরি করেছেন, লেখকের সাইটের ঠিকানা এবং ঘড়ির সংস্করণ।</string>
+    <string name="filler_about_product_page">পণ্যের পৃষ্ঠা</string>
+    <string name="filler_about_documentation">নথিপত্র</string>
+    <string name="filler_about_privacy">গোপনীয়তা নীতি</string>
+    <string name="filler_about_license">লাইসেন্স (MIT)</string>
+    <string name="filler_about_source">সোর্স কোড</string>
+    <string name="filler_about_support">সহায়তা</string>
+    <string name="filler_help_about_text">এই অ্যাপ সম্পর্কে একটি উইন্ডো খোলে: এটি কী করে, কোন সংস্করণ চলছে, কে এটি তৈরি করেছেন, লেখকের সাইটের ঠিকানা, পণ্যের পৃষ্ঠা, নথিপত্র, গোপনীয়তা নীতি, লাইসেন্স, সোর্স কোড ও সহায়তার লিংক এবং ঘড়ির সংস্করণ।</string>
 </resources>

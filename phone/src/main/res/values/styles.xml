@@ -62,6 +62,20 @@
         <item name="android:layout_marginStart">0dp</item>
     </style>
 
+    <!-- A link row of the About window (FILLER-0075): the accent ink, the 48 dp hit target and a focus state, so a
+         tap, a keyboard and a remote reach it. -->
+    <style name="Widget.Filler.AboutLink" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/filler_link_min_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
     <!-- Toolbar title and Flat toolbar styles ported from FastMediaSorter (S3248 / S4460; FILLER-0067). -->
     <style name="TextAppearance.Filler.Bar.Title" parent="TextAppearance.Material3.TitleLarge" />
 

@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">Result</string>
     <string name="filler_help_result_text">After a run, says how it ended: done, stopped, or what went wrong and what to do next.</string>
     <string name="filler_help_watch_label">Watch screen</string>
-    <string name="filler_help_watch_text">The same app runs on a Wear OS watch, on a screen of its own. The watch screen has no help button; this explanation is its help too. Its About button shows the running version and the author, and names the phone app. The watch writes temporary files to the watch storage only, with no folder choice. Filling runs in the background with a notification, and the notification\'s Stop button stops filling and deletes the files.</string>
+    <string name="filler_help_watch_text">The same app runs on a Wear OS watch, on a screen of its own. The watch screen has no help button; this explanation is its help too. Its About button shows the running version, the author and the addresses of the product page, documentation and privacy policy, and names the phone app. The watch writes temporary files to the watch storage only, with no folder choice. Filling runs in the background with a notification, and the notification\'s Stop button stops filling and deletes the files.</string>
     <string name="filler_help_help_text">Opens this explanation. Close it with Back, a tap outside the list, Esc or F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">Color theme</string>
@@ -76,15 +76,22 @@
     <!-- The About window of the toolbar's About action (ABOUT-PAGE 1.0, FILLER-0075): the window's title and
          the action's label, the version line read from the build's own package metadata at runtime, the
          author block (rule 3: a localized label; the name in Latin and the site address
-         translatable="false" in every locale; one credit, once; no e-mail, profile or phone), and the help
-         entry text of the action. No product-site row while this program's own page does not answer
-         (rule 5), so no row leads nowhere (rule 2). The watch app line (rule 7, FILLER-0076) says that the watch
-         version exists; it holds no address while none answers. The product has no watch face to name. -->
+         translatable="false" in every locale; one credit, once; no e-mail, profile or phone), the labels of the
+         link rows (product page, documentation, privacy policy, license, source code, support; rules 2 and 5), and
+         the help entry text of the action. The watch app line (rule 7, FILLER-0076) says that the watch version
+         exists and is itself the link; the addresses live in FillerProductLinks. The product has no watch face to
+         name. -->
     <string name="filler_about">About Filler</string>
     <string name="filler_about_version">Version: %1$s</string>
     <string name="filler_about_author">Author: %1$s</string>
     <string name="filler_about_author_name" translatable="false">Serhii Zhyhunenko</string>
     <string name="filler_about_site" translatable="false">https://sza.od.ua</string>
     <string name="filler_about_watch_app">There is also a Filler app for Wear OS watches. It fills the free space of the watch storage.</string>
-    <string name="filler_help_about_text">Opens a window about this app: what it does, which version is running, who made it, the author\'s site address and the watch version.</string>
+    <string name="filler_about_product_page">Product page</string>
+    <string name="filler_about_documentation">Documentation</string>
+    <string name="filler_about_privacy">Privacy policy</string>
+    <string name="filler_about_license">License (MIT)</string>
+    <string name="filler_about_source">Source code</string>
+    <string name="filler_about_support">Support</string>
+    <string name="filler_help_about_text">Opens a window about this app: what it does, which version is running, who made it, the author\'s site address, links to the product page, documentation, privacy policy, license, source code and support, and the watch version.</string>
 </resources>

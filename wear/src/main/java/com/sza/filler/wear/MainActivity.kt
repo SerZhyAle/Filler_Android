@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.sza.filler.about.FillerProductLinks
 import com.sza.filler.domain.filler.FILLER_RESERVE_BYTES
 import com.sza.filler.wear.run.FillerRunService
 import com.sza.filler.wear.ui.WatchFillerOutcome
@@ -146,7 +147,10 @@ class MainActivity : ComponentActivity() {
         outState.putBoolean(KEY_ABOUT, showingAbout)
     }
 
-    /** The version is the one this install was built with, and the author's name is the same in every locale. */
+    /**
+     * The version is the one this install was built with, and the author's name is the same in every locale. The
+     * addresses are shown as text only (ABOUT-PAGE rule 6).
+     */
     private fun fillAbout() {
         // The overload with flag objects needs API 33.
         @Suppress("DEPRECATION")
@@ -154,6 +158,16 @@ class MainActivity : ComponentActivity() {
         findViewById<TextView>(R.id.txtFillerAboutVersion).text = getString(R.string.filler_about_version, version)
         findViewById<TextView>(R.id.txtFillerAboutAuthor).text =
             getString(R.string.filler_about_author, getString(R.string.filler_about_author_name))
+        val language = resources.configuration.locales[0].language
+        findViewById<TextView>(R.id.txtFillerAboutProductPage).text =
+            getString(R.string.filler_about_product_page, FillerProductLinks.productPage(language))
+        findViewById<TextView>(R.id.txtFillerAboutDocumentation).text =
+            getString(R.string.filler_about_documentation, FillerProductLinks.DOCUMENTATION)
+        findViewById<TextView>(R.id.txtFillerAboutPrivacy).text =
+            getString(R.string.filler_about_privacy, FillerProductLinks.privacyPolicy(language))
+        val companion = FillerProductLinks.companionPage(FillerProductLinks.installedFromPlay(this), language)
+        findViewById<TextView>(R.id.txtFillerAboutPhoneApp).text =
+            "${getString(R.string.filler_about_phone_app)}\n$companion"
     }
 
     /** Opens or closes the About view; showing it contacts nothing. */

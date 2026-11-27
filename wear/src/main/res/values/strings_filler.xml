@@ -40,13 +40,17 @@
     <string name="filler_notification_title">Filling free space</string>
     <string name="filler_notification_stop">Stop</string>
     <!-- The About view (ABOUT-PAGE 1.0, FILLER-0075): the author label is localized, the name stays in Latin and the
-         site address is text in every locale (rules 3, 4 and 6). The phone app line (rule 7, FILLER-0076) names the
-         parent app and holds no address while none answers. The product has no watch face to name. -->
+         site address is text in every locale (rules 3, 4 and 6). The product page, documentation and privacy lines
+         and the phone app line (rule 7, FILLER-0076) are followed by their addresses, which live in
+         FillerProductLinks and are text only on the watch. The product has no watch face to name. -->
     <string name="filler_about">About</string>
     <string name="filler_about_version">Version: %1$s</string>
     <string name="filler_about_author">Author: %1$s</string>
     <string name="filler_about_author_name" translatable="false">Serhii Zhyhunenko</string>
     <string name="filler_about_site" translatable="false">https://sza.od.ua</string>
     <string name="filler_about_phone_app">There is also a Filler app for Android phones. It fills the phone storage or a memory card.</string>
+    <string name="filler_about_product_page">Product page: %1$s</string>
+    <string name="filler_about_documentation">Documentation: %1$s</string>
+    <string name="filler_about_privacy">Privacy policy: %1$s</string>
     <string name="filler_about_close">Close</string>
 </resources>

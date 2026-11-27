@@ -38,5 +38,8 @@
     <string name="filler_about_version">Версія: %1$s</string>
     <string name="filler_about_author">Автор: %1$s</string>
     <string name="filler_about_phone_app">Є також застосунок Filler для телефонів Android. Він заповнює пам\'ять телефона або картку пам\'яті.</string>
+    <string name="filler_about_product_page">Сайт програми: %1$s</string>
+    <string name="filler_about_documentation">Документація: %1$s</string>
+    <string name="filler_about_privacy">Політика конфіденційності: %1$s</string>
     <string name="filler_about_close">Закрити</string>
 </resources>

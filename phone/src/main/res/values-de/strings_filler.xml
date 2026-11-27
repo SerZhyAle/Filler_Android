@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">Ergebnis</string>
     <string name="filler_help_result_text">Sagt nach einem Durchlauf, wie er endete: fertig, gestoppt oder was schiefging und was als Nächstes zu tun ist.</string>
     <string name="filler_help_watch_label">Uhrbildschirm</string>
-    <string name="filler_help_watch_text">Dieselbe App läuft auf einer Wear-OS-Uhr, auf einem eigenen Bildschirm. Der Uhrbildschirm hat keine Hilfe-Schaltfläche; diese Erklärung ist deshalb auch seine Hilfe. Die Schaltfläche Über Filler darin zeigt die laufende Version und den Autor und nennt die App für das Telefon. Die Uhr schreibt temporäre Dateien nur in den Speicher der Uhr, eine Ordnerauswahl gibt es nicht. Das Füllen läuft im Hintergrund mit einer Benachrichtigung, und die Schaltfläche Stoppen in der Benachrichtigung beendet das Füllen und löscht die Dateien.</string>
+    <string name="filler_help_watch_text">Dieselbe App läuft auf einer Wear-OS-Uhr, auf einem eigenen Bildschirm. Der Uhrbildschirm hat keine Hilfe-Schaltfläche; diese Erklärung ist deshalb auch seine Hilfe. Die Schaltfläche Über Filler darin zeigt die laufende Version, den Autor und die Adressen von Produktseite, Dokumentation und Datenschutzerklärung und nennt die App für das Telefon. Die Uhr schreibt temporäre Dateien nur in den Speicher der Uhr, eine Ordnerauswahl gibt es nicht. Das Füllen läuft im Hintergrund mit einer Benachrichtigung, und die Schaltfläche Stoppen in der Benachrichtigung beendet das Füllen und löscht die Dateien.</string>
     <string name="filler_help_help_text">Öffnet diese Erklärung. Schließen mit Zurück, einem Tippen außerhalb der Liste, Esc oder F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">Farbthema</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">Version: %1$s</string>
     <string name="filler_about_author">Autor: %1$s</string>
     <string name="filler_about_watch_app">Filler gibt es auch als App für Wear-OS-Uhren. Sie füllt den freien Platz im Speicher der Uhr.</string>
-    <string name="filler_help_about_text">Öffnet ein Fenster über diese App: was sie tut, welche Version läuft, wer sie gemacht hat, die Seitenadresse des Autors und die Version für Uhren.</string>
+    <string name="filler_about_product_page">Produktseite</string>
+    <string name="filler_about_documentation">Dokumentation</string>
+    <string name="filler_about_privacy">Datenschutzerklärung</string>
+    <string name="filler_about_license">Lizenz (MIT)</string>
+    <string name="filler_about_source">Quellcode</string>
+    <string name="filler_about_support">Hilfe und Kontakt</string>
+    <string name="filler_help_about_text">Öffnet ein Fenster über diese App: was sie tut, welche Version läuft, wer sie gemacht hat, die Seitenadresse des Autors, Links zu Produktseite, Dokumentation, Datenschutzerklärung, Lizenz, Quellcode und Hilfe und die Version für Uhren.</string>
 </resources>

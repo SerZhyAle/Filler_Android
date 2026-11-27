@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">Risultato</string>
     <string name="filler_help_result_text">Dopo un riempimento, dice com\'è finito: completato, interrotto, oppure che cosa non ha funzionato e che cosa fare dopo.</string>
     <string name="filler_help_watch_label">Schermata dell\'orologio</string>
-    <string name="filler_help_watch_text">La stessa app funziona su un orologio Wear OS, su una schermata propria. La schermata dell\'orologio non ha un pulsante di aiuto, quindi questa spiegazione è anche il suo aiuto. Il suo pulsante Informazioni mostra la versione in esecuzione e l\'autore e cita l\'app per telefono. L\'orologio scrive i file temporanei solo nella memoria dell\'orologio, senza scelta della cartella. Il riempimento prosegue in background con una notifica, e il pulsante Interrompi della notifica ferma il riempimento ed elimina i file.</string>
+    <string name="filler_help_watch_text">La stessa app funziona su un orologio Wear OS, su una schermata propria. La schermata dell\'orologio non ha un pulsante di aiuto, quindi questa spiegazione è anche il suo aiuto. Il suo pulsante Informazioni mostra la versione in esecuzione, l\'autore e gli indirizzi della pagina del prodotto, della documentazione e dell\'informativa sulla privacy e cita l\'app per telefono. L\'orologio scrive i file temporanei solo nella memoria dell\'orologio, senza scelta della cartella. Il riempimento prosegue in background con una notifica, e il pulsante Interrompi della notifica ferma il riempimento ed elimina i file.</string>
     <string name="filler_help_help_text">Apre questa spiegazione. Si chiude con Indietro, un tocco fuori dall\'elenco, Esc o F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">Tema colore</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">Versione: %1$s</string>
     <string name="filler_about_author">Autore: %1$s</string>
     <string name="filler_about_watch_app">Esiste anche l\'app Filler per orologi Wear OS. Riempie lo spazio libero nella memoria dell\'orologio.</string>
-    <string name="filler_help_about_text">Apre una finestra su questa app: che cosa fa, quale versione è in esecuzione, chi l\'ha creata, l\'indirizzo del sito dell\'autore e la versione per orologi.</string>
+    <string name="filler_about_product_page">Pagina del prodotto</string>
+    <string name="filler_about_documentation">Documentazione</string>
+    <string name="filler_about_privacy">Informativa sulla privacy</string>
+    <string name="filler_about_license">Licenza (MIT)</string>
+    <string name="filler_about_source">Codice sorgente</string>
+    <string name="filler_about_support">Assistenza</string>
+    <string name="filler_help_about_text">Apre una finestra su questa app: che cosa fa, quale versione è in esecuzione, chi l\'ha creata, l\'indirizzo del sito dell\'autore, i collegamenti alla pagina del prodotto, alla documentazione, all\'informativa sulla privacy, alla licenza, al codice sorgente e all\'assistenza, e la versione per orologi.</string>
 </resources>

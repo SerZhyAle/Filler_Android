@@ -10,10 +10,10 @@ restart, keeping the usual 1 GB free, at most once a day, with every run listed 
 It is the local-storage Filler of FastMediaSorter as its own app, and an independent product: it shares no application
 code with the other products of the family, only the published contracts.
 
-## Status
+## Building
 
-The phone module builds with its own Gradle configuration; the build commands are in `CLAUDE.md`. The ticket store and
-the release plan are in `PLAN/` and use `tools/harness.ps1`. Where the product came from:
+With JDK and the Android SDK installed, `./gradlew :phone:assembleDebug :wear:assembleDebug` builds the debug APKs of
+the phone app and the watch app. Where the product came from:
 [docs/PLAN_BOOTSTRAP_HANDOFF.md](docs/PLAN_BOOTSTRAP_HANDOFF.md).
 
 ## Privacy

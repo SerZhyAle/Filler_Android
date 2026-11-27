@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">Résultat</string>
     <string name="filler_help_result_text">Après un remplissage, indique comment il s\'est terminé : terminé, arrêté, ou ce qui n\'a pas marché et quoi faire ensuite.</string>
     <string name="filler_help_watch_label">Écran de la montre</string>
-    <string name="filler_help_watch_text">La même application fonctionne sur une montre Wear OS, sur un écran à elle. L\'écran de la montre n\'a pas de bouton d\'aide, donc cette explication lui sert d\'aide aussi. Son bouton À propos affiche la version en cours et l\'auteur, et mentionne l\'application pour téléphone. La montre n\'écrit ses fichiers temporaires que dans le stockage de la montre, sans choix de dossier. Le remplissage se poursuit en arrière-plan avec une notification, dont le bouton Arrêter arrête le remplissage et supprime les fichiers.</string>
+    <string name="filler_help_watch_text">La même application fonctionne sur une montre Wear OS, sur un écran à elle. L\'écran de la montre n\'a pas de bouton d\'aide, donc cette explication lui sert d\'aide aussi. Son bouton À propos affiche la version en cours, l\'auteur et les adresses de la page du produit, de la documentation et de la politique de confidentialité, et mentionne l\'application pour téléphone. La montre n\'écrit ses fichiers temporaires que dans le stockage de la montre, sans choix de dossier. Le remplissage se poursuit en arrière-plan avec une notification, dont le bouton Arrêter arrête le remplissage et supprime les fichiers.</string>
     <string name="filler_help_help_text">Ouvre cette explication. Fermez-la avec Retour, un appui hors de la liste, Échap ou F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">Thème de couleur</string>
@@ -79,5 +79,11 @@
     <string name="filler_about_version">Version : %1$s</string>
     <string name="filler_about_author">Auteur : %1$s</string>
     <string name="filler_about_watch_app">Filler existe aussi comme application pour les montres Wear OS. Elle remplit l\'espace libre du stockage de la montre.</string>
-    <string name="filler_help_about_text">Ouvre une fenêtre à propos de cette application : ce qu\'elle fait, quelle version est en cours, qui l\'a créée, l\'adresse du site de l\'auteur et la version pour montres.</string>
+    <string name="filler_about_product_page">Page du produit</string>
+    <string name="filler_about_documentation">Documentation</string>
+    <string name="filler_about_privacy">Politique de confidentialité</string>
+    <string name="filler_about_license">Licence (MIT)</string>
+    <string name="filler_about_source">Code source</string>
+    <string name="filler_about_support">Assistance</string>
+    <string name="filler_help_about_text">Ouvre une fenêtre à propos de cette application : ce qu\'elle fait, quelle version est en cours, qui l\'a créée, l\'adresse du site de l\'auteur, des liens vers la page du produit, la documentation, la politique de confidentialité, la licence, le code source et l\'assistance, et la version pour montres.</string>
 </resources>
