@@ -43,6 +43,10 @@ Filler has no internet access: no account, no analytics, no advertising, no trac
 
 The Android app's interface is in 13 languages.
 
+## What's new
+
+First release of Filler for Android phones, tablets and Wear OS watches: fill free space with temporary files and delete them afterwards, configure the reserve kept free, schedule automatic runs, switch color themes, use the built-in help overlay and run the app in 13 languages with no internet access.
+
 ## Console fields (2026-11-13)
 
 The listing sources of the other product languages are the `PLAY_LISTING-<code>.md` files beside this one (ru and uk

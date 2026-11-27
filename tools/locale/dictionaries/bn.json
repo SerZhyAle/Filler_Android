@@ -177,5 +177,6 @@
   "Email [sza@ukr.net](mailto:sza@ukr.net), GitHub [SerZhyAle](https://github.com/SerZhyAle). Questions and bug reports are welcome as [GitHub issues](https://github.com/SerZhyAle/Filler_Android/issues).": "ইমেইল [sza@ukr.net](mailto:sza@ukr.net), GitHub [SerZhyAle](https://github.com/SerZhyAle)। প্রশ্ন ও বাগ রিপোর্ট [GitHub issues](https://github.com/SerZhyAle/Filler_Android/issues) হিসেবে পাঠাতে পারেন।",
   "This project is developed with heavy AI assistance; the author reviews every change.": "এই প্রকল্প AI-এর ব্যাপক সহায়তায় তৈরি করা হয়; লেখক প্রতিটি পরিবর্তন পর্যালোচনা করেন।",
   "License": "লাইসেন্স",
-  "MIT - see [LICENSE](LICENSE).": "MIT - [LICENSE](LICENSE) দেখুন।"
+  "MIT - see [LICENSE](LICENSE).": "MIT - [LICENSE](LICENSE) দেখুন।",
+  "First release of Filler for Android phones, tablets and Wear OS watches: fill free space with temporary files and delete them afterwards, configure the reserve kept free, schedule automatic runs, switch color themes, use the built-in help overlay and run the app in 13 languages with no internet access.": "Android ফোন, ট্যাবলেট এবং Wear OS ঘড়ির জন্য Filler-এর প্রথম সংস্করণ: অস্থায়ী ফাইল দিয়ে খালি জায়গা পূরণ করুন এবং পরে সেগুলো মুছে ফেলুন, খালি রাখা রিজার্ভ নির্ধারণ করুন, স্বয়ংক্রিয় রান সময়সূচী করুন, রঙের থিম পরিবর্তন করুন, অন্তর্নির্মিত সহায়তা ব্যবহার করুন এবং ইন্টারনেট ছাড়াই 13টি ভাষায় অ্যাপ চালান।"
 }

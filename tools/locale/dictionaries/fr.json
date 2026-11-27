@@ -177,5 +177,6 @@
   "Email [sza@ukr.net](mailto:sza@ukr.net), GitHub [SerZhyAle](https://github.com/SerZhyAle). Questions and bug reports are welcome as [GitHub issues](https://github.com/SerZhyAle/Filler_Android/issues).": "E-mail [sza@ukr.net](mailto:sza@ukr.net), GitHub [SerZhyAle](https://github.com/SerZhyAle). Les questions et les signalements de bogues sont les bienvenus sous forme d'[issues GitHub](https://github.com/SerZhyAle/Filler_Android/issues).",
   "This project is developed with heavy AI assistance; the author reviews every change.": "Ce projet est développé avec une aide importante de l'IA ; l'auteur relit chaque modification.",
   "License": "Licence",
-  "MIT - see [LICENSE](LICENSE).": "MIT - voir [LICENSE](LICENSE)."
+  "MIT - see [LICENSE](LICENSE).": "MIT - voir [LICENSE](LICENSE).",
+  "First release of Filler for Android phones, tablets and Wear OS watches: fill free space with temporary files and delete them afterwards, configure the reserve kept free, schedule automatic runs, switch color themes, use the built-in help overlay and run the app in 13 languages with no internet access.": "Première version de Filler pour téléphones, tablettes Android et montres Wear OS : remplissez l'espace libre avec des fichiers temporaires puis supprimez-les, réglez la réserve libre, planifiez des exécutions automatiques, changez de thème de couleur, utilisez l'aide intégrée et exécutez l'application en 13 langues sans accès Internet."
 }

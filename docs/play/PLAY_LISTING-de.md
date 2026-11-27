@@ -35,3 +35,7 @@ Datenschutz
 Filler hat keinen Internetzugriff: kein Konto, keine Analyse, keine Werbung, kein Tracking. Nichts verlässt Ihr Gerät.
 
 Die Oberfläche der Android-App gibt es in 13 Sprachen.
+
+## What's new
+
+Erste Veröffentlichung von Filler für Android-Smartphones, -Tablets und Wear OS-Uhren: freien Speicherplatz mit temporären Dateien füllen und danach wieder löschen, freizuhaltende Reserve festlegen, automatische Läufe planen, Farbthemen wechseln, die integrierte Hilfe nutzen und die App in 13 Sprachen ohne Internetzugriff ausführen.

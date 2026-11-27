@@ -35,3 +35,7 @@ Privacidade
 O Filler não tem acesso à internet: sem conta, sem análise de uso, sem publicidade, sem rastreamento. Nada sai do seu dispositivo.
 
 A interface do app para Android está disponível em 13 idiomas.
+
+## What's new
+
+Primeira versão do Filler para celulares, tablets Android e relógios Wear OS: preencha o espaço livre com arquivos temporários e exclua-os depois, configure a reserva livre, agende execuções automáticas, alterne temas de cores, use a ajuda integrada e execute o aplicativo em 13 idiomas sem acesso à internet.
