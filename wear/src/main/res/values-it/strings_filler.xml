@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Riempie lo spazio libero dell\'orologio con file temporanei, poi li elimina. I tuoi file restano come sono.</string>
+    <string name="filler_watch_storage">memoria dell\'orologio</string>
+    <string name="filler_location">Scrive in: %1$s</string>
+    <string name="filler_no_place">La memoria dell\'orologio non è disponibile ora.</string>
+    <string name="filler_free_space">Spazio libero: %1$s</string>
+    <string name="filler_free_space_unknown">Spazio libero: non misurato</string>
+    <string name="filler_reserve">Riservato al sistema: %1$s</string>
+    <string name="filler_reserve_less">Lascia meno spazio libero</string>
+    <string name="filler_reserve_more">Lascia più spazio libero</string>
+    <string name="filler_start">Avvia riempimento</string>
+    <string name="filler_cancel">Interrompi ed elimina i file</string>
+    <string name="filler_progress">Scritti %1$s di %2$s</string>
+    <string name="filler_estimate">%1$d%% completato, tempo rimasto: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% completato, tempo rimasto: calcolo in corso..</string>
+    <string name="filler_confirm_title">Riempire lo spazio libero?</string>
+    <string name="filler_confirm_message">Verranno scritti circa %1$s di file temporanei nella memoria dell\'orologio, e resteranno liberi %2$s. I file vengono eliminati quando il riempimento termina o viene interrotto.</string>
+    <string name="filler_confirm_reserve_lowered">È meno del solito (%1$s), quindi il sistema e le altre app hanno meno spazio finché dura l\'operazione.</string>
+    <string name="filler_confirm_positive">Riempi</string>
+    <string name="filler_retry_cleanup">Elimina file rimanenti</string>
+    <string name="filler_pending_cleanup">Sull\'orologio ci sono ancora file temporanei di un\'esecuzione precedente. Tocca Elimina file rimanenti prima di riempire di nuovo.</string>
+    <string name="filler_result_done">Fatto: %1$s scritti e di nuovo eliminati.</string>
+    <string name="filler_result_cancelled">Riempimento interrotto. I file temporanei sono stati eliminati.</string>
+    <string name="filler_result_failed">La scrittura si è interrotta perché la memoria ha segnalato un errore. I file temporanei sono stati eliminati.</string>
+    <string name="filler_result_cleanup_incomplete">Non è stato ancora possibile eliminare alcuni file temporanei. Tocca Elimina file rimanenti per riprovare.</string>
+    <string name="filler_result_cleanup_done">I file temporanei rimanenti sono stati eliminati.</string>
+    <string name="filler_result_no_place">La memoria dell\'orologio non è disponibile ora. Riavvia l\'orologio, poi riapri Filler.</string>
+    <string name="filler_result_no_access">Ora non è consentito scrivere nella memoria dell\'orologio. Riavvia l\'orologio, poi riapri Filler.</string>
+    <string name="filler_result_measurement_unavailable">Non è stato possibile misurare lo spazio libero. Riapri Filler tra un momento.</string>
+    <string name="filler_result_insufficient_space">Non c\'è spazio libero oltre la parte riservata al sistema. Libera spazio sull\'orologio o lascia meno spazio libero.</string>
+    <string name="filler_result_busy">Il riempimento è già in corso.</string>
+    <string name="filler_result_not_started">L\'orologio non ha permesso di avviare il riempimento. Apri Filler e riprova.</string>
+    <string name="filler_notification_channel">Riempimento</string>
+    <string name="filler_notification_title">Riempimento in corso</string>
+    <string name="filler_notification_stop">Interrompi</string>
+    <string name="filler_about">Informazioni</string>
+    <string name="filler_about_version">Versione: %1$s</string>
+    <string name="filler_about_author">Autore: %1$s</string>
+    <string name="filler_about_phone_app">Esiste anche l\'app Filler per telefoni Android. Riempie la memoria del telefono o una scheda di memoria.</string>
+    <string name="filler_about_product_page">Pagina del prodotto: %1$s</string>
+    <string name="filler_about_documentation">Documentazione: %1$s</string>
+    <string name="filler_about_privacy">Informativa sulla privacy: %1$s</string>
+    <string name="filler_about_close">Chiudi</string>
+</resources>

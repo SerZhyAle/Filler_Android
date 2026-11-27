@@ -1,6 +1,8 @@
 # Чому Android попереджає про APK Filler - і що натиснути
 
-Мови: [English](INSTALL_TRUST.md) - [Русский](INSTALL_TRUST-ru.md) - Українська
+<!-- languages -->
+Мови: [English](INSTALL_TRUST.md) - [Русский](INSTALL_TRUST-ru.md) - Українська - [Deutsch](INSTALL_TRUST-de.md) - [Italiano](INSTALL_TRUST-it.md) - [Español](INSTALL_TRUST-es.md) - [Français](INSTALL_TRUST-fr.md) - [Português](INSTALL_TRUST-pt.md) - [العربية](INSTALL_TRUST-ar.md) - [हिन्दी](INSTALL_TRUST-hi.md) - [বাংলা](INSTALL_TRUST-bn.md) - [اردو](INSTALL_TRUST-ur.md) - [简体中文](INSTALL_TRUST-zh.md)
+<!-- /languages -->
 
 Filler - невеликий безкоштовний застосунок незалежного розробника. Коли ви ставите підписаний APK з GitHub Releases або
 SourceForge, а не з Google Play, Android показує кілька запитів. Тут описано, що це за запити, чому вони з'являються і що

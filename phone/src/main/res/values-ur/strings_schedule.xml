@@ -55,19 +55,19 @@
     <string name="schedule_help_editor_label">ایڈیٹر</string>
     <string name="schedule_help_editor_text">فولڈر منتخب کریں فولڈر چنتا ہے، وقت گھنٹہ اور منٹ مقرر کرتا ہے، دہرائیں مقرر کرتا ہے کہ دو رن کے درمیان کتنے دن ہوں۔ محفوظ کریں فولڈر اور خالی رکھی جانے والی جگہ بتا کر تصدیق مانگتا ہے، اور صرف وہی فولڈر محفوظ کرتا ہے جس میں ابھی لکھا جا سکے۔ منسوخ کریں کچھ نہیں بدلتا۔</string>
     <string name="schedule_help_list_label">شیڈول</string>
-    <string name="schedule_help_list_text">ہر شیڈول کارڈ میں فولڈر، وقفہ، وقت اور اگلا رن دکھایا جاتا ہے۔ چیک باکس شیڈول آن یا آف کرتا ہے، ابھی چلائیں فوراً شروع کرتا ہے، ترمیم بدلتا ہے اور حذف اسے ہٹاتا ہے۔</string>
-    <string name="schedule_help_history_text">ہر شیڈول شدہ رن، نیا سب سے اوپر: کب شروع ہوا، کون سا فولڈر اور کیسے ختم ہوا۔ چھوڑا گیا یا ناکام رن وجہ بتاتا ہے، اور سسٹم کی طرف سے دیر سے شروع کیا گیا رن یہ بتاتا ہے۔ رن کے لیے اسکرین کے سامنے کسی کی ضرورت نہیں، اور جاری رن ایک اطلاع دکھاتا ہے۔</string>
+    <string name="schedule_help_list_text">ہر شیڈول کارڈ میں فولڈر، وقفہ، وقت اور اگلا رن دکھایا جاتا ہے۔ چیک باکس شیڈول آن یا آف کرتا ہے، ابھی چلائیں فوراً شروع کرتا ہے، ترمیم بدلتا ہے اور حذف کریں اسے ہٹاتا ہے۔</string>
+    <string name="schedule_help_history_text">ہر شیڈول شدہ رن، نیا سب سے اوپر: کب شروع ہوا، کون سا فولڈر اور کیسے ختم ہوا۔ چھوڑا گیا یا ناکام رن وجہ بتاتا ہے، اور سسٹم کی طرف سے دیر سے شروع کیا گیا رن یہ بتاتا ہے۔ رن کے لیے اسکرین کے سامنے کسی کی ضرورت نہیں، اور جاری رن ایک نوٹیفکیشن دکھاتا ہے۔</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
     <string name="schedule_run_now">ابھی چلائیں</string>
-    <string name="schedule_run_now_started">%1$s کے لیے شیڈول کردہ بھرائی شروع ہو رہی ہے..</string>
+    <string name="schedule_run_now_started">%1$s کے لیے شیڈول شدہ بھرنا شروع ہو رہا ہے..</string>
     <string name="schedule_pause_all">سب کو موقوف کریں</string>
     <string name="schedule_resume_all">سب کو دوبارہ شروع کریں</string>
     <string name="schedule_item_paused">موقوف</string>
-    <string name="schedule_history_clear">تاریخ صاف کریں</string>
-    <string name="schedule_history_clear_title">چلانے کی تاریخ صاف کریں؟</string>
+    <string name="schedule_history_clear">ہسٹری صاف کریں</string>
+    <string name="schedule_history_clear_title">رن ہسٹری صاف کریں؟</string>
     <string name="schedule_history_clear_message">تمام ریکارڈ شدہ شیڈول رن ہٹا دیتا ہے۔ آپ کے محفوظ کردہ شیڈول برقرار رہتے ہیں۔</string>
-    <string name="schedule_notifications_enable">نوٹیفیکیشنز کی اجازت دیں</string>
-    <string name="schedule_help_notifications_text">Android 13 اور اس کے بعد کے ورژن پر نوٹیفیکیشن کی اجازت بند ہونے پر دکھایا جاتا ہے۔ جاری شیڈول بھرائی کے نوٹیفیکیشن کی اجازت دینے یا سیٹنگز کھولنے کے لیے ٹیپ کریں۔</string>
+    <string name="schedule_notifications_enable">نوٹیفکیشنز کی اجازت دیں</string>
+    <string name="schedule_help_notifications_text">Android 13 اور اس کے بعد کے ورژن پر نوٹیفکیشن کی اجازت بند ہونے پر دکھایا جاتا ہے۔ جاری شیڈول شدہ بھرنے کے نوٹیفکیشن کی اجازت دینے یا سیٹنگز کھولنے کے لیے ٹیپ کریں۔</string>
     <string name="schedule_help_pause_all_text">ہر ایک کو الگ سے بند کیے بغیر تمام محفوظ شیڈول ایک ساتھ موقوف کرتا ہے یا دوبارہ شروع کرتا ہے۔</string>
     <string name="schedule_help_clear_history_text">تصدیق مانگتا ہے اور محفوظ شیڈول برقرار رکھتے ہوئے پچھلے رنز کی فہرست صاف کرتا ہے۔</string>
 </resources>

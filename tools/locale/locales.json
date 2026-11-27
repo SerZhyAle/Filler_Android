@@ -1,0 +1,24 @@
+{
+  "$comment": "The one list of the product's languages (FILLER-0079): the thirteen of FastMediaSorter for Android, in the portfolio order of the secondary language row (RU, EN and UA first there). code: the suffix of a file name; tag: lang, hreflang and the Android locale-config name; android: the resource folder; og: og:locale; play: the Play Console listing language; hand: the document kinds written by hand in that language - every other kind is a render target of tools/locale/render-translations.ps1 and its dictionaries/<code>.json.",
+  "languages": [
+    { "code": "en", "tag": "en", "dir": "ltr", "android": "values", "og": "en_US", "play": "en-US", "english": "English", "endonym": "English", "label": "EN", "more": "More languages", "list": "Languages:", "hand": ["page", "guide", "listing", "readme"] },
+    { "code": "ru", "tag": "ru", "dir": "ltr", "android": "values-ru", "og": "ru_RU", "play": "ru-RU", "english": "Russian", "endonym": "Русский", "label": "RU", "more": "Другие языки", "list": "Языки:", "hand": ["page", "guide", "listing"] },
+    { "code": "uk", "tag": "uk", "dir": "ltr", "android": "values-uk", "og": "uk_UA", "play": "uk", "english": "Ukrainian", "endonym": "Українська", "label": "UA", "more": "Інші мови", "list": "Мови:", "hand": ["page", "guide", "listing"] },
+    { "code": "de", "tag": "de", "dir": "ltr", "android": "values-de", "og": "de_DE", "play": "de-DE", "english": "German", "endonym": "Deutsch", "label": "DE", "more": "Weitere Sprachen", "list": "Sprachen:", "hand": [] },
+    { "code": "it", "tag": "it", "dir": "ltr", "android": "values-it", "og": "it_IT", "play": "it-IT", "english": "Italian", "endonym": "Italiano", "label": "IT", "more": "Altre lingue", "list": "Lingue:", "hand": [] },
+    { "code": "es", "tag": "es", "dir": "ltr", "android": "values-es", "og": "es_MX", "play": "es-419", "english": "Spanish", "endonym": "Español", "label": "ES", "more": "Más idiomas", "list": "Idiomas:", "hand": [] },
+    { "code": "fr", "tag": "fr", "dir": "ltr", "android": "values-fr", "og": "fr_FR", "play": "fr-FR", "english": "French", "endonym": "Français", "label": "FR", "more": "Autres langues", "list": "Langues :", "hand": [] },
+    { "code": "pt", "tag": "pt", "dir": "ltr", "android": "values-pt", "og": "pt_BR", "play": "pt-BR", "english": "Portuguese", "endonym": "Português", "label": "PT", "more": "Mais idiomas", "list": "Idiomas:", "hand": [] },
+    { "code": "ar", "tag": "ar", "dir": "rtl", "android": "values-ar", "og": "ar_AR", "play": "ar", "english": "Arabic", "endonym": "العربية", "label": "AR", "more": "لغات أخرى", "list": "اللغات:", "hand": [] },
+    { "code": "hi", "tag": "hi", "dir": "ltr", "android": "values-hi", "og": "hi_IN", "play": "hi-IN", "english": "Hindi", "endonym": "हिन्दी", "label": "HI", "more": "अन्य भाषाएँ", "list": "भाषाएँ:", "hand": [] },
+    { "code": "bn", "tag": "bn", "dir": "ltr", "android": "values-bn", "og": "bn_BD", "play": "bn-BD", "english": "Bengali", "endonym": "বাংলা", "label": "BN", "more": "আরও ভাষা", "list": "ভাষা:", "hand": [] },
+    { "code": "ur", "tag": "ur", "dir": "rtl", "android": "values-ur", "og": "ur_PK", "play": "ur", "english": "Urdu", "endonym": "اردو", "label": "UR", "more": "مزید زبانیں", "list": "زبانیں:", "hand": [] },
+    { "code": "zh", "tag": "zh-Hans", "dir": "ltr", "android": "values-b+zh+Hans", "og": "zh_CN", "play": "zh-CN", "english": "Chinese (Simplified)", "endonym": "简体中文", "label": "ZH", "more": "更多语言", "list": "语言：", "hand": [] }
+  ],
+  "keep": [
+    "Filler", "Filler: Fill Storage Space", "RU", "EN", "UA", "GitHub", "sza.od.ua", "sza@ukr.net", "Serhii Zhyhunenko",
+    "Fast Media Sorter &amp; Organizer", "Fast Media Sorter &amp; Sharing for Windows", "FastMediaSorter for Web", "CyrFlip",
+    "doc-html-translate", "FileDO", "STREAMS Player", "OneClickRunner", "Universal Agent Kit", "DeviceInfo", "Tourist",
+    "SZA (hub)"
+  ]
+}

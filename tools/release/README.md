@@ -171,12 +171,14 @@ for signed AAB transfer and track assignment after these checks.
    [tracks guide](https://developers.google.com/android-publisher/tracks).
 3. **Prepare one batch.** Use the guarded FastMediaSorter Python publisher from its checkout. Put the exact
    signed Filler AABs, pinned versionName, per-artifact versionCodes, track IDs and release notes into
-   `play-batch.json` beside the candidate's `preflight.json`. Release note blocks use `en-US`, `ru-RU` and `uk`.
+   `play-batch.json` beside the candidate's `preflight.json`. Release notes carry one block per listing language, named
+   by the `play` code of `tools/locale/locales.json`.
    When phone and Wear OS belong to the same release, stage both in one edit with one successful commit. A
    deliberately separate release waits for the previous app-wide review verdict. Approve changed listing content
    in the same batch when it ships with the release. Prepare an explicit Filler `listingRoot` from the approved
    sources when the API must stage that content. The publisher reads its `en-US`, `ru-RU` and `uk-UA` directories
-   as Play locales `en-US`, `ru-RU` and `uk`. Each directory carries `title.txt`, `short_description.txt`,
+   as Play locales `en-US`, `ru-RU` and `uk`; confirm the publisher's directory names for the other listing languages
+   before the batch. Each directory carries `title.txt`, `short_description.txt`,
    `full_description.txt` and any approved images in the publisher's slot layout. Match outstanding Console
    changes to the approved batch as well.
 
@@ -303,11 +305,13 @@ if the owner prefers it or a dependency brings native code.
 
 Decision (S0023, unattended assumption of 2026-11-13, owner may overrule): no changelog ledger (`ledgerShape` stays
 `none`, as in Tourist_mob). The release notes of a Filler release are the Play "What's new" text only, because Play is
-the only channel: each listing source `docs/play/PLAY_LISTING.md`, `PLAY_LISTING-ru.md` and `PLAY_LISTING-uk.md`
-gets a `## What's new` section, at most 500 characters, written by the release before the tag as a shipped fact
-with no hedge words. Use those three sections to prepare the publisher's notes file with `<en-US>`, `<ru-RU>`
-and `<uk>` blocks and matching closing tags. Read back the three languages on each released track. The preflight
-reports OPEN until all three sections exist. The alternative weighed was a `CHANGELOG.md` ledger rendered into
+the only channel. The release writes a `## What's new` section, at most 500 characters, as a shipped fact with no hedge
+words, before the tag, into the three hand-written listing sources (`docs/play/PLAY_LISTING.md`, `PLAY_LISTING-ru.md`,
+`PLAY_LISTING-uk.md`), translates the new English segments into `tools/locale/dictionaries/` and runs
+`tools/locale/render-translations.ps1`, which writes the section into every other listing (FILLER-0079). Use those
+sections to prepare the publisher's notes file with one block per listing language (`<en-US>`, `<ru-RU>`, `<uk>`,
+`<de-DE>` and so on, the `play` codes of `tools/locale/locales.json`) and matching closing tags. Read back every
+language on each released track. The preflight reports OPEN until every listing carries the section. The alternative weighed was a `CHANGELOG.md` ledger rendered into
 the three texts, worth taking when a second channel (a GitHub Release) appears.
 
 R8: the release variant of both apps is unminified (`isMinifyEnabled = false`, stated in each module's build

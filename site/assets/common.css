@@ -7,3 +7,9 @@
 .skip-link:focus{transform:none}
 a.brand{display:inline-flex;align-items:center;min-height:var(--ui-target)}
 a.brand:hover{color:var(--text)}
+/* The secondary language row (PAGE-STYLE 4.2, FILLER-0079): the languages beyond the segmented RU EN UA, as text links below
+   the header; every link keeps the kit's target size and wraps on a narrow screen. */
+.locale-row{display:flex;flex-wrap:wrap;margin:.4rem 0;font-size:.82rem;font-weight:700;letter-spacing:.04em}
+.locale-row a{display:inline-flex;align-items:center;justify-content:center;min-width:var(--ui-target);min-height:var(--ui-target);color:var(--muted)}
+.locale-row a:hover{color:var(--text)}
+.locale-row a[aria-current="page"]{color:var(--text);text-decoration:underline}

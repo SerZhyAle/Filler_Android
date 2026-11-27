@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Preenche o espaço livre do relógio com arquivos temporários e depois os exclui. Seus próprios arquivos ficam como estão.</string>
+    <string name="filler_watch_storage">armazenamento do relógio</string>
+    <string name="filler_location">Grava em: %1$s</string>
+    <string name="filler_no_place">O armazenamento do relógio não está disponível agora.</string>
+    <string name="filler_free_space">Espaço livre: %1$s</string>
+    <string name="filler_free_space_unknown">Espaço livre: não medido</string>
+    <string name="filler_reserve">Reservado para o sistema: %1$s</string>
+    <string name="filler_reserve_less">Reservar menos</string>
+    <string name="filler_reserve_more">Reservar mais</string>
+    <string name="filler_start">Iniciar preenchimento</string>
+    <string name="filler_cancel">Parar e excluir arquivos</string>
+    <string name="filler_progress">Gravados %1$s de %2$s</string>
+    <string name="filler_estimate">%1$d%% concluído, tempo restante: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% concluído, tempo restante: calculando..</string>
+    <string name="filler_confirm_title">Preencher o espaço livre?</string>
+    <string name="filler_confirm_message">Cerca de %1$s de arquivos temporários serão gravados no armazenamento do relógio, e %2$s ficarão livres. Os arquivos são excluídos quando o preenchimento termina ou é interrompido.</string>
+    <string name="filler_confirm_reserve_lowered">Isso é menos que o habitual (%1$s), então o sistema e outros apps têm menos espaço enquanto a execução durar.</string>
+    <string name="filler_confirm_positive">Preencher</string>
+    <string name="filler_retry_cleanup">Excluir arquivos restantes</string>
+    <string name="filler_pending_cleanup">Ainda há arquivos temporários de uma execução anterior no relógio. Toque em Excluir arquivos restantes antes de preencher novamente.</string>
+    <string name="filler_result_done">Concluído: %1$s gravados e excluídos novamente.</string>
+    <string name="filler_result_cancelled">Preenchimento interrompido. Os arquivos temporários foram excluídos.</string>
+    <string name="filler_result_failed">A gravação parou porque o armazenamento informou um erro. Os arquivos temporários foram excluídos.</string>
+    <string name="filler_result_cleanup_incomplete">Alguns arquivos temporários ainda não puderam ser excluídos. Toque em Excluir arquivos restantes para tentar de novo.</string>
+    <string name="filler_result_cleanup_done">Os arquivos temporários restantes foram excluídos.</string>
+    <string name="filler_result_no_place">O armazenamento do relógio não está disponível agora. Reinicie o relógio e abra o Filler novamente.</string>
+    <string name="filler_result_no_access">A gravação no armazenamento do relógio não é permitida agora. Reinicie o relógio e abra o Filler novamente.</string>
+    <string name="filler_result_measurement_unavailable">Não foi possível medir o espaço livre. Abra o Filler novamente daqui a pouco.</string>
+    <string name="filler_result_insufficient_space">Não há espaço livre acima da parte reservada para o sistema. Libere espaço no relógio ou reserve menos.</string>
+    <string name="filler_result_busy">O preenchimento já está em andamento.</string>
+    <string name="filler_result_not_started">O relógio não permitiu iniciar o preenchimento. Abra o Filler e tente novamente.</string>
+    <string name="filler_notification_channel">Preenchimento</string>
+    <string name="filler_notification_title">Preenchendo o espaço livre</string>
+    <string name="filler_notification_stop">Parar</string>
+    <string name="filler_about">Sobre</string>
+    <string name="filler_about_version">Versão: %1$s</string>
+    <string name="filler_about_author">Autor: %1$s</string>
+    <string name="filler_about_phone_app">Há também um app Filler para telefones Android. Ele preenche o armazenamento do telefone ou um cartão de memória.</string>
+    <string name="filler_about_product_page">Página do produto: %1$s</string>
+    <string name="filler_about_documentation">Documentação: %1$s</string>
+    <string name="filler_about_privacy">Política de privacidade: %1$s</string>
+    <string name="filler_about_close">Fechar</string>
+</resources>

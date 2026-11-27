@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">用临时文件填满手表的可用空间，然后将其删除。您自己的文件保持不变。</string>
+    <string name="filler_watch_storage">手表存储</string>
+    <string name="filler_location">写入位置：%1$s</string>
+    <string name="filler_no_place">手表存储目前不可用。</string>
+    <string name="filler_free_space">可用空间：%1$s</string>
+    <string name="filler_free_space_unknown">可用空间：未测量</string>
+    <string name="filler_reserve">为系统保留：%1$s</string>
+    <string name="filler_reserve_less">减少保留</string>
+    <string name="filler_reserve_more">增加保留</string>
+    <string name="filler_start">开始填充</string>
+    <string name="filler_cancel">停止并删除文件</string>
+    <string name="filler_progress">已写入 %1$s / %2$s</string>
+    <string name="filler_estimate">已完成 %1$d%%，剩余时间：%2$s</string>
+    <string name="filler_estimate_calculating">已完成 %1$d%%，剩余时间：计算中..</string>
+    <string name="filler_confirm_title">填充可用空间？</string>
+    <string name="filler_confirm_message">将向手表存储写入约 %1$s 的临时文件，并保留 %2$s 可用空间。填充完成或停止时，这些文件会被删除。</string>
+    <string name="filler_confirm_reserve_lowered">这低于通常的 %1$s，因此在运行期间，系统和其他应用可用的空间会减少。</string>
+    <string name="filler_confirm_positive">填充</string>
+    <string name="filler_retry_cleanup">删除剩余文件</string>
+    <string name="filler_pending_cleanup">手表上仍有上次运行留下的临时文件。请先点按“删除剩余文件”，再重新填充。</string>
+    <string name="filler_result_done">完成：已写入 %1$s 并再次删除。</string>
+    <string name="filler_result_cancelled">填充已停止。临时文件已删除。</string>
+    <string name="filler_result_failed">存储报告了错误，写入已停止。临时文件已删除。</string>
+    <string name="filler_result_cleanup_incomplete">部分临时文件暂时无法删除。请点按“删除剩余文件”重试。</string>
+    <string name="filler_result_cleanup_done">剩余的临时文件已删除。</string>
+    <string name="filler_result_no_place">手表存储目前不可用。请重启手表，然后重新打开 Filler。</string>
+    <string name="filler_result_no_access">目前不允许写入手表存储。请重启手表，然后重新打开 Filler。</string>
+    <string name="filler_result_measurement_unavailable">无法测量可用空间。请稍后重新打开 Filler。</string>
+    <string name="filler_result_insufficient_space">除系统保留部分外没有可用空间。请释放手表空间或减少保留。</string>
+    <string name="filler_result_busy">填充已在运行。</string>
+    <string name="filler_result_not_started">手表不允许开始填充。请打开 Filler 后重试。</string>
+    <string name="filler_notification_channel">填充</string>
+    <string name="filler_notification_title">正在填充可用空间</string>
+    <string name="filler_notification_stop">停止</string>
+    <string name="filler_about">关于</string>
+    <string name="filler_about_version">版本：%1$s</string>
+    <string name="filler_about_author">作者：%1$s</string>
+    <string name="filler_about_phone_app">另有适用于 Android 手机的 Filler 应用，用于填充手机存储或存储卡。</string>
+    <string name="filler_about_product_page">产品页面：%1$s</string>
+    <string name="filler_about_documentation">文档：%1$s</string>
+    <string name="filler_about_privacy">隐私政策：%1$s</string>
+    <string name="filler_about_close">关闭</string>
+</resources>

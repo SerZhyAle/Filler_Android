@@ -59,15 +59,15 @@
     <string name="schedule_help_history_text">每次计划运行，最新的在前：何时开始、哪个文件夹以及如何结束。被跳过或失败的运行会说明原因，被系统推迟开始的运行也会注明。运行时无需有人在屏幕前，正在进行的运行会显示通知。</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
     <string name="schedule_run_now">立即运行</string>
-    <string name="schedule_run_now_started">正在开始 %1$s 的定时填充..</string>
+    <string name="schedule_run_now_started">正在开始 %1$s 的计划填充..</string>
     <string name="schedule_pause_all">全部暂停</string>
     <string name="schedule_resume_all">全部恢复</string>
     <string name="schedule_item_paused">已暂停</string>
     <string name="schedule_history_clear">清除历史记录</string>
     <string name="schedule_history_clear_title">清除运行历史记录？</string>
-    <string name="schedule_history_clear_message">删除所有已记录的定时运行。已保存的计划会保持不变。</string>
+    <string name="schedule_history_clear_message">删除所有已记录的计划运行。已保存的计划会保持不变。</string>
     <string name="schedule_notifications_enable">允许通知</string>
-    <string name="schedule_help_notifications_text">在 Android 13 及更高版本上未授予通知权限时显示。点击可允许定时填充的通知，或打开系统通知设置。</string>
+    <string name="schedule_help_notifications_text">在 Android 13 及更高版本上未授予通知权限时显示。点按可允许计划填充的通知，或打开系统通知设置。</string>
     <string name="schedule_help_pause_all_text">一次性暂停所有已保存的计划而无需逐个关闭，或重新恢复全部计划。</string>
     <string name="schedule_help_clear_history_text">确认后清空过去运行的列表，同时保留已保存的计划。</string>
 </resources>

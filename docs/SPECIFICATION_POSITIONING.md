@@ -54,5 +54,9 @@ exception to the order (no store policy asks it to name a different function fir
 | Play listing, Russian | `docs/play/PLAY_LISTING-ru.md` |
 | Play listing, Ukrainian | `docs/play/PLAY_LISTING-uk.md` |
 
+The translations `tools/locale/render-translations.ps1` writes from a surface of this table (the further landing pages and
+listings, and the README in the other languages) follow it segment by segment, so they keep its order by construction and
+carry no anchor of their own (`FILLER-0079`).
+
 The Play Console fields are copies of the listing sources, so the console follows the sources and has no row of its own. The
 privacy pages, the not-found pages and `docs/play/PLAY_DATA_SAFETY.md` list no pillar and are not surfaces of this file.

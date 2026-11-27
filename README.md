@@ -1,5 +1,9 @@
 # Filler for Android
 
+<!-- languages -->
+Languages: English - [Русский](README_ru.md) - [Українська](README_uk.md) - [Deutsch](README_de.md) - [Italiano](README_it.md) - [Español](README_es.md) - [Français](README_fr.md) - [Português](README_pt.md) - [العربية](README_ar.md) - [हिन्दी](README_hi.md) - [বাংলা](README_bn.md) - [اردو](README_ur.md) - [简体中文](README_zh.md)
+<!-- /languages -->
+
 Filler fills the free space of a storage device with temporary files and then deletes them again. You choose built-in
 storage or a memory card, or a folder on it; Filler shows the free space it measured and the part it keeps free for the
 system, writes up to the amount you confirm, with how much is written, the percentage and the time left in view, and
@@ -20,15 +24,15 @@ the phone app and the watch app. Where the product came from:
 
 The developer receives none of your data: no account, no analytics, no advertising, no tracking. Filler has no
 internet access, so nothing leaves the device; the phone app asks only for what runs a scheduled fill on time with the
-app closed, and the watch app only for what keeps a fill going while its screen is dark. The full policy, in English, Russian and
-Ukrainian: [privacy policy](https://serzhyale.github.io/Filler_Android/privacy.html).
+app closed, and the watch app only for what keeps a fill going while its screen is dark. The full policy:
+[privacy policy](https://serzhyale.github.io/Filler_Android/privacy.html).
 
 ## Installing the APK from GitHub Releases or SourceForge
 
 The signed phone and watch APKs published outside Google Play make Android ask to allow unknown apps from one source and
-may show a Play Protect notice about the developer. What each prompt is, why it appears and exactly what to tap, in
-[English](docs/INSTALL_TRUST.md), [Russian](docs/INSTALL_TRUST-ru.md) and [Ukrainian](docs/INSTALL_TRUST-uk.md). The
-same app on Google Play is signed by Play App Signing and meets none of these prompts.
+may show a Play Protect notice about the developer. What each prompt is, why it appears and exactly what to tap is in the
+[install guide](docs/INSTALL_TRUST.md). The same app on Google Play is signed by Play App Signing and meets none of these
+prompts.
 
 ## Contact
 

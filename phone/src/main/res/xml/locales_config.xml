@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The languages Android offers for this app in its per-app language setting (Android 13 and later, FILLER-0079):
+     one entry per language folder of res/; tools/locale/check-locales.ps1 holds the two in step. -->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="en" />
+    <locale android:name="ru" />
+    <locale android:name="uk" />
+    <locale android:name="de" />
+    <locale android:name="it" />
+    <locale android:name="es" />
+    <locale android:name="fr" />
+    <locale android:name="pt" />
+    <locale android:name="ar" />
+    <locale android:name="hi" />
+    <locale android:name="bn" />
+    <locale android:name="ur" />
+    <locale android:name="zh-Hans" />
+</locale-config>

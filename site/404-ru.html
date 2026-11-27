@@ -36,6 +36,20 @@
 </header>
 <main class="container section" id="main">
   <noscript><p class="lang-links"><a href="https://serzhyale.github.io/Filler_Android/404.html" hreflang="en">English</a> &middot; <a href="https://serzhyale.github.io/Filler_Android/404-ru.html" hreflang="ru">Русский</a> &middot; <a href="https://serzhyale.github.io/Filler_Android/404-uk.html" hreflang="uk">Українська</a></p></noscript>
+  <!-- locales:row -->
+  <nav class="locale-row" aria-label="Другие языки">
+    <a href="https://serzhyale.github.io/Filler_Android/404-de.html" hreflang="de" lang="de" title="Deutsch">DE</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-it.html" hreflang="it" lang="it" title="Italiano">IT</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-es.html" hreflang="es" lang="es" title="Español">ES</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-fr.html" hreflang="fr" lang="fr" title="Français">FR</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-pt.html" hreflang="pt" lang="pt" title="Português">PT</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-ar.html" hreflang="ar" lang="ar" title="العربية">AR</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-hi.html" hreflang="hi" lang="hi" title="हिन्दी">HI</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-bn.html" hreflang="bn" lang="bn" title="বাংলা">BN</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-ur.html" hreflang="ur" lang="ur" title="اردو">UR</a>
+    <a href="https://serzhyale.github.io/Filler_Android/404-zh.html" hreflang="zh-Hans" lang="zh-Hans" title="简体中文">ZH</a>
+  </nav>
+  <!-- /locales:row -->
   <article class="policy-card">
 <h1 id="not-found">Страница не найдена</h1>
 <p>Такого адреса на сайте Filler нет. Возможно, он набран с ошибкой или устарел.</p>
@@ -69,6 +83,9 @@
       try{localStorage.setItem('sza-lang',k)}catch(e){}
       if(b.getAttribute('aria-pressed')!=='true')location.href=urls[k];
     });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.locale-row a[data-lang]'),function(a){
+    a.addEventListener('click',function(){try{localStorage.setItem('sza-lang',a.getAttribute('data-lang'))}catch(e){}});
   });
 })();
 </script>

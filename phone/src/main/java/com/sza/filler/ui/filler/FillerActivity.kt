@@ -172,11 +172,11 @@ class FillerActivity : AppCompatActivity() {
         about.txtAboutVersion.text = getString(R.string.filler_about_version, version)
         about.txtAboutAuthor.text =
             getString(R.string.filler_about_author, getString(R.string.filler_about_author_name))
-        val language = resources.configuration.locales[0].language
+        val language = FillerProductLinks.siteLanguage(resources.configuration.locales[0])
         val fromPlay = FillerProductLinks.installedFromPlay(this)
         listOf(
             about.txtAboutProductPage to FillerProductLinks.productPage(language),
-            about.txtAboutDocumentation to FillerProductLinks.DOCUMENTATION,
+            about.txtAboutDocumentation to FillerProductLinks.documentation(language),
             about.txtAboutPrivacy to FillerProductLinks.privacyPolicy(language),
             about.txtAboutLicense to FillerProductLinks.LICENSE,
             about.txtAboutSource to FillerProductLinks.REPOSITORY,

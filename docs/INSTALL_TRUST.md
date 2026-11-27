@@ -1,6 +1,8 @@
 # Why Android warns about the Filler APK - and what to tap
 
-Languages: English - [Русский](INSTALL_TRUST-ru.md) - [Українська](INSTALL_TRUST-uk.md)
+<!-- languages -->
+Languages: English - [Русский](INSTALL_TRUST-ru.md) - [Українська](INSTALL_TRUST-uk.md) - [Deutsch](INSTALL_TRUST-de.md) - [Italiano](INSTALL_TRUST-it.md) - [Español](INSTALL_TRUST-es.md) - [Français](INSTALL_TRUST-fr.md) - [Português](INSTALL_TRUST-pt.md) - [العربية](INSTALL_TRUST-ar.md) - [हिन्दी](INSTALL_TRUST-hi.md) - [বাংলা](INSTALL_TRUST-bn.md) - [اردو](INSTALL_TRUST-ur.md) - [简体中文](INSTALL_TRUST-zh.md)
+<!-- /languages -->
 
 Filler is a small free app from an independent developer. When you install the signed APK from GitHub Releases or
 SourceForge instead of Google Play, Android shows a few prompts on the way in. Here is what they are, why they appear,

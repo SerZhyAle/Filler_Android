@@ -18,7 +18,8 @@
         and the SITE-REPRESENTATION pointer, against the two manifests;
       languages: the interface-language sentence of the three landing pages and the three listing sources against the phone
         app's locales;
-      pages: the counts of pages in the SITE-STRUCTURE pointer against the sitemap;
+      pages: the counts of pages in the SITE-STRUCTURE pointer against the sitemap - all its pages, and those of the
+        primary language, which the search threshold counts;
       app-id: every com.sza.* identifier typed in site/*.html, README.md and docs/play/*.md, every Play link and the Play link
         of tools/site/check-site.ps1, against publishedApplicationId; the id written in <code> on each landing page.
     Scope (FILLER-0071, REPO-LAYOUT 0.12 rule 8): the five patterns that read the two SITE-* contract pointers are
@@ -91,6 +92,8 @@ $phoneId = Get-AppId 'phone/build.gradle.kts'
 $wearId = Get-AppId 'wear/build.gradle.kts'
 $sitemap = Read-Text 'site/sitemap.xml'
 $sitemapPages = if ($null -ne $sitemap) { [regex]::Matches($sitemap, '<loc>([^<]+)</loc>').Count } else { $null }
+# a locale variant carries the suffix -<code>; the pages of the primary language carry none (SITE-STRUCTURE section 9 item C)
+$primaryPages = if ($null -ne $sitemap) { @([regex]::Matches($sitemap, '<loc>([^<]+)</loc>') | Where-Object { $_.Groups[1].Value -notmatch '-[a-z]{2}\.html$' }).Count } else { $null }
 if ($unverified.Count -gt 0) {
     foreach ($r in $unverified) { Write-Output "COULD NOT VERIFY - $r" }
     Write-Output "site-facts: COULD NOT VERIFY ($($unverified.Count) input(s) missing or unreadable)"
@@ -114,6 +117,7 @@ $sourceValues = @{
     watchPermissions = $declared.wear.Count
     phoneLocales     = $phoneLocales.Count
     sitemapPages     = $sitemapPages
+    primaryPages     = $primaryPages
 }
 
 # ---- the statements ----
@@ -153,7 +157,7 @@ $claims = @(
     @{ Class = 'languages'; File = 'docs/play/PLAY_LISTING.md'; Lang = 'en'; Rx = 'interface is in (\d+) languages'; Expect = @('phoneLocales') }
     @{ Class = 'languages'; File = 'docs/play/PLAY_LISTING-ru.md'; Lang = 'ru'; Rx = 'Интерфейс приложения для Android доступен на (\d+) языках'; Expect = @('phoneLocales') }
     @{ Class = 'languages'; File = 'docs/play/PLAY_LISTING-uk.md'; Lang = 'uk'; Rx = 'Інтерфейс застосунку для Android доступний (\d+) мовами'; Expect = @('phoneLocales') }
-    @{ Class = 'pages'; File = 'docs/contracts/SITE-STRUCTURE.md'; Lang = 'en'; Rx = '\((\w+) pages against the threshold'; Expect = @('sitemapPages'); Local = $true }
+    @{ Class = 'pages'; File = 'docs/contracts/SITE-STRUCTURE.md'; Lang = 'en'; Rx = '\((\w+) pages in the primary language against the threshold'; Expect = @('primaryPages'); Local = $true }
     @{ Class = 'pages'; File = 'docs/contracts/SITE-STRUCTURE.md'; Lang = 'en'; Rx = 'lists exactly the (\w+) pages'; Expect = @('sitemapPages'); Local = $true }
     @{ Class = 'pages'; File = 'docs/contracts/SITE-STRUCTURE.md'; Lang = 'en'; Rx = 'the sitemap and the (\w+) files agree'; Expect = @('sitemapPages'); Local = $true }
 )

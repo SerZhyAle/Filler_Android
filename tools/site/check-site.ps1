@@ -1,11 +1,12 @@
-﻿#requires -Version 7.0
+#requires -Version 7.0
 <#
 .SYNOPSIS
     Checks the hosted pages under site/ before they are published (owner's order of 2026-11-13, the public presence of Filler).
 .DESCRIPTION
     The pages are hand-written HTML; nothing renders them, so this gate holds what a renderer would:
       - each site/*.html page has one <h1>, a canonical link equal to its own published address (index.html is the root
-        address), the reciprocal hreflang set (en, ru, uk and x-default) and the matching og:url;
+        address), the reciprocal hreflang set (every language of tools/locale/locales.json and x-default), lang and dir
+        of its language, the secondary language row (FILLER-0079, PAGE-STYLE 4.2) and the matching og:url;
       - every relative href and src of every page resolves to a file under site/, and no page loads a remote script,
         image, frame or stylesheet (the privacy statement of the product holds for its site);
       - sitemap.xml lists every page and nothing else, each page of a locale group with its four alternates, and
@@ -79,17 +80,29 @@ $utf8 = New-Object System.Text.UTF8Encoding($false)
 $pages = @(Get-ChildItem -LiteralPath $site -Filter '*.html' -File | Sort-Object Name)
 if ($pages.Count -eq 0) { Write-Host 'site-check: COULD NOT VERIFY (no pages)'; exit 2 }
 
+# The languages of the site are the one list of the product (FILLER-0079): the file suffix is the code, lang and
+# hreflang are the tag.
+$localesPath = Join-Path $Root 'tools/locale/locales.json'
+if (-not (Test-Path -LiteralPath $localesPath -PathType Leaf)) { Write-Host 'site-check: COULD NOT VERIFY (tools/locale/locales.json is missing)'; exit 2 }
+$languages = @(([IO.File]::ReadAllText($localesPath, $utf8) | ConvertFrom-Json).languages)
+$codes = @($languages | ForEach-Object { $_.code })
+$furtherCodes = @($languages | Where-Object { $_.hand.Count -eq 0 } | ForEach-Object { $_.code })
+$language = @{}
+foreach ($entry in $languages) { $language[$entry.code] = $entry }
+function Get-PageName([string]$Stem, [string]$Code) { if ($Code -eq 'en') { return "$Stem.html" }; return "$Stem-$Code.html" }
 # Locale groups: the pages of one group are each other's hreflang alternates. English is the x-default of its group.
-$groups = [ordered]@{
-    privacy = [ordered]@{ en = 'privacy.html'; ru = 'privacy-ru.html'; uk = 'privacy-uk.html' }
-    landing = [ordered]@{ en = 'index.html'; ru = 'index-ru.html'; uk = 'index-uk.html' }
+$groups = [ordered]@{ privacy = [ordered]@{}; landing = [ordered]@{} }
+foreach ($c in $codes) {
+    $groups['privacy'][$c] = Get-PageName 'privacy' $c
+    $groups['landing'][$c] = Get-PageName 'index' $c
 }
 $localeOf = @{}
 $groupOf = @{}
 foreach ($g in $groups.Keys) { foreach ($l in $groups[$g].Keys) { $localeOf[$groups[$g][$l]] = $l; $groupOf[$groups[$g][$l]] = $g } }
 # The not-found pages (S0038): not a locale group of the sitemap. The host serves 404.html for an address it has no page for,
 # at any depth; the two siblings are plain pages with noindex. They carry no canonical and no hreflang.
-$notFound = [ordered]@{ en = '404.html'; ru = '404-ru.html'; uk = '404-uk.html' }
+$notFound = [ordered]@{}
+foreach ($c in $codes) { $notFound[$c] = Get-PageName '404' $c }
 $notFoundLocale = @{}
 foreach ($l in $notFound.Keys) { $notFoundLocale[$notFound[$l]] = $l }
 function Get-PublishedUrl([string]$name) { if ($name -eq 'index.html') { return $base }; return $base + $name }
@@ -111,11 +124,14 @@ foreach ($page in $pages) {
     }
     if ($groupOf.ContainsKey($name)) {
         $set = $groups[$groupOf[$name]]
-        foreach ($pair in @(@('en', $set['en']), @('ru', $set['ru']), @('uk', $set['uk']), @('x-default', $set['en']))) {
-            $link = "<link rel=`"alternate`" hreflang=`"$($pair[0])`" href=`"$(Get-PublishedUrl $pair[1])`">"
-            if (-not $html.Contains($link)) { $findings.Add("$name`: missing hreflang $($pair[0])") }
+        foreach ($c in @($codes) + @('x-default')) {
+            $hreflang = if ($c -eq 'x-default') { $c } else { $language[$c].tag }
+            $targetName = if ($c -eq 'x-default') { $set['en'] } else { $set[$c] }
+            $link = "<link rel=`"alternate`" hreflang=`"$hreflang`" href=`"$(Get-PublishedUrl $targetName)`">"
+            if (-not $html.Contains($link)) { $findings.Add("$name`: missing hreflang $hreflang") }
         }
-        if ($html -notmatch "<html lang=`"$($localeOf[$name])`"") { $findings.Add("$name`: html lang is not $($localeOf[$name])") }
+        $own = $language[$localeOf[$name]]
+        if (-not $html.Contains("<html lang=`"$($own.tag)`" dir=`"$($own.dir)`"")) { $findings.Add("$name`: html lang and dir are not $($own.tag) $($own.dir)") }
     }
     foreach ($m in [regex]::Matches($html, '\s(?:href|src)="([^"]+)"')) {
         $ref = $m.Groups[1].Value
@@ -160,7 +176,7 @@ foreach ($l in $landing.Keys) {
         $obj = $ld | ConvertFrom-Json
         if ($obj.'@type' -ne 'SoftwareApplication') { $findings.Add("$name`: JSON-LD @type is not SoftwareApplication") }
         if ($obj.url -ne $url) { $findings.Add("$name`: JSON-LD url is not $url") }
-        if ($obj.inLanguage -ne $l) { $findings.Add("$name`: JSON-LD inLanguage is not $l") }
+        if ($obj.inLanguage -ne $language[$l].tag) { $findings.Add("$name`: JSON-LD inLanguage is not $($language[$l].tag)") }
         if ($obj.installUrl -ne $playUrl) { $findings.Add("$name`: JSON-LD installUrl is not the Google Play listing") }
     }
     catch { $findings.Add("$name`: JSON-LD does not parse") }
@@ -170,7 +186,9 @@ foreach ($l in $landing.Keys) {
     if ($html.IndexOf('<p class="product-name">') -gt $html.IndexOf('<h1')) { $findings.Add("$name`: the identity block does not come before the h1") }
     $header = [regex]::Match($html, '<header class="site-header">[\s\S]*?</header>').Value
     if (-not $header.Contains('href="#get"')) { $findings.Add("$name`: the header has no link to #get") }
-    if (-not $header.Contains("href=`"$docsUrl`"")) { $findings.Add("$name`: the header has no documentation link") }
+    # the documentation of a language is the README in that language (SITE-STRUCTURE section 8 item B)
+    $docsOf = if ($l -eq 'en') { $docsUrl } else { "https://github.com/SerZhyAle/Filler_Android/blob/main/README_$l.md" }
+    if (-not $header.Contains("href=`"$docsOf`"")) { $findings.Add("$name`: the header has no documentation link ($docsOf)") }
     foreach ($k in @('ru', 'en', 'ua')) { if (-not $header.Contains("data-lang=`"$k`"")) { $findings.Add("$name`: the header has no $k language control") } }
     $get = [regex]::Match($html, '<section class="get" id="get"[\s\S]*?</section>').Value
     if ($get.Length -eq 0) { $findings.Add("$name`: no #get block") }
@@ -243,7 +261,8 @@ else { $findings.Add('assets/common.css: missing') }
 
 # the chrome every page carries (S0038): the skip link, the common layer, the support link in the footer, the brand as a link
 # to the landing (privacy and not-found pages) - each in the page's own language
-$landingHomeHref = @{ en = './'; ru = 'index-ru.html'; uk = 'index-uk.html' }
+$landingHomeHref = @{}
+foreach ($c in $codes) { $landingHomeHref[$c] = if ($c -eq 'en') { './' } else { Get-PageName 'index' $c } }
 foreach ($page in $pages) {
     $name = $page.Name
     $html = $htmlOf[$name]
@@ -251,6 +270,14 @@ foreach ($page in $pages) {
     $l = if ($isNotFound) { $notFoundLocale[$name] } elseif ($localeOf.ContainsKey($name)) { $localeOf[$name] } else { $null }
     if ($null -eq $l) { $findings.Add("$name`: a page that belongs to no locale group of the gate"); continue }
     $kind = if ($isNotFound) { 'notfound' } else { $groupOf[$name] }
+    # the secondary language row (PAGE-STYLE 4.2): a page of RU EN UA lists the further languages, a further page all of them
+    $row = [regex]::Match($html, '<nav class="locale-row"[\s\S]*?</nav>').Value
+    if ($row.Length -eq 0) { $findings.Add("$name`: no language row") }
+    else {
+        $listed = if ($furtherCodes -contains $l) { $codes } else { $furtherCodes }
+        if ([regex]::Matches($row, '<a\s').Count -ne $listed.Count) { $findings.Add("$name`: the language row has $([regex]::Matches($row, '<a\s').Count) link(s), it lists $($listed.Count) language(s)") }
+        foreach ($c in $listed) { if (-not $row.Contains("hreflang=`"$($language[$c].tag)`"")) { $findings.Add("$name`: the language row lacks $($language[$c].tag)") } }
+    }
     if (-not [regex]::IsMatch($html, '<body>\r?\n<a class="btn btn-primary skip-link" href="#main"><span>[^<]+</span></a>\r?\n')) {
         $findings.Add("$name`: the skip link is not the first element of the body")
     }
@@ -292,16 +319,17 @@ foreach ($l in $notFound.Keys) {
     }
 }
 
-# the three languages are one set: the same ids, links and counts
+# the languages are one set: the same ids, links and counts (the language row aside, it differs by design)
 if ($htmlOf.ContainsKey('index.html')) {
     function Get-Shape([string]$html) {
+        $html = [regex]::Replace($html, '<nav class="locale-row"[\s\S]*?</nav>', ' ')
         $ids = @([regex]::Matches($html, '\sid="([^"]+)"') | ForEach-Object { $_.Groups[1].Value }) -join ','
-        $links = @([regex]::Matches($html, '<a\s[^>]*href="([^"]+)"') | ForEach-Object { $_.Groups[1].Value -replace '^privacy(-ru|-uk)?\.html$', 'privacy.html' -replace '/INSTALL_TRUST(-ru|-uk)?\.md$', '/INSTALL_TRUST.md' }) -join ','
+        $links = @([regex]::Matches($html, '<a\s[^>]*href="([^"]+)"') | ForEach-Object { $_.Groups[1].Value -replace '^privacy(-[a-z]+)?\.html$', 'privacy.html' -replace '/INSTALL_TRUST(-[a-z]+)?\.md$', '/INSTALL_TRUST.md' -replace '(?:#readme|/blob/main/README_[a-z]+\.md)$', '#readme' }) -join ','
         $counts = "cards=$([regex]::Matches($html, '<article class="card">').Count) items=$([regex]::Matches($html, '<li>').Count) groups=$([regex]::Matches($html, '<details ').Count) steps=$([regex]::Matches($html, '<ol class="quickstart">[\s\S]*?</ol>').Count)"
         return "$ids|$links|$counts"
     }
     $shapeEn = Get-Shape $htmlOf['index.html']
-    foreach ($l in @('ru', 'uk')) {
+    foreach ($l in @($codes | Where-Object { $_ -ne 'en' })) {
         $n = $landing[$l]
         if ($htmlOf.ContainsKey($n) -and (Get-Shape $htmlOf[$n]) -ne $shapeEn) { $findings.Add("$n`: ids, links or counts differ from index.html") }
     }
@@ -323,8 +351,10 @@ if (Test-Path -LiteralPath $sitemapPath) {
         $file = $pages | Where-Object { (Get-PublishedUrl $_.Name) -eq $loc } | Select-Object -First 1
         if ($file -and $groupOf.ContainsKey($file.Name)) {
             $set = $groups[$groupOf[$file.Name]]
-            foreach ($pair in @(@('en', $set['en']), @('ru', $set['ru']), @('uk', $set['uk']), @('x-default', $set['en']))) {
-                if (-not $blk.Value.Contains("hreflang=`"$($pair[0])`" href=`"$(Get-PublishedUrl $pair[1])`"")) { $findings.Add("sitemap.xml: $loc lacks the $($pair[0]) alternate") }
+            foreach ($c in @($codes) + @('x-default')) {
+                $hreflang = if ($c -eq 'x-default') { $c } else { $language[$c].tag }
+                $targetName = if ($c -eq 'x-default') { $set['en'] } else { $set[$c] }
+                if (-not $blk.Value.Contains("hreflang=`"$hreflang`" href=`"$(Get-PublishedUrl $targetName)`"")) { $findings.Add("sitemap.xml: $loc lacks the $hreflang alternate") }
             }
         }
     }
@@ -487,13 +517,13 @@ else {
     foreach ($p in $pages) {
         if (-not $notFoundLocale.ContainsKey($p.Name) -and -not $rowFor.ContainsKey($p.Name)) { $findings.Add("${heldRel}: no page row for $($p.Name)") }
     }
-    # the three languages of the privacy pages are one set of sections: a language switch keeps the section
+    # the languages of the privacy pages are one set of sections: a language switch keeps the section
     $privacySet = $groups['privacy']
     if ($idsOf.ContainsKey($privacySet['en'])) {
         $enIds = ($idsOf[$privacySet['en']] | Sort-Object) -join ','
-        foreach ($l in @('ru', 'uk')) {
+        foreach ($l in @($codes | Where-Object { $_ -ne 'en' })) {
             $pn = $privacySet[$l]
-            if ($idsOf.ContainsKey($pn) -and (($idsOf[$pn] | Sort-Object) -join ',') -ne $enIds) { $findings.Add("${pn}: the ids differ from $($privacySet['en']) (the anchors of the three languages are one set)") }
+            if ($idsOf.ContainsKey($pn) -and (($idsOf[$pn] | Sort-Object) -join ',') -ne $enIds) { $findings.Add("${pn}: the ids differ from $($privacySet['en']) (the anchors of the languages are one set)") }
         }
     }
 }
@@ -523,7 +553,8 @@ if ($htmlOf.ContainsKey('index.html')) {
     $enHtml = $htmlOf['index.html']
     $enTitle = [regex]::Match($enHtml, '<title>([^<]*)</title>').Groups[1].Value
     $enDesc = [regex]::Match($enHtml, '<meta name="description" content="([^"]*)">').Groups[1].Value
-    $enBody = [regex]::Match($enHtml, '<body[\s\S]*</body>').Value
+    # the language row is generated and carries no sentence of the product, so it is not part of the pinned text
+    $enBody = [regex]::Replace([regex]::Match($enHtml, '<body[\s\S]*</body>').Value, '<nav class="locale-row"[\s\S]*?</nav>', ' ')
     $enText = (Get-VisibleText "$enTitle <p>$enDesc</p> $enBody")
     $sha = [BitConverter]::ToString([Security.Cryptography.SHA256]::HashData($utf8.GetBytes($enText))).Replace('-', '').ToLowerInvariant()
     if ($WritePin) {

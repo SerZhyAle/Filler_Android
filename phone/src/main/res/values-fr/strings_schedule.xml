@@ -67,7 +67,7 @@
     <string name="schedule_history_clear_title">Effacer l\'historique des exécutions ?</string>
     <string name="schedule_history_clear_message">Supprime toutes les exécutions enregistrées. Vos planifications enregistrées sont conservées.</string>
     <string name="schedule_notifications_enable">Autoriser les notifications</string>
-    <string name="schedule_help_notifications_text">Affiché sous Android 13 et versions ultérieures lorsque les notifications sont désactivées. Appuyez pour autoriser les notifications des exécutions planifiées ou ouvrir les paramètres système.</string>
+    <string name="schedule_help_notifications_text">Affiché sous Android 13 et versions ultérieures lorsque les notifications sont désactivées. Touchez pour autoriser les notifications des exécutions planifiées ou ouvrir les paramètres système.</string>
     <string name="schedule_help_pause_all_text">Met en pause toutes les planifications enregistrées en une fois sans les désactiver individuellement, ou les reprend.</string>
     <string name="schedule_help_clear_history_text">Demande confirmation puis efface la liste des exécutions passées tout en conservant vos planifications.</string>
 </resources>

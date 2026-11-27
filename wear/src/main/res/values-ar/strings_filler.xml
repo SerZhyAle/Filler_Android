@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">يملأ المساحة الفارغة في الساعة بملفات مؤقتة، ثم يحذفها. تبقى ملفاتك كما هي.</string>
+    <string name="filler_watch_storage">تخزين الساعة</string>
+    <string name="filler_location">الكتابة في: %1$s</string>
+    <string name="filler_no_place">تخزين الساعة غير متاح الآن.</string>
+    <string name="filler_free_space">المساحة الفارغة: %1$s</string>
+    <string name="filler_free_space_unknown">المساحة الفارغة: غير مقيسة</string>
+    <string name="filler_reserve">محجوزة للنظام: %1$s</string>
+    <string name="filler_reserve_less">ترك مساحة أقل</string>
+    <string name="filler_reserve_more">ترك مساحة أكبر</string>
+    <string name="filler_start">بدء الملء</string>
+    <string name="filler_cancel">إيقاف وحذف الملفات</string>
+    <string name="filler_progress">تمت كتابة %1$s من %2$s</string>
+    <string name="filler_estimate">اكتمل %1$d%% - المتبقي: %2$s</string>
+    <string name="filler_estimate_calculating">اكتمل %1$d%% - جارٍ حساب الوقت المتبقي..</string>
+    <string name="filler_confirm_title">ملء المساحة الفارغة؟</string>
+    <string name="filler_confirm_message">ستتم كتابة نحو %1$s من الملفات المؤقتة في تخزين الساعة، وستبقى %2$s فارغة. تُحذف الملفات عند انتهاء الملء أو إيقافه.</string>
+    <string name="filler_confirm_reserve_lowered">هذا أقل من المعتاد (%1$s)، لذا ستتوفر مساحة أقل للنظام والتطبيقات الأخرى أثناء التشغيل.</string>
+    <string name="filler_confirm_positive">ملء</string>
+    <string name="filler_retry_cleanup">حذف الملفات المتبقية</string>
+    <string name="filler_pending_cleanup">لا تزال ملفات مؤقتة من تشغيل سابق موجودة على الساعة. اضغط على حذف الملفات المتبقية قبل الملء مرة أخرى.</string>
+    <string name="filler_result_done">تم: كُتب %1$s ثم حُذف مجددًا.</string>
+    <string name="filler_result_cancelled">تم إيقاف الملء. حُذفت الملفات المؤقتة.</string>
+    <string name="filler_result_failed">توقفت الكتابة لأن وحدة التخزين أبلغت عن خطأ. حُذفت الملفات المؤقتة.</string>
+    <string name="filler_result_cleanup_incomplete">تعذر حذف بعض الملفات المؤقتة حتى الآن. اضغط على حذف الملفات المتبقية للمحاولة مرة أخرى.</string>
+    <string name="filler_result_cleanup_done">حُذفت الملفات المؤقتة المتبقية.</string>
+    <string name="filler_result_no_place">تخزين الساعة غير متاح الآن. أعد تشغيل الساعة، ثم افتح Filler مرة أخرى.</string>
+    <string name="filler_result_no_access">الكتابة في تخزين الساعة غير مسموح بها الآن. أعد تشغيل الساعة، ثم افتح Filler مرة أخرى.</string>
+    <string name="filler_result_measurement_unavailable">تعذر قياس المساحة الفارغة. افتح Filler مرة أخرى بعد لحظات.</string>
+    <string name="filler_result_insufficient_space">لا توجد مساحة فارغة فوق الجزء المحجوز للنظام. حرّر مساحة على الساعة أو اترك مساحة فارغة أقل.</string>
+    <string name="filler_result_busy">الملء قيد التشغيل بالفعل.</string>
+    <string name="filler_result_not_started">لم تسمح الساعة ببدء الملء. افتح Filler وحاول مرة أخرى.</string>
+    <string name="filler_notification_channel">الملء</string>
+    <string name="filler_notification_title">ملء المساحة الفارغة</string>
+    <string name="filler_notification_stop">إيقاف</string>
+    <string name="filler_about">حول</string>
+    <string name="filler_about_version">الإصدار: %1$s</string>
+    <string name="filler_about_author">المؤلف: %1$s</string>
+    <string name="filler_about_phone_app">يوجد أيضًا تطبيق Filler لهواتف Android. يملأ تخزين الهاتف أو بطاقة ذاكرة.</string>
+    <string name="filler_about_product_page">صفحة المنتج: %1$s</string>
+    <string name="filler_about_documentation">التوثيق: %1$s</string>
+    <string name="filler_about_privacy">سياسة الخصوصية: %1$s</string>
+    <string name="filler_about_close">إغلاق</string>
+</resources>

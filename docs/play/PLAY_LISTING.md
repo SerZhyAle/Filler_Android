@@ -45,6 +45,11 @@ The Android app's interface is in 13 languages.
 
 ## Console fields (2026-11-13)
 
+The listing sources of the other product languages are the `PLAY_LISTING-<code>.md` files beside this one (ru and uk
+hand-written, the rest rendered by `tools/locale/render-translations.ps1`, `FILLER-0079`, 2026-11-27). The console
+holds en-US, ru-RU and uk only; entering the ten further listing languages (the `play` codes of
+`tools/locale/locales.json`) is a console step of FILLER-0022.
+
 Entered in the Play Console for `com.sza.filler` (app 4975443931674740940) from this file and its two translations: App
 name, short and full description in en-US (default), ru-RU and uk, re-entered the same day after the rename and the
 reserve sentence of S0005 (the counters read 26, 73, 1348 / 26, 74, 1438 / 26, 73, 1405; on 2026-11-14, S0039, the interface-language line of the three

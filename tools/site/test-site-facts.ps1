@@ -27,9 +27,9 @@ $pristine = Join-Path $work 'pristine'
 $utf8 = [System.Text.UTF8Encoding]::new($false)
 
 function Copy-Subset([string]$From, [string]$To) {
-    foreach ($rel in 'site', 'README.md', 'tools/site/check-site.ps1', 'phone/build.gradle.kts', 'wear/build.gradle.kts',
+    foreach ($rel in @(Get-ChildItem -LiteralPath $From -Filter 'README_*.md' -File | ForEach-Object { $_.Name }) + @('site', 'README.md', 'tools/locale/locales.json', 'filler-core/src/main/java/com/sza/filler/about/FillerProductLinks.kt', 'tools/site/check-site.ps1', 'phone/build.gradle.kts', 'wear/build.gradle.kts',
         'phone/src/main/AndroidManifest.xml', 'wear/src/main/AndroidManifest.xml', 'docs/site-held-addresses.jsonl',
-        'docs/SPECIFICATION_FAMILY_MAP_ROW.md', 'docs/play', 'docs/contracts/SITE-STRUCTURE.md', 'docs/contracts/SITE-REPRESENTATION.md') {
+        'docs/SPECIFICATION_FAMILY_MAP_ROW.md', 'docs/play', 'docs/contracts/SITE-STRUCTURE.md', 'docs/contracts/SITE-REPRESENTATION.md')) {
         $dst = Join-Path $To $rel
         New-Item -ItemType Directory -Force -Path (Split-Path -Parent $dst) | Out-Null
         Copy-Item -LiteralPath (Join-Path $From $rel) -Destination $dst -Recurse -Force
@@ -66,14 +66,14 @@ $wearManifest = 'wear/src/main/AndroidManifest.xml'
 $perm = '    <uses-permission android:name="android.permission.{0}" />'
 
 $cases = @(
-    @{ Name = 'site pass: the tree as it is'; Gate = 'site'; Exit = 0; Verdict = $sitePass; Expect = @('held addresses: 5 holder\(s\), 6 page row\(s\)'); Mutate = { param($t) } }
+    @{ Name = 'site pass: the tree as it is'; Gate = 'site'; Exit = 0; Verdict = $sitePass; Expect = @('held addresses: 43 holder\(s\), 26 page row\(s\)'); Mutate = { param($t) } }
     @{ Name = 'held: list missing'; Gate = 'site'; Exit = 1; Verdict = $siteFail
        Expect = @('docs/site-held-addresses\.jsonl: missing'); Mutate = { param($t) Remove-Item -LiteralPath (Join-Path $t $list) } }
     @{ Name = 'held: line is no JSON'; Gate = 'site'; Exit = 1; Verdict = $siteFail
        Expect = @('site-held-addresses\.jsonl:\d+: not one JSON object'); Mutate = { param($t) Add-File $t $list ([IO.File]::ReadAllText((Join-Path $t $list)) + "{not json`n") } }
     @{ Name = 'held: address is no page'; Gate = 'site'; Exit = 1; Verdict = $siteFail
-       Expect = @('H01 holds .*privacy-de\.html, which is not a page of the site')
-       Mutate = { param($t) Edit-Text $t $list '("id":"H01".*?"address":")[^"]+' '${1}https://serzhyale.github.io/Filler_Android/privacy-de.html' } }
+       Expect = @('H01 holds .*privacy-xx\.html, which is not a page of the site')
+       Mutate = { param($t) Edit-Text $t $list '("id":"H01".*?"address":")[^"]+' '${1}https://serzhyale.github.io/Filler_Android/privacy-xx.html' } }
     @{ Name = 'held: fragment is no id'; Gate = 'site'; Exit = 1; Verdict = $siteFail
        Expect = @("H01 holds .*privacy\.html#nowhere, and privacy\.html has no id 'nowhere'")
        Mutate = { param($t) Edit-Text $t $list '("id":"H01".*?"address":"[^"]+)' '${1}#nowhere' } }
@@ -106,13 +106,13 @@ $cases = @(
        Expect = @("privacy\.html: the anchor 'permissions' is not an id of the page \(it is frozen since 21edc3c\)")
        Mutate = { param($t) Edit-Text $t 'site/privacy.html' 'id="permissions"' 'id="permission-list"' } }
     @{ Name = 'anchor: landing anchor is no id'; Gate = 'site'; Exit = 1; Verdict = $siteFail
-       Expect = @("index-uk\.html: the anchor 'limits' is not an id of the page \(it is listed\)")
+       Expect = @("index-uk\.html: the anchor 'limits' is not an id of the page \(it is frozen since 3f77140\)")
        Mutate = { param($t) Edit-Text $t 'site/index-uk.html' 'id="limits"' 'id="obmezhennia"' } }
     @{ Name = 'anchor: page without a row'; Gate = 'site'; Exit = 1; Verdict = $siteFail
        Expect = @('no page row for index-uk\.html'); Mutate = { param($t) Edit-Text $t $list '(?m)^\{"kind":"page","page":"index-uk\.html".*\r?\n' '' } }
     @{ Name = 'anchor: row of a page that does not exist'; Gate = 'site'; Exit = 1; Verdict = $siteFail
-       Expect = @('page row privacy-de\.html names no page of the site')
-       Mutate = { param($t) Edit-Text $t $list '"page":"privacy-uk\.html"' '"page":"privacy-de.html"' } }
+       Expect = @('page row privacy-xx\.html names no page of the site')
+       Mutate = { param($t) Edit-Text $t $list '"page":"privacy-uk\.html"' '"page":"privacy-xx.html"' } }
     @{ Name = 'anchor: served page without an answer date'; Gate = 'site'; Exit = 1; Verdict = $siteFail
        Expect = @('privacy-ru\.html is served from 21edc3c and has no answered200 date')
        Mutate = { param($t) Edit-Text $t $list '("page":"privacy-ru\.html","servedFrom":"21edc3c","answered200":)"2026-11-13"' '${1}null' } }
@@ -127,7 +127,7 @@ $cases = @(
        Mutate = { param($t) Edit-Text $t 'site/index-ru.html' 'id="support"' 'id="podderzhka"' } }
 
     @{ Name = 'facts pass: the tree as it is'; Gate = 'facts'; Exit = 0; Verdict = $factsPass
-       Expect = @('phone 5 and watch 4 permission\(s\), 13 phone locale\(s\), 3 watch locale\(s\), 6 page\(s\)'); Mutate = { param($t) } }
+       Expect = @('phone 5 and watch 4 permission\(s\), 13 phone locale\(s\), 13 watch locale\(s\), 26 page\(s\)'); Mutate = { param($t) } }
     @{ Name = 'permissions: phone manifest declares a sixth'; Gate = 'facts'; Exit = 1; Verdict = $factsFail
        Expect = @('site/index\.html says five \(5\), the source phonePermissions is 6', 'docs/play/PLAY_DATA_SAFETY\.md says five \(5\), the source phonePermissions is 6')
        Mutate = { param($t) Edit-Text $t $phoneManifest '(?m)^(\s*<uses-permission android:name="android\.permission\.POST_NOTIFICATIONS" />)' ('${1}' + "`n" + ($perm -f 'VIBRATE')) } }
@@ -162,8 +162,8 @@ $cases = @(
        Mutate = { param($t) Edit-Text $t 'site/index.html' "The Android app's interface is in 13 languages\." 'The interface is in English, Russian and Ukrainian.' } }
     @{ Name = 'languages: the listing says 3'; Gate = 'facts'; Exit = 1; Verdict = $factsFail
        Expect = @('docs/play/PLAY_LISTING\.md says 3 \(3\), the source phoneLocales is 13'); Mutate = { param($t) Edit-Text $t 'docs/play/PLAY_LISTING.md' 'interface is in 13 languages' 'interface is in 3 languages' } }
-    @{ Name = 'pages: the pointer counts seven'; Gate = 'facts'; Exit = 1; Verdict = $factsFail
-       Expect = @('docs/contracts/SITE-STRUCTURE\.md says seven \(7\), the source sitemapPages is 6'); Mutate = { param($t) Edit-Text $t 'docs/contracts/SITE-STRUCTURE.md' 'exactly the six pages' 'exactly the seven pages' } }
+    @{ Name = 'pages: the pointer counts one more'; Gate = 'facts'; Exit = 1; Verdict = $factsFail
+       Expect = @('docs/contracts/SITE-STRUCTURE\.md says 27 \(27\), the source sitemapPages is 26'); Mutate = { param($t) Edit-Text $t 'docs/contracts/SITE-STRUCTURE.md' 'exactly the 26 pages' 'exactly the 27 pages' } }
     @{ Name = 'app-id: the README types another id'; Gate = 'facts'; Exit = 1; Verdict = $factsFail
        Expect = @('README\.md types com\.sza\.fillers, the application id is com\.sza\.filler'); Mutate = { param($t) Edit-Text $t 'README.md' 'com\.sza\.filler' 'com.sza.fillers' } }
     @{ Name = 'app-id: a Play link of another app'; Gate = 'facts'; Exit = 1; Verdict = $factsFail

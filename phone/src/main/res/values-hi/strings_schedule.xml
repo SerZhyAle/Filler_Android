@@ -30,7 +30,7 @@
     <string name="scheduled_ops_fill_confirm_title">भरना शेड्यूल करें?</string>
     <string name="scheduled_ops_fill_confirm_message">हर बार चलने पर %2$s पर फ़ोल्डर %1$s में अस्थायी फ़ाइलें तब तक लिखी जाती हैं जब तक %3$s खाली न रह जाए, फिर उन्हें हटा दिया जाता है। आपकी अपनी फ़ाइलें जैसी हैं वैसी ही रहती हैं।</string>
     <string name="schedule_confirm_cap">एक दिन में अधिकतम एक शेड्यूल किया गया भरना चलता है।</string>
-    <string name="schedule_not_usable">भरने के लिए अंदरूनी स्टोरेज या मेमोरी कार्ड पर ऐसा फ़ोल्डर चाहिए जिसमें अभी लिखा जा सके। स्टोरेज कनेक्ट करें या कोई दूसरा फ़ोल्डर चुनें।</string>
+    <string name="schedule_not_usable">भरने के लिए आंतरिक स्टोरेज या मेमोरी कार्ड पर ऐसा फ़ोल्डर चाहिए जिसमें अभी लिखा जा सके। स्टोरेज कनेक्ट करें या कोई दूसरा फ़ोल्डर चुनें।</string>
     <string name="schedule_history_title">इतिहास</string>
     <string name="schedule_history_empty">अभी कोई शेड्यूल किया गया रन नहीं हुआ।</string>
     <string name="schedule_history_head">%1$s - %2$s</string>
@@ -55,19 +55,19 @@
     <string name="schedule_help_editor_label">एडिटर</string>
     <string name="schedule_help_editor_text">फ़ोल्डर चुनें फ़ोल्डर चुनता है, समय घंटा और मिनट तय करता है, दोहराएँ तय करता है कि दो रन के बीच कितने दिन हों। सहेजें फ़ोल्डर और खाली रखी जाने वाली जगह बताते हुए पुष्टि माँगता है, और केवल वही फ़ोल्डर सहेजता है जिसमें अभी लिखा जा सके। रद्द करें कुछ नहीं बदलता।</string>
     <string name="schedule_help_list_label">शेड्यूल</string>
-    <string name="schedule_help_list_text">प्रत्येक शेड्यूल कार्ड में फ़ोल्डर, अंतराल, समय और अगला रन दिखता है। चेकबॉक्स शेड्यूल चालू या बंद करता है, अभी चलाएं तुरंत शुरू करता है, संपादित करें बदलता है और हटाएं इसे हटाता है।</string>
+    <string name="schedule_help_list_text">प्रत्येक शेड्यूल कार्ड में फ़ोल्डर, अंतराल, समय और अगला रन दिखता है। चेकबॉक्स शेड्यूल चालू या बंद करता है, अभी चलाएँ उसे तुरंत शुरू करता है, बदलें से उसमें बदलाव होता है और हटाएँ उसे हटाता है।</string>
     <string name="schedule_help_history_text">हर शेड्यूल किया गया रन, नया सबसे ऊपर: कब शुरू हुआ, कौन सा फ़ोल्डर और कैसे समाप्त हुआ। छोड़ा गया या विफल रन कारण बताता है, और सिस्टम द्वारा देर से शुरू किया गया रन यह बताता है। रन के लिए स्क्रीन के सामने किसी की ज़रूरत नहीं, और चल रहा रन एक सूचना दिखाता है।</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
-    <string name="schedule_run_now">अभी चलाएं</string>
-    <string name="schedule_run_now_started">%1$s के लिए निर्धारित भराव शुरू हो रहा है..</string>
+    <string name="schedule_run_now">अभी चलाएँ</string>
+    <string name="schedule_run_now_started">%1$s के लिए शेड्यूल किया गया भरना शुरू हो रहा है..</string>
     <string name="schedule_pause_all">सभी रोकें</string>
     <string name="schedule_resume_all">सभी फिर से शुरू करें</string>
     <string name="schedule_item_paused">रुका हुआ</string>
-    <string name="schedule_history_clear">इतिहास साफ करें</string>
-    <string name="schedule_history_clear_title">चलाने का इतिहास साफ करें?</string>
+    <string name="schedule_history_clear">इतिहास साफ़ करें</string>
+    <string name="schedule_history_clear_title">रन का इतिहास साफ़ करें?</string>
     <string name="schedule_history_clear_message">सभी दर्ज किए गए पुराने रन हटाता है। आपके सहेजे गए शेड्यूल बने रहते हैं।</string>
-    <string name="schedule_notifications_enable">सूचनाएं अनुमति दें</string>
-    <string name="schedule_help_notifications_text">Android 13 और बाद के संस्करणों पर सूचना अनुमति बंद होने पर दिखता है। चल रहे निर्धारित भराव की सूचनाओं की अनुमति देने या सेटिंग्स खोलने के लिए टैप करें।</string>
+    <string name="schedule_notifications_enable">सूचनाओं की अनुमति दें</string>
+    <string name="schedule_help_notifications_text">Android 13 और बाद के संस्करणों पर सूचना अनुमति बंद होने पर दिखता है। चल रहे शेड्यूल किए गए भरने की सूचनाओं की अनुमति देने या सेटिंग्स खोलने के लिए टैप करें।</string>
     <string name="schedule_help_pause_all_text">प्रत्येक को अलग से बंद किए बिना सभी सहेजे गए शेड्यूल को एक साथ रोकता है या फिर से शुरू करता है।</string>
-    <string name="schedule_help_clear_history_text">पुष्टि मांगता है और सहेजे गए शेड्यूल को रखे हुए पिछले रन की सूची साफ करता है।</string>
+    <string name="schedule_help_clear_history_text">पुष्टि माँगता है और सहेजे गए शेड्यूल को रखे हुए पिछले रन की सूची साफ़ करता है।</string>
 </resources>

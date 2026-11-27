@@ -158,11 +158,11 @@ class MainActivity : ComponentActivity() {
         findViewById<TextView>(R.id.txtFillerAboutVersion).text = getString(R.string.filler_about_version, version)
         findViewById<TextView>(R.id.txtFillerAboutAuthor).text =
             getString(R.string.filler_about_author, getString(R.string.filler_about_author_name))
-        val language = resources.configuration.locales[0].language
+        val language = FillerProductLinks.siteLanguage(resources.configuration.locales[0])
         findViewById<TextView>(R.id.txtFillerAboutProductPage).text =
             getString(R.string.filler_about_product_page, FillerProductLinks.productPage(language))
         findViewById<TextView>(R.id.txtFillerAboutDocumentation).text =
-            getString(R.string.filler_about_documentation, FillerProductLinks.DOCUMENTATION)
+            getString(R.string.filler_about_documentation, FillerProductLinks.documentation(language))
         findViewById<TextView>(R.id.txtFillerAboutPrivacy).text =
             getString(R.string.filler_about_privacy, FillerProductLinks.privacyPolicy(language))
         val companion = FillerProductLinks.companionPage(FillerProductLinks.installedFromPlay(this), language)

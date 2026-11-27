@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Remplit l\'espace libre de la montre avec des fichiers temporaires, puis les supprime. Vos propres fichiers restent intacts.</string>
+    <string name="filler_watch_storage">stockage de la montre</string>
+    <string name="filler_location">Écrit dans : %1$s</string>
+    <string name="filler_no_place">Le stockage de la montre n\'est pas disponible pour le moment.</string>
+    <string name="filler_free_space">Espace libre : %1$s</string>
+    <string name="filler_free_space_unknown">Espace libre : non mesuré</string>
+    <string name="filler_reserve">Réservé au système : %1$s</string>
+    <string name="filler_reserve_less">Laisser moins d\'espace libre</string>
+    <string name="filler_reserve_more">Laisser plus d\'espace libre</string>
+    <string name="filler_start">Lancer le remplissage</string>
+    <string name="filler_cancel">Arrêter et supprimer les fichiers</string>
+    <string name="filler_progress">%1$s écrits sur %2$s</string>
+    <string name="filler_estimate">%1$d %% terminé, temps restant : %2$s</string>
+    <string name="filler_estimate_calculating">%1$d %% terminé, temps restant : calcul..</string>
+    <string name="filler_confirm_title">Remplir l\'espace libre ?</string>
+    <string name="filler_confirm_message">Environ %1$s de fichiers temporaires seront écrits dans le stockage de la montre, et %2$s resteront libres. Les fichiers sont supprimés à la fin ou à l\'arrêt du remplissage.</string>
+    <string name="filler_confirm_reserve_lowered">C\'est moins que la valeur habituelle (%1$s) : le système et les autres applications auront moins de place pendant l\'exécution.</string>
+    <string name="filler_confirm_positive">Remplir</string>
+    <string name="filler_retry_cleanup">Supprimer les fichiers restants</string>
+    <string name="filler_pending_cleanup">Des fichiers temporaires d\'une exécution précédente se trouvent encore sur la montre. Touchez Supprimer les fichiers restants avant de remplir à nouveau.</string>
+    <string name="filler_result_done">Terminé : %1$s écrits puis supprimés.</string>
+    <string name="filler_result_cancelled">Remplissage arrêté. Les fichiers temporaires ont été supprimés.</string>
+    <string name="filler_result_failed">L\'écriture s\'est arrêtée car le stockage a signalé une erreur. Les fichiers temporaires ont été supprimés.</string>
+    <string name="filler_result_cleanup_incomplete">Certains fichiers temporaires n\'ont pas encore pu être supprimés. Touchez Supprimer les fichiers restants pour réessayer.</string>
+    <string name="filler_result_cleanup_done">Les fichiers temporaires restants ont été supprimés.</string>
+    <string name="filler_result_no_place">Le stockage de la montre n\'est pas disponible pour le moment. Redémarrez la montre, puis rouvrez Filler.</string>
+    <string name="filler_result_no_access">L\'écriture dans le stockage de la montre n\'est pas autorisée pour le moment. Redémarrez la montre, puis rouvrez Filler.</string>
+    <string name="filler_result_measurement_unavailable">L\'espace libre n\'a pas pu être mesuré. Rouvrez Filler dans un instant.</string>
+    <string name="filler_result_insufficient_space">Il n\'y a pas d\'espace libre au-delà de la part réservée au système. Libérez de l\'espace sur la montre ou laissez moins d\'espace libre.</string>
+    <string name="filler_result_busy">Le remplissage est déjà en cours.</string>
+    <string name="filler_result_not_started">La montre n\'a pas autorisé le démarrage du remplissage. Ouvrez Filler et réessayez.</string>
+    <string name="filler_notification_channel">Remplissage</string>
+    <string name="filler_notification_title">Remplissage de l\'espace libre</string>
+    <string name="filler_notification_stop">Arrêter</string>
+    <string name="filler_about">À propos</string>
+    <string name="filler_about_version">Version : %1$s</string>
+    <string name="filler_about_author">Auteur : %1$s</string>
+    <string name="filler_about_phone_app">Filler existe aussi comme application pour les téléphones Android. Elle remplit le stockage du téléphone ou une carte mémoire.</string>
+    <string name="filler_about_product_page">Page du produit : %1$s</string>
+    <string name="filler_about_documentation">Documentation : %1$s</string>
+    <string name="filler_about_privacy">Politique de confidentialité : %1$s</string>
+    <string name="filler_about_close">Fermer</string>
+</resources>

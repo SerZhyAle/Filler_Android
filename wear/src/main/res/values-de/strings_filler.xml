@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Füllt den freien Speicher der Uhr mit temporären Dateien und löscht sie dann. Ihre eigenen Dateien bleiben unverändert.</string>
+    <string name="filler_watch_storage">Speicher der Uhr</string>
+    <string name="filler_location">Schreibt in: %1$s</string>
+    <string name="filler_no_place">Der Speicher der Uhr ist derzeit nicht verfügbar.</string>
+    <string name="filler_free_space">Freier Speicher: %1$s</string>
+    <string name="filler_free_space_unknown">Freier Speicher: nicht gemessen</string>
+    <string name="filler_reserve">Für das System freigehalten: %1$s</string>
+    <string name="filler_reserve_less">Weniger frei lassen</string>
+    <string name="filler_reserve_more">Mehr frei lassen</string>
+    <string name="filler_start">Füllen starten</string>
+    <string name="filler_cancel">Stoppen und Dateien löschen</string>
+    <string name="filler_progress">%1$s von %2$s geschrieben</string>
+    <string name="filler_estimate">%1$d %% erledigt, verbleibende Zeit: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d %% erledigt, verbleibende Zeit: wird berechnet..</string>
+    <string name="filler_confirm_title">Freien Speicher füllen?</string>
+    <string name="filler_confirm_message">Etwa %1$s temporäre Dateien werden in den Speicher der Uhr geschrieben, %2$s bleiben frei. Die Dateien werden gelöscht, wenn das Füllen endet oder gestoppt wird.</string>
+    <string name="filler_confirm_reserve_lowered">Das ist weniger als die üblichen %1$s, daher haben das System und andere Apps während des Laufs weniger Platz.</string>
+    <string name="filler_confirm_positive">Füllen</string>
+    <string name="filler_retry_cleanup">Restliche Dateien löschen</string>
+    <string name="filler_pending_cleanup">Temporäre Dateien eines früheren Laufs sind noch auf der Uhr. Tippen Sie auf Restliche Dateien löschen, bevor Sie erneut füllen.</string>
+    <string name="filler_result_done">Fertig: %1$s geschrieben und wieder gelöscht.</string>
+    <string name="filler_result_cancelled">Füllen gestoppt. Die temporären Dateien wurden gelöscht.</string>
+    <string name="filler_result_failed">Das Schreiben wurde gestoppt, weil der Speicher einen Fehler gemeldet hat. Die temporären Dateien wurden gelöscht.</string>
+    <string name="filler_result_cleanup_incomplete">Einige temporäre Dateien konnten noch nicht gelöscht werden. Tippen Sie auf Restliche Dateien löschen, um es erneut zu versuchen.</string>
+    <string name="filler_result_cleanup_done">Die restlichen temporären Dateien wurden gelöscht.</string>
+    <string name="filler_result_no_place">Der Speicher der Uhr ist derzeit nicht verfügbar. Starten Sie die Uhr neu und öffnen Sie Filler wieder.</string>
+    <string name="filler_result_no_access">Das Schreiben in den Speicher der Uhr ist gerade nicht erlaubt. Starten Sie die Uhr neu und öffnen Sie Filler wieder.</string>
+    <string name="filler_result_measurement_unavailable">Der freie Speicher konnte nicht gemessen werden. Öffnen Sie Filler gleich noch einmal.</string>
+    <string name="filler_result_insufficient_space">Über dem für das System freigehaltenen Teil ist kein freier Speicher vorhanden. Geben Sie Speicher auf der Uhr frei oder lassen Sie weniger frei.</string>
+    <string name="filler_result_busy">Das Füllen läuft bereits.</string>
+    <string name="filler_result_not_started">Die Uhr hat den Start des Füllens nicht erlaubt. Öffnen Sie Filler und versuchen Sie es erneut.</string>
+    <string name="filler_notification_channel">Füllen</string>
+    <string name="filler_notification_title">Freier Speicher wird gefüllt</string>
+    <string name="filler_notification_stop">Stoppen</string>
+    <string name="filler_about">Über Filler</string>
+    <string name="filler_about_version">Version: %1$s</string>
+    <string name="filler_about_author">Autor: %1$s</string>
+    <string name="filler_about_phone_app">Filler gibt es auch als App für Android-Telefone. Sie füllt den Telefonspeicher oder eine Speicherkarte.</string>
+    <string name="filler_about_product_page">Produktseite: %1$s</string>
+    <string name="filler_about_documentation">Dokumentation: %1$s</string>
+    <string name="filler_about_privacy">Datenschutzerklärung: %1$s</string>
+    <string name="filler_about_close">Schließen</string>
+</resources>

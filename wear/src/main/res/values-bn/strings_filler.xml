@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">ঘড়ির খালি জায়গা অস্থায়ী ফাইল দিয়ে ভরে, তারপর সেগুলো মুছে দেয়। আপনার নিজের ফাইল যেমন আছে তেমনই থাকে।</string>
+    <string name="filler_watch_storage">ঘড়ির স্টোরেজ</string>
+    <string name="filler_location">যেখানে লেখে: %1$s</string>
+    <string name="filler_no_place">ঘড়ির স্টোরেজ এখন পাওয়া যাচ্ছে না।</string>
+    <string name="filler_free_space">খালি জায়গা: %1$s</string>
+    <string name="filler_free_space_unknown">খালি জায়গা: মাপা হয়নি</string>
+    <string name="filler_reserve">সিস্টেমের জন্য খালি রাখা: %1$s</string>
+    <string name="filler_reserve_less">কম জায়গা খালি রাখুন</string>
+    <string name="filler_reserve_more">বেশি জায়গা খালি রাখুন</string>
+    <string name="filler_start">ভরা শুরু করুন</string>
+    <string name="filler_cancel">থামান ও ফাইল মুছুন</string>
+    <string name="filler_progress">%2$s-এর মধ্যে %1$s লেখা হয়েছে</string>
+    <string name="filler_estimate">%1$d%% সম্পন্ন, বাকি সময়: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% সম্পন্ন, বাকি সময় হিসাব করা হচ্ছে..</string>
+    <string name="filler_confirm_title">খালি জায়গা ভরবেন?</string>
+    <string name="filler_confirm_message">ঘড়ির স্টোরেজে প্রায় %1$s অস্থায়ী ফাইল লেখা হবে, এবং %2$s খালি থাকবে। ভরা শেষ হলে বা থামলে ফাইলগুলো মুছে ফেলা হয়।</string>
+    <string name="filler_confirm_reserve_lowered">এটি স্বাভাবিক %1$s-এর চেয়ে কম, তাই চলার সময় সিস্টেম ও অন্যান্য অ্যাপের জায়গা কম থাকবে।</string>
+    <string name="filler_confirm_positive">ভরুন</string>
+    <string name="filler_retry_cleanup">অবশিষ্ট ফাইল মুছুন</string>
+    <string name="filler_pending_cleanup">আগের রানের অস্থায়ী ফাইল এখনও ঘড়িতে রয়েছে। আবার ভরার আগে অবশিষ্ট ফাইল মুছুন-এ ট্যাপ করুন।</string>
+    <string name="filler_result_done">সম্পন্ন: %1$s লেখা হয়েছে এবং আবার মুছে ফেলা হয়েছে।</string>
+    <string name="filler_result_cancelled">ভরা থামানো হয়েছে। অস্থায়ী ফাইলগুলো মুছে ফেলা হয়েছে।</string>
+    <string name="filler_result_failed">স্টোরেজ একটি ত্রুটি জানানোয় লেখা থেমে গেছে। অস্থায়ী ফাইলগুলো মুছে ফেলা হয়েছে।</string>
+    <string name="filler_result_cleanup_incomplete">কিছু অস্থায়ী ফাইল এখনও মুছে ফেলা যায়নি। আবার চেষ্টা করতে অবশিষ্ট ফাইল মুছুন-এ ট্যাপ করুন।</string>
+    <string name="filler_result_cleanup_done">অবশিষ্ট অস্থায়ী ফাইলগুলো মুছে ফেলা হয়েছে।</string>
+    <string name="filler_result_no_place">ঘড়ির স্টোরেজ এখন পাওয়া যাচ্ছে না। ঘড়ি রিস্টার্ট করে আবার Filler খুলুন।</string>
+    <string name="filler_result_no_access">এখন ঘড়ির স্টোরেজে লেখার অনুমতি নেই। ঘড়ি রিস্টার্ট করে আবার Filler খুলুন।</string>
+    <string name="filler_result_measurement_unavailable">খালি জায়গা মাপা যায়নি। একটু পরে আবার Filler খুলুন।</string>
+    <string name="filler_result_insufficient_space">সিস্টেমের জন্য রাখা অংশের বাইরে কোনো খালি জায়গা নেই। ঘড়িতে জায়গা খালি করুন বা কম জায়গা খালি রাখুন।</string>
+    <string name="filler_result_busy">ভরা ইতিমধ্যে চলছে।</string>
+    <string name="filler_result_not_started">ঘড়ি ভরা শুরু করতে দেয়নি। Filler খুলে আবার চেষ্টা করুন।</string>
+    <string name="filler_notification_channel">ভরা</string>
+    <string name="filler_notification_title">খালি জায়গা ভরা হচ্ছে</string>
+    <string name="filler_notification_stop">থামান</string>
+    <string name="filler_about">Filler সম্পর্কে</string>
+    <string name="filler_about_version">সংস্করণ: %1$s</string>
+    <string name="filler_about_author">লেখক: %1$s</string>
+    <string name="filler_about_phone_app">Android ফোনের জন্যও একটি Filler অ্যাপ আছে। এটি ফোনের স্টোরেজ বা মেমরি কার্ড ভরে।</string>
+    <string name="filler_about_product_page">পণ্যের পৃষ্ঠা: %1$s</string>
+    <string name="filler_about_documentation">নথিপত্র: %1$s</string>
+    <string name="filler_about_privacy">গোপনীয়তা নীতি: %1$s</string>
+    <string name="filler_about_close">বন্ধ করুন</string>
+</resources>

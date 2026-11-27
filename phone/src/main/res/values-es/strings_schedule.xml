@@ -55,19 +55,19 @@
     <string name="schedule_help_editor_label">Editor</string>
     <string name="schedule_help_editor_text">Elegir carpeta elige la carpeta, Hora fija la hora y el minuto, Repetir fija cuántos días hay entre dos ejecuciones. Guardar pide confirmación, nombrando la carpeta y el espacio que queda libre, y solo guarda una carpeta que admita escritura ahora. Cancelar no cambia nada.</string>
     <string name="schedule_help_list_label">Programaciones</string>
-    <string name="schedule_help_list_text">Cada tarjeta de horario muestra su carpeta, frecuencia, hora y próxima ejecución. La casilla activa o desactiva el horario, Ejecutar ahora lo inicia de inmediato, Editar lo modifica y Eliminar lo borra.</string>
+    <string name="schedule_help_list_text">Cada tarjeta de programación muestra su carpeta, frecuencia, hora y próxima ejecución. La casilla activa o desactiva la programación, Ejecutar ahora la inicia de inmediato, Editar la modifica y Eliminar la borra.</string>
     <string name="schedule_help_history_text">Cada ejecución programada, la más reciente primero: cuándo empezó, qué carpeta y cómo terminó. Una ejecución omitida o fallida dice por qué, y una que el sistema inició tarde lo indica. Una ejecución no necesita a nadie frente a la pantalla, y una en curso muestra una notificación.</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
     <string name="schedule_run_now">Ejecutar ahora</string>
-    <string name="schedule_run_now_started">Iniciando llenado programado para %1$s..</string>
+    <string name="schedule_run_now_started">Iniciando relleno programado para %1$s..</string>
     <string name="schedule_pause_all">Pausar todo</string>
     <string name="schedule_resume_all">Reanudar todo</string>
     <string name="schedule_item_paused">En pausa</string>
     <string name="schedule_history_clear">Borrar historial</string>
     <string name="schedule_history_clear_title">¿Borrar el historial de ejecuciones?</string>
-    <string name="schedule_history_clear_message">Elimina todos los registros de ejecuciones anteriores. Tus horarios guardados se mantienen.</string>
+    <string name="schedule_history_clear_message">Elimina todos los registros de ejecuciones anteriores. Tus programaciones guardadas se mantienen.</string>
     <string name="schedule_notifications_enable">Permitir notificaciones</string>
     <string name="schedule_help_notifications_text">Se muestra en Android 13 y posteriores cuando las notificaciones están desactivadas. Tócalo para permitir notificaciones de ejecuciones programadas o abrir los ajustes del sistema.</string>
-    <string name="schedule_help_pause_all_text">Pausa todos los horarios guardados a la vez sin desactivar cada uno, o los reanuda de nuevo.</string>
-    <string name="schedule_help_clear_history_text">Pide confirmación y borra la lista de ejecuciones pasadas manteniendo los horarios guardados.</string>
+    <string name="schedule_help_pause_all_text">Pausa todas las programaciones guardadas a la vez sin desactivar cada una, o las reanuda de nuevo.</string>
+    <string name="schedule_help_clear_history_text">Pide confirmación y borra la lista de ejecuciones pasadas manteniendo las programaciones guardadas.</string>
 </resources>

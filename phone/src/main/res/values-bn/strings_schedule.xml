@@ -30,7 +30,7 @@
     <string name="scheduled_ops_fill_confirm_title">ভরা নির্ধারণ করবেন?</string>
     <string name="scheduled_ops_fill_confirm_message">প্রতিটি রান %2$s-এ ফোল্ডার %1$s-এ অস্থায়ী ফাইল লেখে যতক্ষণ না %3$s খালি থাকে, তারপর সেগুলো মুছে দেয়। আপনার নিজের ফাইল যেমন আছে তেমনই থাকে।</string>
     <string name="schedule_confirm_cap">দিনে সর্বাধিক একটি নির্ধারিত ভরা চলে।</string>
-    <string name="schedule_not_usable">ভরার জন্য বিল্ট-ইন স্টোরেজ বা মেমরি কার্ডে এমন একটি ফোল্ডার দরকার যেখানে এখন লেখা যায়। স্টোরেজ সংযুক্ত করুন বা অন্য ফোল্ডার বেছে নিন।</string>
+    <string name="schedule_not_usable">ভরার জন্য অভ্যন্তরীণ স্টোরেজ বা মেমরি কার্ডে এমন একটি ফোল্ডার দরকার যেখানে এখন লেখা যায়। স্টোরেজ সংযুক্ত করুন বা অন্য ফোল্ডার বেছে নিন।</string>
     <string name="schedule_history_title">ইতিহাস</string>
     <string name="schedule_history_empty">এখনও কোনো নির্ধারিত রান হয়নি।</string>
     <string name="schedule_history_head">%1$s - %2$s</string>
@@ -55,19 +55,19 @@
     <string name="schedule_help_editor_label">সম্পাদক</string>
     <string name="schedule_help_editor_text">ফোল্ডার বেছে নিন ফোল্ডার বাছাই করে, সময় ঘণ্টা ও মিনিট ঠিক করে, পুনরাবৃত্তি ঠিক করে দুটি রানের মধ্যে কত দিন থাকবে। সংরক্ষণ ফোল্ডার ও খালি রাখা জায়গার নাম উল্লেখ করে নিশ্চিতকরণ চায়, এবং কেবল এমন ফোল্ডার সংরক্ষণ করে যেখানে এখন লেখা যায়। বাতিল কিছুই বদলায় না।</string>
     <string name="schedule_help_list_label">সময়সূচি</string>
-    <string name="schedule_help_list_text">প্রতিটি সময়সূচী কার্ডে ফোল্ডার, কতদিন পরপর ও কোন সময়ে চলে এবং পরবর্তী চালানোর সময় থাকে। চেকবক্স সময়সূচী চালু বা বন্ধ করে, এখনই চালান সাথে সাথে শুরু করে, সম্পাদনা পরিবর্তন করে এবং মুছুন সরিয়ে দেয়।</string>
-    <string name="schedule_help_history_text">প্রতিটি নির্ধারিত রান, নতুনগুলো আগে: কখন শুরু হয়েছে, কোন ফোল্ডার এবং কীভাবে শেষ হয়েছে। এড়িয়ে যাওয়া বা ব্যর্থ রান কারণ জানায়, এবং সিস্টেম দেরিতে শুরু করলে তাও জানায়। রানের জন্য স্ক্রিনের সামনে কাউকে লাগে না, এবং চলমান রান একটি বিজ্ঞপ্তি দেখায়।</string>
+    <string name="schedule_help_list_text">প্রতিটি সময়সূচি কার্ডে ফোল্ডার, কতদিন পরপর ও কোন সময়ে চলে এবং পরবর্তী রানের সময় থাকে। চেকবক্স সময়সূচি চালু বা বন্ধ করে, এখনই চালান সাথে সাথে শুরু করে, সম্পাদনা পরিবর্তন করে এবং মুছুন সরিয়ে দেয়।</string>
+    <string name="schedule_help_history_text">প্রতিটি নির্ধারিত রান, নতুনগুলো আগে: কখন শুরু হয়েছে, কোন ফোল্ডার এবং কীভাবে শেষ হয়েছে। এড়িয়ে যাওয়া বা ব্যর্থ রান কারণ জানায়, এবং সিস্টেম দেরিতে শুরু করলে তাও জানায়। রানের জন্য স্ক্রিনের সামনে কাউকে লাগে না, এবং চলমান রান একটি নোটিফিকেশন দেখায়।</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
     <string name="schedule_run_now">এখনই চালান</string>
-    <string name="schedule_run_now_started">%1$s-এর জন্য নির্ধারিত পূরণ শুরু হচ্ছে..</string>
+    <string name="schedule_run_now_started">%1$s-এর জন্য নির্ধারিত ভরা শুরু হচ্ছে..</string>
     <string name="schedule_pause_all">সব বিরতি দিন</string>
     <string name="schedule_resume_all">সব পুনরায় চালু করুন</string>
     <string name="schedule_item_paused">বিরতিতে আছে</string>
     <string name="schedule_history_clear">ইতিহাস মুছুন</string>
-    <string name="schedule_history_clear_title">চালানোর ইতিহাস মুছে ফেলবেন?</string>
-    <string name="schedule_history_clear_message">সব নথিভুক্ত চালানোর তালিকা মুছে ফেলে। আপনার সংরক্ষিত সময়সূচী অপরিবর্তিত থাকে।</string>
+    <string name="schedule_history_clear_title">রানের ইতিহাস মুছে ফেলবেন?</string>
+    <string name="schedule_history_clear_message">সব নথিভুক্ত রানের তালিকা মুছে ফেলে। আপনার সংরক্ষিত সময়সূচি অপরিবর্তিত থাকে।</string>
     <string name="schedule_notifications_enable">নোটিফিকেশন অনুমোদন করুন</string>
-    <string name="schedule_help_notifications_text">Android 13 এবং তার পরের সংস্করণে নোটিফিকেশন অনুমতি বন্ধ থাকলে এটি দেখায়। নির্ধারিত পূরণের নোটিফিকেশন অনুমোদন করতে বা সেটিংস খুলতে ট্যাপ করুন।</string>
-    <string name="schedule_help_pause_all_text">প্রতিটি আলাদাভাবে বন্ধ না করেই সব সংরক্ষিত সময়সূচী একসাথে বিরতি দেয় বা পুনরায় চালু করে।</string>
-    <string name="schedule_help_clear_history_text">নিশ্চিতকরণ চায় এবং সংরক্ষিত সময়সূচী রেখেই আগের চালানোর তালিকা মুছে ফেলে।</string>
+    <string name="schedule_help_notifications_text">Android 13 এবং তার পরের সংস্করণে নোটিফিকেশন অনুমতি বন্ধ থাকলে এটি দেখায়। নির্ধারিত ভরার নোটিফিকেশন অনুমোদন করতে বা সেটিংস খুলতে ট্যাপ করুন।</string>
+    <string name="schedule_help_pause_all_text">প্রতিটি আলাদাভাবে বন্ধ না করেই সব সংরক্ষিত সময়সূচি একসাথে বিরতি দেয় বা পুনরায় চালু করে।</string>
+    <string name="schedule_help_clear_history_text">নিশ্চিতকরণ চায় এবং সংরক্ষিত সময়সূচি রেখেই আগের রানের তালিকা মুছে ফেলে।</string>
 </resources>

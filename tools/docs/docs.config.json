@@ -2,7 +2,7 @@
   "$comment": "Configuration of tools/docs/check-docs.ps1 (DOC-INTERNAL-QUALITY, S0026). corpus: what reverse coverage walks - whole folders, plus files matched by pattern; only files git tracks or could track (not git-ignored) are in it. registry: the one document registry. ignore: files of the corpus consciously left out of every record, each {path, reason}; empty means every file is declared. No baseline file exists: the gate keeps no accepted debt (CHECK-BASELINE stays not applicable). Since FILLER-0071 (REPO-LAYOUT 0.12 rule 8, DOC-INTERNAL-QUALITY 0.14 item AA) the corpus is the public tracked set: the agent rules, the contract pointers, this registry and the release ledger are local-only and gitignored, so they are outside.",
   "corpus": {
     "folders": ["docs"],
-    "files": ["README.md", "tools/**/*.md"]
+    "files": ["README.md", "README_*.md", "tools/**/*.md"]
   },
   "registry": "docs/DOCUMENT_REGISTRY.jsonl",
   "ignore": []

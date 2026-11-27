@@ -12,7 +12,7 @@
               dp  the phone app only          wd  the watch app only
               r   release packages of HEAD, judged by the pre-flight (APKs also -> C:\GD\WORK)
     Checks    fg  every fast gate below in one run         fb  buildSrc tests (version stamp, signing)
-              fsite ffacts fpos fdocs fdrift fhelp fstore fcomp fval fq  one gate each    fu  unit tests, all modules
+              fsite ffacts fpos fdocs fdrift fhelp fstore floc fcomp fval fq  one gate each    fu  unit tests, all modules
     Runners   r0 r1 r2 r3  queue runners      rs  stop them      rm  monitor them      rw  portfolio dispatcher
     Locks     ub uc  clear a stale build / code lock      ul  drop stale ticket leases      uqb uqc  leave a queue
     Other     ss  the release queue          adb  adb of the Android SDK, e.g. `.\a.ps1 adb devices`
@@ -74,6 +74,7 @@ $commands = [ordered]@{
     'fdrift' = @{ Group = 'Checks'; Kind = 'script'; Path = 'tools\port-ledger\check-drift.ps1'; Args = @{}; Gate = $true; Help = 'Port ledger drift check against the FastMediaSorter checkout' }
     'fhelp' = @{ Group = 'Checks'; Kind = 'script'; Path = 'tools\help\check-help-map.ps1'; Args = @{}; Gate = $true; Help = 'Help map gate: surfaces, dialogs, layer entries, locales' }
     'fstore' = @{ Group = 'Checks'; Kind = 'script'; Path = 'tools\store\check-store-assets.ps1'; Args = @{}; Gate = $true; Help = 'Store assets gate: the committed graphics equal their render' }
+    'floc'  = @{ Group = 'Checks'; Kind = 'script'; Path = 'tools\locale\check-locales.ps1'; Args = @{}; Gate = $true; Help = 'Language gate: app strings, per-app languages, links, translated documents' }
     'fcomp' = @{ Group = 'Checks'; Kind = 'plugin'; Path = 'tools\check-compliance.ps1'; Args = @{ RepoRoot = $root; IncludeUntracked = $true }; Gate = $true; Help = 'Canon compliance gate of the installed sza plugin' }
     'fval'  = @{ Group = 'Checks'; Kind = 'harness'; Path = 'spec_catalog/validate'; Args = @{}; Gate = $true; Help = 'Ticket journal validation' }
     'fq'    = @{ Group = 'Checks'; Kind = 'harness'; Path = 'spec_catalog/release-queue'; Args = @{ Validate = $true }; Gate = $true; Help = 'Release plan validation' }

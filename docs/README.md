@@ -16,8 +16,9 @@
 | `site-held-addresses.jsonl` | the addresses of the site that outside surfaces hold (the README, the Play Console fields, the repository homepage, the sibling sites) and the anchors of each page, resolved against the page set by `tools/site/check-site.ps1` (`SITE-STRUCTURE` rule 8, S0039) |
 | `AGENT_HOOKS.md` | the inventory of the agent hooks this repository registers (the `SessionStart` hook of the drift check) |
 | `DOCUMENT_REGISTRY.jsonl` | the document registry of the maintained corpus (`AGENTS.md`, `CLAUDE.md`, `README.md`, `docs/`, `PLAN/` and the Markdown under `tools/`): one record per document group, with its topic, product area, update triggers and, for a generated file, its generator and check (S0026; checked by `tools/docs/check-docs.ps1`) |
+| `INSTALL_TRUST.md` and its `-<code>` siblings | the install guide for the signed APKs in every product language (en, ru and uk hand-written, the rest rendered by `tools/locale/`) |
 | `contracts/` | pointers to the shared contracts this product is bound by, indexed with version, role and state |
-| `play/` | the Google Play listing texts in en, ru and uk, the App content answers, the release and review record, and the listing graphics |
+| `play/` | the Google Play listing texts in every product language (en, ru and uk hand-written, the rest rendered by `tools/locale/`), the App content answers, the release and review record, and the listing graphics |
 | `releases/` | the release ledger (`channels.json`, `builds.json`, `history.jsonl` and rendered `RELEASES.md`, S0054; writer: `tools/harness.ps1 releases/release-ledger`) |
 | `github/` | the repository social preview |
 

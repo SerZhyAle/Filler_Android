@@ -28,9 +28,9 @@
     <string name="schedule_editor_save">Speichern</string>
     <string name="schedule_editor_cancel">Abbrechen</string>
     <string name="scheduled_ops_fill_confirm_title">Füllen planen?</string>
-    <string name="scheduled_ops_fill_confirm_message">Jeder Lauf schreibt temporäre Dateien in den Ordner %1$s auf %2$s, bis %3$s frei bleiben, und löscht sie dann. Deine eigenen Dateien bleiben unverändert.</string>
+    <string name="scheduled_ops_fill_confirm_message">Jeder Lauf schreibt temporäre Dateien in den Ordner %1$s auf %2$s, bis %3$s frei bleiben, und löscht sie dann. Ihre eigenen Dateien bleiben unverändert.</string>
     <string name="schedule_confirm_cap">Pro Tag läuft höchstens ein geplantes Füllen.</string>
-    <string name="schedule_not_usable">Zum Füllen wird ein Ordner im internen Speicher oder auf einer Speicherkarte gebraucht, der jetzt beschreibbar ist. Verbinde den Speicher oder wähle einen anderen Ordner.</string>
+    <string name="schedule_not_usable">Zum Füllen wird ein Ordner im internen Speicher oder auf einer Speicherkarte gebraucht, der jetzt beschreibbar ist. Verbinden Sie den Speicher oder wählen Sie einen anderen Ordner.</string>
     <string name="schedule_history_title">Verlauf</string>
     <string name="schedule_history_empty">Noch keine geplanten Läufe.</string>
     <string name="schedule_history_head">%1$s - %2$s</string>
@@ -41,7 +41,7 @@
     <string name="scheduled_op_reason_fill_measurement_unavailable">Der freie Speicher konnte nicht gemessen werden</string>
     <string name="scheduled_op_reason_fill_no_free_space">Kein freier Speicher über dem für das System freigehaltenen Teil</string>
     <string name="scheduled_op_reason_fill_write_failed">Das Schreiben wurde mit einem Fehler gestoppt; die temporären Dateien wurden gelöscht</string>
-    <string name="scheduled_op_reason_fill_cleanup_pending">Temporäre Dateien sind übrig. Verbinde den Speicher, öffne Filler und tippe auf Restliche Dateien löschen</string>
+    <string name="scheduled_op_reason_fill_cleanup_pending">Temporäre Dateien sind übrig. Verbinden Sie den Speicher, öffnen Sie Filler und tippen Sie auf Restliche Dateien löschen</string>
     <string name="scheduled_op_reason_fill_daily_cap">Übersprungen: Heute lief bereits ein geplantes Füllen</string>
     <string name="scheduled_op_reason_fill_stopped">Vor dem Ende gestoppt. Temporäre Dateien, die nicht gelöscht werden konnten, zeigt der Filler-Bildschirm</string>
     <string name="scheduled_op_reason_unknown">Ohne gespeicherten Grund beendet</string>

@@ -10,6 +10,7 @@ on:
     paths:
       - 'site/**'
       - 'tools/site/**'
+      - 'tools/locale/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -44,6 +45,13 @@ jobs:
         shell: pwsh
         run: |
           pwsh -NoProfile -File tools/site/check-site-facts.ps1 -Scope public
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      # FILLER-0079: every language of tools/locale/locales.json has its pages and documents, and each rendered file is
+      # in step with its English source and dictionary.
+      - name: Check the languages
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File tools/locale/check-locales.ps1
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       # S0040: every surface lists the pillars of docs/SPECIFICATION_POSITIONING.md in its order
       - name: Check the positioning order

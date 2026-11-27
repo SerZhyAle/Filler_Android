@@ -17,6 +17,7 @@
       source      the judged commit (OPEN for a working-tree snapshot)
       drift       tools/port-ledger/check-drift.ps1 of the judged source: exit 0, nothing undecided
       site        tools/site/check-site.ps1 of the judged source
+      locales     tools/locale/check-locales.ps1 of the judged source (every language's strings and documents)
       ledger-selftest  tools/port-ledger/test-port-ledger.ps1
       plan        the release plan validates (WARN only: plan drift is reconciled, never a blocker)
       leaks       no key, key store or keystore.properties among the files the candidate carries
@@ -36,7 +37,8 @@
       play-upload GOOGLE-PLAY checks on the AABs and fresh Play evidence, or OPEN if evidence/tools are missing
       notices     no package bundles native code without THIRD-PARTY-NOTICES.txt (decision: tools/release/README.md)
       privacy     the permissions read from the APKs against the privacy page and the Data safety record
-      whats-new   each listing (en, ru, uk) carries a '## What's new' text Play can take (OPEN until written)
+      whats-new   each listing (one per language of tools/locale/locales.json) carries a '## What's new' text Play can
+                  take (OPEN until written)
 
     The verdict is FAIL when any check fails, otherwise PASS; it is shippable only when it is PASS and nothing is
     OPEN. The device half (update-proof.ps1) and the owner's manual items are listed in tools/release/README.md.
@@ -182,6 +184,7 @@ try {
     # --- script gates of the judged source --------------------------------------------------------------------
     Invoke-Gate 'drift' 'tools\port-ledger\check-drift.ps1'
     Invoke-Gate 'site' 'tools\site\check-site.ps1'
+    Invoke-Gate 'locales' 'tools\locale\check-locales.ps1'
     Invoke-Gate 'ledger-selftest' 'tools\port-ledger\test-port-ledger.ps1'
 
     $planOut = & pwsh -NoProfile -File (Join-Path $script:RepoRoot 'tools\harness.ps1') spec_catalog/release-queue -Validate 2>&1
@@ -366,11 +369,13 @@ try {
 
     # --- What's new -------------------------------------------------------------------------------------------
     $notes = @()
-    foreach ($listing in 'PLAY_LISTING.md', 'PLAY_LISTING-ru.md', 'PLAY_LISTING-uk.md') {
+    $listings = @((Get-Content (Join-Path $src 'tools\locale\locales.json') -Raw | ConvertFrom-Json).languages |
+            ForEach-Object { if ($_.code -eq 'en') { 'PLAY_LISTING.md' } else { "PLAY_LISTING-$($_.code).md" } })
+    foreach ($listing in $listings) {
         $problem = Test-WhatsNew (Get-Content (Join-Path $src "docs\play\$listing") -Raw)
         if ($problem) { $notes += "$listing`: $problem" }
     }
-    Add-Check 'whats-new' $(if ($notes.Count) { 'OPEN' } else { 'PASS' }) $(if ($notes.Count) { $notes -join '; ' } else { "What's new written in en, ru, uk" })
+    Add-Check 'whats-new' $(if ($notes.Count) { 'OPEN' } else { 'PASS' }) $(if ($notes.Count) { $notes -join '; ' } else { "What's new written in $($listings.Count) listing(s)" })
 
     $verdict = Write-Verdict $pinName
 

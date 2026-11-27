@@ -59,7 +59,7 @@
     <string name="schedule_help_history_text">كل تشغيل مجدول، الأحدث أولًا: متى بدأ وأي مجلد وكيف انتهى. يذكر التشغيل الذي تم تخطيه أو فشل السبب، ويذكر التشغيل الذي بدأه النظام متأخرًا ذلك. لا يحتاج التشغيل إلى أحد أمام الشاشة، ويعرض التشغيل الجاري إشعارًا.</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
     <string name="schedule_run_now">تشغيل الآن</string>
-    <string name="schedule_run_now_started">جارٍ بدء التعبئة المجدولة للمجلد %1$s..</string>
+    <string name="schedule_run_now_started">جارٍ بدء الملء المجدول للمجلد %1$s..</string>
     <string name="schedule_pause_all">إيقاف الكل مؤقتًا</string>
     <string name="schedule_resume_all">استئناف الكل</string>
     <string name="schedule_item_paused">متوقف مؤقتًا</string>
@@ -67,7 +67,7 @@
     <string name="schedule_history_clear_title">مسح سجل التشغيل؟</string>
     <string name="schedule_history_clear_message">يزيل جميع عمليات التشغيل المسجلة. تبقى الجداول المحفوظة كما هي.</string>
     <string name="schedule_notifications_enable">السماح بالإشعارات</string>
-    <string name="schedule_help_notifications_text">يظهر على Android 13 والإصدارات الأحدث عندما يكون إذن الإشعارات متوقفًا. انقر للسماح بإشعارات التشغيل المجدول أو لفتح إعدادات الإشعارات.</string>
+    <string name="schedule_help_notifications_text">يظهر على Android 13 والإصدارات الأحدث عندما يكون إذن الإشعارات متوقفًا. اضغط للسماح بإشعارات التشغيل المجدول أو لفتح إعدادات الإشعارات.</string>
     <string name="schedule_help_pause_all_text">يوقف جميع الجداول المحفوظة مؤقتًا دفعة واحدة دون إيقاف كل جدول على حدة، أو يستأنفها مرة أخرى.</string>
     <string name="schedule_help_clear_history_text">يطلب التأكيد ثم يمسح قائمة عمليات التشغيل السابقة مع الإبقاء على الجداول المحفوظة.</string>
 </resources>

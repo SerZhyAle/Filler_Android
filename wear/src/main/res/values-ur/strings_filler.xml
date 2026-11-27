@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">گھڑی کی خالی جگہ کو عارضی فائلوں سے بھرتا ہے، پھر انہیں حذف کر دیتا ہے۔ آپ کی اپنی فائلیں جیسی ہیں ویسی ہی رہتی ہیں۔</string>
+    <string name="filler_watch_storage">گھڑی کا اسٹوریج</string>
+    <string name="filler_location">لکھنے کی جگہ: %1$s</string>
+    <string name="filler_no_place">گھڑی کا اسٹوریج ابھی دستیاب نہیں ہے۔</string>
+    <string name="filler_free_space">خالی جگہ: %1$s</string>
+    <string name="filler_free_space_unknown">خالی جگہ: ناپی نہیں گئی</string>
+    <string name="filler_reserve">سسٹم کے لیے خالی رکھی گئی: %1$s</string>
+    <string name="filler_reserve_less">کم جگہ خالی رکھیں</string>
+    <string name="filler_reserve_more">زیادہ جگہ خالی رکھیں</string>
+    <string name="filler_start">بھرنا شروع کریں</string>
+    <string name="filler_cancel">روکیں اور فائلیں حذف کریں</string>
+    <string name="filler_progress">%2$s میں سے %1$s لکھا گیا</string>
+    <string name="filler_estimate">%1$d%% مکمل، باقی وقت: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% مکمل، باقی وقت: حساب ہو رہا ہے..</string>
+    <string name="filler_confirm_title">خالی جگہ بھریں؟</string>
+    <string name="filler_confirm_message">گھڑی کے اسٹوریج میں تقریباً %1$s عارضی فائلیں لکھی جائیں گی، اور %2$s خالی رہے گی۔ بھرنا مکمل ہونے یا رکنے پر فائلیں حذف کر دی جاتی ہیں۔</string>
+    <string name="filler_confirm_reserve_lowered">یہ معمول کی %1$s سے کم ہے، اس لیے عمل کے دوران سسٹم اور دوسری ایپس کے لیے کم جگہ ہو گی۔</string>
+    <string name="filler_confirm_positive">بھریں</string>
+    <string name="filler_retry_cleanup">باقی فائلیں حذف کریں</string>
+    <string name="filler_pending_cleanup">پچھلی بار کی عارضی فائلیں ابھی بھی گھڑی پر موجود ہیں۔ دوبارہ بھرنے سے پہلے باقی فائلیں حذف کریں پر ٹیپ کریں۔</string>
+    <string name="filler_result_done">مکمل: %1$s لکھا گیا اور پھر حذف کر دیا گیا۔</string>
+    <string name="filler_result_cancelled">بھرنا روک دیا گیا۔ عارضی فائلیں حذف کر دی گئیں۔</string>
+    <string name="filler_result_failed">لکھنا رک گیا کیونکہ اسٹوریج نے ایک خرابی کی اطلاع دی۔ عارضی فائلیں حذف کر دی گئیں۔</string>
+    <string name="filler_result_cleanup_incomplete">کچھ عارضی فائلیں ابھی حذف نہیں ہو سکیں۔ دوبارہ کوشش کے لیے باقی فائلیں حذف کریں پر ٹیپ کریں۔</string>
+    <string name="filler_result_cleanup_done">باقی عارضی فائلیں حذف کر دی گئیں۔</string>
+    <string name="filler_result_no_place">گھڑی کا اسٹوریج ابھی دستیاب نہیں ہے۔ گھڑی ری اسٹارٹ کریں، پھر Filler دوبارہ کھولیں۔</string>
+    <string name="filler_result_no_access">ابھی گھڑی کے اسٹوریج میں لکھنے کی اجازت نہیں ہے۔ گھڑی ری اسٹارٹ کریں، پھر Filler دوبارہ کھولیں۔</string>
+    <string name="filler_result_measurement_unavailable">خالی جگہ ناپی نہیں جا سکی۔ تھوڑی دیر میں Filler دوبارہ کھولیں۔</string>
+    <string name="filler_result_insufficient_space">سسٹم کے لیے رکھے گئے حصے سے اوپر کوئی خالی جگہ نہیں ہے۔ گھڑی پر جگہ خالی کریں یا کم جگہ خالی رکھیں۔</string>
+    <string name="filler_result_busy">بھرنا پہلے سے جاری ہے۔</string>
+    <string name="filler_result_not_started">گھڑی نے بھرنا شروع کرنے کی اجازت نہیں دی۔ Filler کھولیں اور دوبارہ کوشش کریں۔</string>
+    <string name="filler_notification_channel">بھرنا</string>
+    <string name="filler_notification_title">خالی جگہ بھری جا رہی ہے</string>
+    <string name="filler_notification_stop">روکیں</string>
+    <string name="filler_about">Filler کے بارے میں</string>
+    <string name="filler_about_version">ورژن: %1$s</string>
+    <string name="filler_about_author">مصنف: %1$s</string>
+    <string name="filler_about_phone_app">Android فونز کے لیے بھی Filler ایپ موجود ہے۔ یہ فون کے اسٹوریج یا میموری کارڈ کو بھرتی ہے۔</string>
+    <string name="filler_about_product_page">پروڈکٹ کا صفحہ: %1$s</string>
+    <string name="filler_about_documentation">دستاویزات: %1$s</string>
+    <string name="filler_about_privacy">رازداری کی پالیسی: %1$s</string>
+    <string name="filler_about_close">بند کریں</string>
+</resources>

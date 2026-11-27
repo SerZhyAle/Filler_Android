@@ -55,19 +55,19 @@
     <string name="schedule_help_editor_label">Editor</string>
     <string name="schedule_help_editor_text">Scegli cartella sceglie la cartella, Ora imposta ora e minuto, Ripeti imposta quanti giorni passano tra due esecuzioni. Salva chiede una conferma che nomina la cartella e lo spazio lasciato libero, e salva solo una cartella scrivibile adesso. Annulla non cambia nulla.</string>
     <string name="schedule_help_list_label">Pianificazioni</string>
-    <string name="schedule_help_list_text">Ogni scheda mostra cartella, frequenza, ora e prossima esecuzione. La casella attiva o disattiva la programmazione, Esegui ora la avvia subito, Modifica la cambia ed Elimina la rimuove.</string>
+    <string name="schedule_help_list_text">Ogni scheda mostra cartella, frequenza, ora e prossima esecuzione. La casella attiva o disattiva la pianificazione, Esegui ora la avvia subito, Modifica la cambia ed Elimina la rimuove.</string>
     <string name="schedule_help_history_text">Ogni esecuzione pianificata, la più recente per prima: quando è iniziata, quale cartella e come è finita. Un\'esecuzione saltata o non riuscita dice perché, e una che il sistema ha avviato in ritardo lo indica. Un\'esecuzione non ha bisogno di nessuno davanti allo schermo, e una in corso mostra una notifica.</string>
     <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
     <string name="schedule_run_now">Esegui ora</string>
-    <string name="schedule_run_now_started">Avvio riempimento programmato per %1$s..</string>
+    <string name="schedule_run_now_started">Avvio riempimento pianificato per %1$s..</string>
     <string name="schedule_pause_all">Metti tutto in pausa</string>
     <string name="schedule_resume_all">Riprendi tutto</string>
     <string name="schedule_item_paused">In pausa</string>
     <string name="schedule_history_clear">Cancella cronologia</string>
     <string name="schedule_history_clear_title">Cancellare la cronologia delle esecuzioni?</string>
-    <string name="schedule_history_clear_message">Rimuove tutte le esecuzioni registrate. Le programmazioni salvate restano invariate.</string>
+    <string name="schedule_history_clear_message">Rimuove tutte le esecuzioni registrate. Le pianificazioni salvate restano invariate.</string>
     <string name="schedule_notifications_enable">Consenti notifiche</string>
-    <string name="schedule_help_notifications_text">Mostrato su Android 13 e versioni successive quando le notifiche sono disattivate. Toccalo per consentire le notifiche delle esecuzioni programmate o aprire le impostazioni di sistema.</string>
-    <string name="schedule_help_pause_all_text">Mette in pausa tutte le programmazioni salvate insieme senza disattivarle una per una, oppure le riprende.</string>
-    <string name="schedule_help_clear_history_text">Chiede conferma e cancella l\'elenco delle esecuzioni passate mantenendo le programmazioni salvate.</string>
+    <string name="schedule_help_notifications_text">Mostrato su Android 13 e versioni successive quando le notifiche sono disattivate. Toccalo per consentire le notifiche delle esecuzioni pianificate o aprire le impostazioni di sistema.</string>
+    <string name="schedule_help_pause_all_text">Mette in pausa tutte le pianificazioni salvate insieme senza disattivarle una per una, oppure le riprende.</string>
+    <string name="schedule_help_clear_history_text">Chiede conferma e cancella l\'elenco delle esecuzioni passate mantenendo le pianificazioni salvate.</string>
 </resources>

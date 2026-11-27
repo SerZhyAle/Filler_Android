@@ -33,7 +33,7 @@
     <string name="filler_result_insufficient_space">Não há espaço livre acima da parte reservada para o sistema. Libere espaço ou escolha outro dispositivo de armazenamento.</string>
     <string name="filler_result_busy">O preenchimento já está em andamento.</string>
     <string name="filler_reserve_slider_description">Espaço mantido livre para o sistema</string>
-    <string name="filler_confirm_reserve_lowered">Isso é menos que o habitual (%1$s), então o sistema e outros aplicativos têm menos espaço enquanto a execução durar.</string>
+    <string name="filler_confirm_reserve_lowered">Isso é menos que o habitual (%1$s), então o sistema e outros apps têm menos espaço enquanto a execução durar.</string>
     <string name="help">Ajuda</string>
     <string name="help_with_key">Ajuda (F1)</string>
     <string name="filler_help_heading">O que cada parte desta tela faz</string>
@@ -57,7 +57,7 @@
     <string name="filler_help_result_label">Resultado</string>
     <string name="filler_help_result_text">Após um preenchimento, diz como ele terminou: concluído, parado, ou o que deu errado e o que fazer a seguir.</string>
     <string name="filler_help_watch_label">Tela do relógio</string>
-    <string name="filler_help_watch_text">O mesmo aplicativo roda em um relógio Wear OS, em uma tela própria. A tela do relógio não tem botão de ajuda, por isso esta explicação também é a ajuda dela. O botão Sobre dela mostra a versão em execução, o autor e os endereços da página do produto, da documentação e da política de privacidade e menciona o aplicativo para telefone. O relógio grava os arquivos temporários somente no armazenamento do relógio, sem escolha de pasta. O preenchimento segue em segundo plano com uma notificação, e o botão Parar nela interrompe o preenchimento e exclui os arquivos.</string>
+    <string name="filler_help_watch_text">O mesmo app roda em um relógio Wear OS, em uma tela própria. A tela do relógio não tem botão de ajuda, por isso esta explicação também é a ajuda dela. O botão Sobre dela mostra a versão em execução, o autor e os endereços da página do produto, da documentação e da política de privacidade e menciona o app para telefone. O relógio grava os arquivos temporários somente no armazenamento do relógio, sem escolha de pasta. O preenchimento segue em segundo plano com uma notificação, e o botão Parar nela interrompe o preenchimento e exclui os arquivos.</string>
     <string name="filler_help_help_text">Abre esta explicação. Feche com Voltar, um toque fora da lista, Esc ou F1.</string>
     <!-- Color theme picker (FILLER-0067). -->
     <string name="filler_theme">Tema de cor</string>
@@ -78,12 +78,12 @@
     <string name="filler_about">Sobre o Filler</string>
     <string name="filler_about_version">Versão: %1$s</string>
     <string name="filler_about_author">Autor: %1$s</string>
-    <string name="filler_about_watch_app">Há também o aplicativo Filler para relógios Wear OS. Ele preenche o espaço livre do armazenamento do relógio.</string>
+    <string name="filler_about_watch_app">Há também o app Filler para relógios Wear OS. Ele preenche o espaço livre do armazenamento do relógio.</string>
     <string name="filler_about_product_page">Página do produto</string>
     <string name="filler_about_documentation">Documentação</string>
     <string name="filler_about_privacy">Política de privacidade</string>
     <string name="filler_about_license">Licença (MIT)</string>
     <string name="filler_about_source">Código-fonte</string>
     <string name="filler_about_support">Suporte</string>
-    <string name="filler_help_about_text">Abre uma janela sobre este aplicativo: o que ele faz, qual versão está em execução, quem o criou, o endereço do site do autor, links para a página do produto, a documentação, a política de privacidade, a licença, o código-fonte e o suporte, e a versão para relógios.</string>
+    <string name="filler_help_about_text">Abre uma janela sobre este app: o que ele faz, qual versão está em execução, quem o criou, o endereço do site do autor, links para a página do produto, a documentação, a política de privacidade, a licença, o código-fonte e o suporte, e a versão para relógios.</string>
 </resources>
