@@ -182,7 +182,22 @@ try {
     Set-Content (Join-Path $src 'local.properties') ('sdk.dir=' + ((Get-SdkRoot) -replace '\\', '\\' -replace ':', '\:')) -Encoding ascii
 
     # --- script gates of the judged source --------------------------------------------------------------------
-    Invoke-Gate 'drift' 'tools\port-ledger\check-drift.ps1'
+    $copiedExtraction = @()
+    foreach ($rel in @('.sza-profile.json', 'docs\port-scope.json')) {
+        $dst = Join-Path $src $rel
+        $local = Join-Path $script:RepoRoot $rel
+        if (-not (Test-Path -LiteralPath $dst) -and (Test-Path -LiteralPath $local -PathType Leaf)) {
+            $parent = Split-Path -Parent $dst
+            if (-not (Test-Path -LiteralPath $parent)) { $null = New-Item -ItemType Directory -Force $parent }
+            Copy-Item -LiteralPath $local -Destination $dst
+            $copiedExtraction += $dst
+        }
+    }
+    try {
+        Invoke-Gate 'drift' 'tools\port-ledger\check-drift.ps1'
+    } finally {
+        foreach ($tmpFile in $copiedExtraction) { Remove-Item -LiteralPath $tmpFile -Force -ErrorAction SilentlyContinue }
+    }
     Invoke-Gate 'site' 'tools\site\check-site.ps1'
     Invoke-Gate 'locales' 'tools\locale\check-locales.ps1'
     Invoke-Gate 'ledger-selftest' 'tools\port-ledger\test-port-ledger.ps1'
