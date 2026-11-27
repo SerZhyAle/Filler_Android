@@ -36,6 +36,21 @@ jobs:
         run: |
           pwsh -NoProfile -File tools/site/check-site.ps1
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      # S0039: the facts the pages type by hand against the manifests, the locale folders and the build script.
+      # FILLER-0071 (REPO-LAYOUT 0.12 rule 8): the two SITE-* contract pointers are local-only and gitignored, so the
+      # runner's fresh clone carries no copy; the public scope drops their five patterns, and the default scope would
+      # exit 2 there (CHECK-VERDICT rule 13: a skipped declared input is could-not-verify).
+      - name: Check the site facts
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File tools/site/check-site-facts.ps1 -Scope public
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      # S0040: every surface lists the pillars of docs/SPECIFICATION_POSITIONING.md in its order
+      - name: Check the positioning order
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File tools/site/check-positioning.ps1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
   deploy:
     needs: check

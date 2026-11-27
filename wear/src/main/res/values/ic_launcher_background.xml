@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background of the adaptive launcher icon; the listing graphics use the same colour
+         (tools/store/render-store-assets.ps1). -->
+    <color name="ic_launcher_background">#12355B</color>
+</resources>

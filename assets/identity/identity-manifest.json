@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "product": "Filler",
+  "family": null,
+  "master": {
+    "svg": "assets/identity/master/filler-mark.svg",
+    "small": "assets/identity/master/filler-mark-small.svg",
+    "mono": "assets/identity/master/filler-mark-small.svg",
+    "background": "#12355B",
+    "sha256": "d5930e5658be14d7748dc5609a7157926c0bc85615683bb8c929b04b712e6680"
+  },
+  "generator": "pwsh -NoProfile -File tools/identity/build-identity.ps1",
+  "renditions": [
+    {
+      "surface": "app.launcher",
+      "path": "phone/src/main/res/drawable/ic_launcher_foreground.xml",
+      "format": "xml",
+      "sha256": "f24039be42107cb01b766610d5eb9eeb91b9041812cf17a6578f01d708d7ddb1"
+    },
+    {
+      "surface": "app.wear",
+      "path": "wear/src/main/res/drawable/ic_launcher_foreground.xml",
+      "format": "xml",
+      "sha256": "f24039be42107cb01b766610d5eb9eeb91b9041812cf17a6578f01d708d7ddb1"
+    },
+    {
+      "surface": "app.launcher",
+      "path": "phone/src/debug/res/drawable/ic_launcher_foreground.xml",
+      "format": "xml",
+      "sha256": "89fed819d137439ebdb4252ce047d4420593cb737dc8b455eb3e9e8c8a3d0036"
+    },
+    {
+      "surface": "app.wear",
+      "path": "wear/src/debug/res/drawable/ic_launcher_foreground.xml",
+      "format": "xml",
+      "sha256": "89fed819d137439ebdb4252ce047d4420593cb737dc8b455eb3e9e8c8a3d0036"
+    },
+    {
+      "surface": "app.notification",
+      "path": "phone/src/main/res/drawable/ic_stat_filler.xml",
+      "format": "xml",
+      "sha256": "97970b660832a5952786c22af40814569fd9f9de618f2a826be09f6e5cafae21"
+    },
+    {
+      "surface": "app.notification",
+      "path": "wear/src/main/res/drawable/ic_stat_filler.xml",
+      "format": "xml",
+      "sha256": "97970b660832a5952786c22af40814569fd9f9de618f2a826be09f6e5cafae21"
+    },
+    {
+      "surface": "app.about",
+      "path": "phone/src/main/res/drawable/ic_storage.xml",
+      "format": "xml",
+      "sha256": "0ad412d3b5441f66bf053b5af0b9bc25c4575768363b706d0001e42f63dcb78f"
+    },
+    {
+      "surface": "app.about",
+      "path": "wear/src/main/res/drawable/ic_storage.xml",
+      "format": "xml",
+      "sha256": "d428516cc062f76dfb339690268ef52aaea68db9aae29f7ad83f87e034e0e677"
+    },
+    {
+      "surface": "help.head",
+      "path": "phone/src/main/res/drawable/ic_storage.xml",
+      "format": "xml",
+      "sha256": "0ad412d3b5441f66bf053b5af0b9bc25c4575768363b706d0001e42f63dcb78f"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "95a1eb37d17df26cb08c31951da694bf34abc67a0b74d030d2bbe285fba993c5"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-ar/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "c805298f47ecc4c3fb8c432ae37e33e780ea2e75c8bf8a3647ca4c1b4245ff3b"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-b+zh+Hans/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "039fc855d4286e753f0389249cef099b57a8df82dd2612461b9a03a8e9888c8a"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-bn/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "9f183ac0c6fb3a4b969aedf5e2463291e49656ecdd9df9a9d38a315162e6756e"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-de/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "0bacf4451fa332cd98ab96f308caa65311ccbb6d5481a9d1ab426b759f552ef3"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-es/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "33ec96f019419c552882e853c0a150ebe86349aea11c309c971c64ffe38a8dce"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-fr/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "b7d6308183a5ec92378e1e385456e1239e71c27ceb2a4ca85a4c5cf4715575eb"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-hi/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "fb712071dfe955d0f67c46b64c74c210102f5ec36bc23266c2f69816438650ea"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-it/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "77f4a240ddccadf5f22edbcc03c539129fd4ff1fea9442715558ccf0cd7c4be3"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-pt/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "0b99f306a9a547283570686c53309cf6b57ddabb6afc87fd101c655d1d0343ff"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-ru/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "499746afaafbe1d7c6e4ac4677ba6a2b0e399e06e37cf7a0f984f224aefb7cde"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-uk/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "6d91e7520f10508f3fc100f6eea7d38c4450648507c5aff4f5051892167c1cf3"
+    },
+    {
+      "surface": "app.splash",
+      "path": "phone/src/main/res/drawable-ur/ic_splash_app_brand.xml",
+      "format": "xml",
+      "sha256": "0657d527917f529a142b4d49dc0d2a31308fdc1705e06479e2f110a6054150fd"
+    },
+    {
+      "surface": "play.icon",
+      "path": "docs/play/icon-512.png",
+      "format": "png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bff2197495cf967ca4a36ad362ee359bdda09ebc095c6071c89a424575affe8b"
+    },
+    {
+      "surface": "play.feature-graphic",
+      "path": "docs/play/feature-graphic-1024x500.png",
+      "format": "png",
+      "width": 1024,
+      "height": 500,
+      "sha256": "7eb7fcd0d4259d5f623438e5707f45ad0ffe56b9c36a5e1984c9fe708d0b5b6b"
+    },
+    {
+      "surface": "github.social-preview",
+      "path": "docs/github/social-preview-1280x640.png",
+      "format": "png",
+      "width": 1280,
+      "height": 640,
+      "sha256": "377a2e6b11295de76555ddc3e9879771193565dd0302a5044fe54a52de41d7e4"
+    },
+    {
+      "surface": "web.og-image",
+      "path": "site/assets/og-image-1200x630.png",
+      "format": "png",
+      "width": 1200,
+      "height": 630,
+      "sha256": "4139534e42e027e389d3cbb9e059b804687b9a516eaece379699e6a6a451cabd"
+    },
+    {
+      "surface": "web.favicon-svg",
+      "path": "site/assets/favicon.svg",
+      "format": "svg",
+      "sha256": "b1caf635c2f522d8a937a7325d89c290d09e5cf4358924a3ee1c14ede9669bde"
+    },
+    {
+      "surface": "site.identity",
+      "path": "site/assets/icon-512.png",
+      "format": "png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bff2197495cf967ca4a36ad362ee359bdda09ebc095c6071c89a424575affe8b"
+    },
+    {
+      "surface": "web.apple-touch",
+      "path": "site/assets/icon-512.png",
+      "format": "png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bff2197495cf967ca4a36ad362ee359bdda09ebc095c6071c89a424575affe8b"
+    },
+    {
+      "surface": "hub.card",
+      "path": "docs/play/icon-512.png",
+      "format": "png",
+      "width": 512,
+      "height": 512,
+      "sha256": "bff2197495cf967ca4a36ad362ee359bdda09ebc095c6071c89a424575affe8b"
+    }
+  ]
+}

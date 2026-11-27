@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    FILLER-0062: the wordmark rises into its resting place a beat after the mark.
+-->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:propertyName="translateY"
+    android:valueFrom="-6.0"
+    android:valueTo="-14.0"
+    android:valueType="floatType"
+    android:startOffset="60"
+    android:duration="340"
+    android:interpolator="@android:interpolator/decelerate_quint" />

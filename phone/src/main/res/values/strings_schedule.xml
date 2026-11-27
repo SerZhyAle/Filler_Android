@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The scheduled fill (S0025): the schedule screen, its editor, the confirmation, the history and the notification of
+     a running scheduled fill. The confirmation and the seven scheduled_op_reason_fill_* sentences are ported from
+     FastMediaSorter release 48 (strings_scheduled.xml, S4522) with their keys; deliberate difference: the cleanup
+     sentence names this app instead of the source's menu entry. -->
+<resources>
+    <string name="schedule_open">Schedules</string>
+    <string name="schedule_title">Scheduled fills</string>
+    <string name="schedule_back">Back</string>
+    <string name="schedule_intro">Fills the free space of a folder at a set time, with the app closed, then deletes the temporary files. At most one scheduled fill runs per day, and each keeps %1$s free for the system.</string>
+    <string name="schedule_add">Add schedule</string>
+    <string name="schedule_empty">No schedules yet.</string>
+    <string name="schedule_item_when">%1$s at %2$s</string>
+    <string name="schedule_item_next">Next run: %1$s</string>
+    <string name="schedule_item_off">Turned off</string>
+    <string name="schedule_switch">On</string>
+    <string name="schedule_edit">Edit</string>
+    <string name="schedule_delete">Delete</string>
+    <string name="schedule_delete_title">Delete this schedule?</string>
+    <string name="schedule_delete_message">The schedule for the folder %1$s on %2$s stops. Its history stays.</string>
+    <string name="schedule_interval_1">Every day</string>
+    <string name="schedule_interval_2">Every 2 days</string>
+    <string name="schedule_interval_3">Every 3 days</string>
+    <string name="schedule_interval_7">Every week</string>
+    <string name="schedule_interval_14">Every 2 weeks</string>
+    <string name="schedule_interval_30">Every 30 days</string>
+    <string name="schedule_editor_new">New schedule</string>
+    <string name="schedule_editor_change">Change schedule</string>
+    <string name="schedule_editor_time">Time: %1$s</string>
+    <string name="schedule_editor_repeat">Repeat: %1$s</string>
+    <string name="schedule_editor_repeat_title">Repeat</string>
+    <string name="schedule_editor_save">Save</string>
+    <string name="schedule_editor_cancel">Cancel</string>
+    <string name="scheduled_ops_fill_confirm_title">Schedule filling?</string>
+    <string name="scheduled_ops_fill_confirm_message">Each run writes temporary files to the folder %1$s on %2$s until %3$s stays free, then deletes them. Your own files stay as they are.</string>
+    <string name="schedule_confirm_cap">At most one scheduled fill runs per day.</string>
+    <string name="schedule_not_usable">Filling needs a folder on built-in storage or a memory card that can be written now. Connect the storage or choose another folder.</string>
+    <string name="schedule_history_title">History</string>
+    <string name="schedule_history_empty">No scheduled runs yet.</string>
+    <string name="schedule_history_head">%1$s - %2$s</string>
+    <string name="schedule_history_late">Started %1$d min after the set time: the system delayed it, for example to save battery.</string>
+    <string name="scheduled_op_reason_fill_busy">Filling was already running</string>
+    <string name="scheduled_op_reason_fill_not_local">The folder is not on a connected storage device of this phone</string>
+    <string name="scheduled_op_reason_fill_storage_unavailable">The storage was not connected or not writable</string>
+    <string name="scheduled_op_reason_fill_measurement_unavailable">Free space could not be measured</string>
+    <string name="scheduled_op_reason_fill_no_free_space">No free space above the part kept for the system</string>
+    <string name="scheduled_op_reason_fill_write_failed">Writing stopped with an error; the temporary files were deleted</string>
+    <string name="scheduled_op_reason_fill_cleanup_pending">Temporary files remain. Connect the storage, open Filler and tap Delete remaining files</string>
+    <string name="scheduled_op_reason_fill_daily_cap">Skipped: a scheduled fill already ran today</string>
+    <string name="scheduled_op_reason_fill_stopped">Stopped before the end. Temporary files that could not be deleted are shown on the Filler screen</string>
+    <string name="scheduled_op_reason_unknown">Ended without a recorded reason</string>
+    <string name="schedule_notification_channel">Scheduled fills</string>
+    <string name="schedule_notification_title">Scheduled fill running</string>
+    <string name="schedule_notification_text">Writing temporary files to %1$s; they are deleted when it ends.</string>
+    <!-- The entry of the Schedules action in the help layer of the Filler screen. -->
+    <string name="filler_help_schedules_text">Opens the scheduled fills: the Filler fills a chosen folder at a set time, with the app closed, at most once a day, and lists every run with its result.</string>
+    <!-- The help layer of the schedule screen (CONTEXT-HELP, S0025): one entry per element in marker order. -->
+    <string name="schedule_help_intro_label">What a schedule does</string>
+    <string name="schedule_help_intro_text">A schedule fills the free space of one folder at a set time, even with the app closed and after the phone restarts, then deletes the temporary files. It always keeps the usual amount free for the system, and at most one scheduled fill runs per day: a second one due the same day is skipped and the history says so.</string>
+    <string name="schedule_help_add_text">Opens a new schedule with the folder the Filler screen uses by default.</string>
+    <string name="schedule_help_editor_label">Editor</string>
+    <string name="schedule_help_editor_text">Choose folder picks the folder, Time sets the hour and minute, Repeat sets how many days lie between two runs. Save asks for confirmation, naming the folder and the space kept free, and saves only a folder that can be written now. Cancel changes nothing.</string>
+    <string name="schedule_help_list_label">Schedules</string>
+    <string name="schedule_help_list_text">Each saved schedule card with its folder, how often and at what time it runs, and its next run. The checkbox turns a schedule off and on, Run now starts it at once, Edit changes it and Delete removes it; a fill that is running for it stops and deletes its files.</string>
+    <string name="schedule_help_history_text">Every scheduled run, newest first: when it started, which folder, and how it ended. A run that was skipped or failed says why, and a run the system started late says so. A run needs no one at the screen, and a running one shows a notification.</string>
+    <!-- Schedule screen actions added in FILLER-0067 (Run now, Pause/Resume all, Clear history, notifications prompt). -->
+    <string name="schedule_run_now">Run now</string>
+    <string name="schedule_run_now_started">Starting scheduled fill for %1$s..</string>
+    <string name="schedule_pause_all">Pause all</string>
+    <string name="schedule_resume_all">Resume all</string>
+    <string name="schedule_item_paused">Paused</string>
+    <string name="schedule_history_clear">Clear history</string>
+    <string name="schedule_history_clear_title">Clear run history?</string>
+    <string name="schedule_history_clear_message">Removes all recorded scheduled runs. Your saved schedules stay as they are.</string>
+    <string name="schedule_notifications_enable">Allow notifications</string>
+    <string name="schedule_help_notifications_text">Shown on Android 13 and later when notification permission is off. Tap it to allow notifications for running scheduled fills, or open notification settings if it was declined earlier.</string>
+    <string name="schedule_help_pause_all_text">Pauses all saved schedules at once without turning each one off, or resumes them again.</string>
+    <string name="schedule_help_clear_history_text">Asks for confirmation, then clears the list of past runs while keeping your saved schedules.</string>
+</resources>

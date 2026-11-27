@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ported from FastMediaSorter (values/attrs.xml, S4460; FILLER-0067 here): optional feature glyph between
+     the navigation button and the title on StandardToolbar, tinted from the toolbar style. -->
+<resources>
+    <declare-styleable name="StandardToolbar">
+        <attr name="stbTitleIcon" format="reference" />
+        <attr name="stbTitleIconTint" format="color|reference" />
+    </declare-styleable>
+</resources>

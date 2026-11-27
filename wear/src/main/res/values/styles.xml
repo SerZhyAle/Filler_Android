@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Text and button styles of the watch screen over the platform's Theme.DeviceDefault: the toolkit buttons of the
+     watch with the 48 unit target of UI-SIZING; no product colour, shape or font override. -->
+<resources>
+    <!-- The implicit parent of the dotted names below. -->
+    <style name="FillerWatch" />
+
+    <style name="FillerWatch.Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="FillerWatch.Heading" parent="FillerWatch.Title">
+        <item name="android:layout_marginTop">@dimen/watch_gap</item>
+    </style>
+
+    <style name="FillerWatch.Body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/watch_gap</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="FillerWatch.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/watch_gap</item>
+        <item name="android:minHeight">@dimen/watch_touch_target</item>
+        <!-- The platform's watch button caps its label at two lines with an end ellipsis; the cleanup label needs a
+             third line at font scale 1.3 on the small round, so the cap rises (S0048) and the end mark stays. -->
+        <item name="android:maxLines">3</item>
+    </style>
+
+    <!-- Wear Material3's default button background carries a 172 dp intrinsic width and center_vertical gravity, which
+         starved the second button to 0 px under wrap_content and left "-" start-aligned (FILLER-0077); equal
+         weights measure each button with EXACTLY >= 48 dp, compact side padding fits enlarged text, and center aligns glyphs. -->
+    <style name="FillerWatch.StepButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">@dimen/watch_gap</item>
+        <item name="android:layout_marginStart">@dimen/watch_gap</item>
+        <item name="android:layout_marginEnd">@dimen/watch_gap</item>
+        <item name="android:minWidth">@dimen/watch_touch_target</item>
+        <item name="android:minHeight">@dimen/watch_touch_target</item>
+        <item name="android:paddingStart">@dimen/watch_gap</item>
+        <item name="android:paddingEnd">@dimen/watch_gap</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

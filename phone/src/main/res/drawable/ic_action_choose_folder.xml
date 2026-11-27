@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ICON-SET glyph action.choose-folder (status proposed in ICON-SET 0.39; Material Icons 'folder' with three dots cut
+     out, drawn for the contract, Apache-2.0): the path of the catalog file glyphs/action.choose-folder.svg, 24 x 24
+     grid, one path, even-odd fill (the three dots are cut out of the folder).
+     The fill is a placeholder: the colour comes from the theme, the vector tint is the theme role and a MaterialButton
+     iconTint replaces it with the caption ink (ICON-RENDER rule 2). Provisional by its proposed id until the owner
+     folds it in (ICON-SET section 15). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:tint="?attr/colorControlNormal"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:fillType="evenOdd"
+        android:pathData="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2zM7.1 12.4a1.1 1.1 0 1 0 0 2.2a1.1 1.1 0 1 0 0-2.2zm4.9 0a1.1 1.1 0 1 0 0 2.2a1.1 1.1 0 1 0 0-2.2zm4.9 0a1.1 1.1 0 1 0 0 2.2a1.1 1.1 0 1 0 0-2.2z" />
+</vector>

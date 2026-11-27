@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ICON-SET glyph action.fill-space (status proposed in ICON-SET 0.39; Material Icons 'format_color_fill' without its
+     colour bar, moved 3 units down to centre it, Apache-2.0): the path of the catalog file glyphs/action.fill-space.svg,
+     24 x 24 grid, one path. The fill is a placeholder: the
+     colour comes from the theme, the vector tint is the theme role and a MaterialButton iconTint replaces it with the
+     caption ink (ICON-RENDER rule 2). Provisional by its proposed id until the owner folds it in (ICON-SET section 15). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:tint="?attr/colorControlNormal"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M16.56,11.94L7.62,3L6.21,4.41l2.38,2.38L3.44,11.94c-0.59,0.59-0.59,1.54,0,2.12l5.5,5.5C9.23,19.85,9.62,20,10,20s0.77-0.15,1.06-0.44l5.5-5.5C17.15,13.48,17.15,12.53,16.56,11.94z M5.21,13L10,8.21L14.79,13H5.21z M19,14.5c0,0-2,2.17-2,3.5c0,1.1,0.9,2,2,2s2-0.9,2-2C21,16.67,19,14.5,19,14.5z" />
+</vector>

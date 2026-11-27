@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found - Filler</title>
+  <link rel="icon" href="https://serzhyale.github.io/Filler_Android/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="https://serzhyale.github.io/Filler_Android/assets/icon-512.png">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0f1a">
+  <!-- The host serves this file for any address it has no page for, at any depth, so every address below is absolute.
+       PAGE-STYLE section 7: theme and the touch profile are resolved before the first stylesheet; the page forwards to its
+       Russian or Ukrainian sibling only on an explicit stored language choice (PAGE-STYLE 3.9 item 3). -->
+  <script>
+(function(){try{
+  var h=document.documentElement,t=localStorage.getItem('sza-theme');
+  if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+  h.setAttribute('data-theme',t);
+  h.setAttribute('data-ui-profile',matchMedia('(pointer: coarse)').matches?'touch':'pointer');
+  var l=localStorage.getItem('sza-lang');
+  if(l==='ru')location.replace('https://serzhyale.github.io/Filler_Android/404-ru.html');
+  else if(l==='ua'||l==='uk')location.replace('https://serzhyale.github.io/Filler_Android/404-uk.html');
+}catch(e){}})();
+  </script>
+  <link rel="stylesheet" href="https://serzhyale.github.io/Filler_Android/assets/sza-kit.css">
+  <link rel="stylesheet" href="https://serzhyale.github.io/Filler_Android/assets/common.css">
+  <link rel="stylesheet" href="https://serzhyale.github.io/Filler_Android/assets/policy.css">
+</head>
+<body>
+<a class="btn btn-primary skip-link" href="#main"><span>Skip to main content</span></a>
+<div class="bg-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+<header class="site-header">
+  <a class="brand" href="https://serzhyale.github.io/Filler_Android/" aria-label="Filler, home page">Filler<span class="dot">.</span></a>
+  <div class="seg" role="group" aria-label="Language">
+    <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+  </div>
+  <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to light theme"><span class="gi gi-theme" aria-hidden="true"></span><span>Theme</span></button>
+</header>
+<main class="container section" id="main">
+  <noscript><p class="lang-links"><a href="https://serzhyale.github.io/Filler_Android/404.html" hreflang="en">English</a> &middot; <a href="https://serzhyale.github.io/Filler_Android/404-ru.html" hreflang="ru">Русский</a> &middot; <a href="https://serzhyale.github.io/Filler_Android/404-uk.html" hreflang="uk">Українська</a></p></noscript>
+  <article class="policy-card">
+<h1 id="not-found">Page not found</h1>
+<p>There is no page at this address on the Filler site. The address may be mistyped or out of date.</p>
+<div class="btn-row">
+  <a class="btn btn-primary" href="https://serzhyale.github.io/Filler_Android/"><span>Go to the Filler home page</span></a>
+  <a class="btn btn-ghost" href="https://serzhyale.github.io/Filler_Android/privacy.html"><span>Privacy policy</span></a>
+</div>
+  </article>
+</main>
+<footer class="site-footer"><div class="container">
+  <div class="footer-bottom">
+    <span>&copy; 2026 <a href="https://sza.od.ua" rel="noopener">Serhii Zhyhunenko</a></span>
+    <span><a href="https://sza.od.ua" rel="noopener">sza.od.ua</a> &middot; <a href="https://github.com/SerZhyAle" rel="noopener">GitHub</a> &middot; <a href="mailto:sza@ukr.net">sza@ukr.net</a> &middot; <a href="https://serzhyale.github.io/Filler_Android/#support">Support</a></span>
+  </div>
+</div></footer>
+<script>
+(function(){
+  var h=document.documentElement,urls={ru:'https://serzhyale.github.io/Filler_Android/404-ru.html',en:'https://serzhyale.github.io/Filler_Android/404.html',ua:'https://serzhyale.github.io/Filler_Android/404-uk.html'};
+  var tb=document.getElementById('themeBtn'),labels={light:'Switch to dark theme',dark:'Switch to light theme'};
+  function sync(){tb.setAttribute('aria-label',labels[h.getAttribute('data-theme')==='light'?'light':'dark'])}
+  sync();
+  tb.addEventListener('click',function(){
+    var n=h.getAttribute('data-theme')==='light'?'dark':'light';
+    h.setAttribute('data-theme',n);
+    try{localStorage.setItem('sza-theme',n)}catch(e){}
+    sync();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.seg button[data-lang]'),function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-lang');
+      try{localStorage.setItem('sza-lang',k)}catch(e){}
+      if(b.getAttribute('aria-pressed')!=='true')location.href=urls[k];
+    });
+  });
+})();
+</script>
+</body>
+</html>

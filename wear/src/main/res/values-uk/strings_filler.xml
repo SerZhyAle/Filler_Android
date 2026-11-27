@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Заповнює вільне місце годинника тимчасовими файлами, потім видаляє їх. Ваші файли залишаються як є.</string>
+    <string name="filler_watch_storage">пам\'ять годинника</string>
+    <string name="filler_location">Куди: %1$s</string>
+    <string name="filler_no_place">Пам\'ять годинника зараз недоступна.</string>
+    <string name="filler_free_space">Вільно: %1$s</string>
+    <string name="filler_free_space_unknown">Вільно: не виміряно</string>
+    <string name="filler_reserve">Залишається вільним для системи: %1$s</string>
+    <string name="filler_reserve_less">Залишити менше вільного місця</string>
+    <string name="filler_reserve_more">Залишити більше вільного місця</string>
+    <string name="filler_start">Почати заповнення</string>
+    <string name="filler_cancel">Зупинити й видалити файли</string>
+    <string name="filler_progress">Записано %1$s з %2$s</string>
+    <string name="filler_estimate">%1$d%% виконано, залишилось: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% виконано, залишилось: рахується..</string>
+    <string name="filler_confirm_title">Заповнити вільне місце?</string>
+    <string name="filler_confirm_message">У пам\'ять годинника буде записано близько %1$s тимчасових файлів, вільними залишаться %2$s. Файли видаляються, коли заповнення завершиться або буде зупинено.</string>
+    <string name="filler_confirm_reserve_lowered">Це менше за звичні %1$s, тому в системи й інших застосунків залишається менше місця, поки триває заповнення.</string>
+    <string name="filler_confirm_positive">Заповнити</string>
+    <string name="filler_retry_cleanup">Видалити залишені файли</string>
+    <string name="filler_pending_cleanup">Тимчасові файли минулого запуску ще лежать у пам\'яті годинника. Натисніть «Видалити залишені файли», перш ніж заповнювати знову.</string>
+    <string name="filler_result_done">Готово: записано й знову видалено %1$s.</string>
+    <string name="filler_result_cancelled">Заповнення зупинено. Тимчасові файли видалено.</string>
+    <string name="filler_result_failed">Запис зупинено: накопичувач повідомив про помилку. Тимчасові файли видалено.</string>
+    <string name="filler_result_cleanup_incomplete">Частину тимчасових файлів поки не вдалося видалити. Натисніть «Видалити залишені файли», щоб спробувати знову.</string>
+    <string name="filler_result_cleanup_done">Залишені тимчасові файли видалено.</string>
+    <string name="filler_result_no_place">Пам\'ять годинника зараз недоступна. Перезапустіть годинник і знову відкрийте Filler.</string>
+    <string name="filler_result_no_access">Запис у пам\'ять годинника зараз недоступний. Перезапустіть годинник і знову відкрийте Filler.</string>
+    <string name="filler_result_measurement_unavailable">Не вдалося виміряти вільне місце. Відкрийте Filler ще раз трохи згодом.</string>
+    <string name="filler_result_insufficient_space">Понад місце, що залишається системі, вільного місця немає. Звільніть місце на годиннику або залиште менше вільного місця.</string>
+    <string name="filler_result_busy">Заповнення вже триває.</string>
+    <string name="filler_result_not_started">Годинник не дозволив почати заповнення. Відкрийте Filler і спробуйте знову.</string>
+    <string name="filler_notification_channel">Заповнення</string>
+    <string name="filler_notification_title">Заповнення вільного місця</string>
+    <string name="filler_notification_stop">Зупинити</string>
+    <string name="filler_about">Про програму</string>
+    <string name="filler_about_version">Версія: %1$s</string>
+    <string name="filler_about_author">Автор: %1$s</string>
+    <string name="filler_about_phone_app">Є також застосунок Filler для телефонів Android. Він заповнює пам\'ять телефона або картку пам\'яті.</string>
+    <string name="filler_about_close">Закрити</string>
+</resources>

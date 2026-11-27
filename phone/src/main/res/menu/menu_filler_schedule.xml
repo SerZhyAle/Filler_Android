@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Schedules and Color theme actions of the Filler screen's top app bar (S0025, FILLER-0067), and its
+     About action (ABOUT-PAGE rule 1, FILLER-0075): app.schedule, app.theme and app.info glyphs, shown as
+     actions where there is room, before the help action so "?" stays trailing. Where the bar is crowded
+     About falls to the overflow menu first, still one reach from the main surface. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_schedules"
+        android:icon="@drawable/ic_app_schedule"
+        android:title="@string/schedule_open"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_theme"
+        android:icon="@drawable/ic_app_theme"
+        android:title="@string/filler_theme"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/ic_app_info"
+        android:title="@string/filler_about"
+        app:showAsAction="ifRoom" />
+</menu>

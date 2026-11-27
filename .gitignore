@@ -6,6 +6,7 @@ build/
 *.iml
 local.properties
 temp/
+DOWNLOADS/
 *.apk
 *.aab
 *.jks
@@ -18,6 +19,7 @@ temp/
 *secret*
 keystore.properties
 signing.properties
+app-signing.properties
 google-services.json
 play-service-account*.json
 .env
@@ -26,3 +28,28 @@ play-service-account*.json
 # The two name globs above are for secret files; they must not hide product source (canon S0060: in StreamsPlayer_mob
 # they hid UiSizeTokens.kt and RoomSecretStore.kt from the public remote).
 !**/src/**/*.kt
+
+# Local specification workspace and archive.
+/PLAN/
+/PLAN/archive/
+
+# Public-vs-local repository contents boundary (REPO-LAYOUT 0.12 rule 8, owner 2026-11-27, FILLER-0071):
+# agent instructions, agent config, portfolio stamps, contract pointers, the document registry, the release
+# ledger and harness glue stay local; the public remote carries source, site, public docs, CI and channel
+# manifests only. The files below stay on disk, untracked (git rm --cached, no history rewrite).
+/CLAUDE.md
+/AGENTS.md
+/.claude/
+/.sza-canon.json
+/.sza-profile.json
+/docs/contracts/
+/docs/DOCUMENT_REGISTRY.jsonl
+/docs/releases/
+/r0.ps1
+/r1.ps1
+/r2.ps1
+/r3.ps1
+/rm.ps1
+/rs.ps1
+/rw.ps1
+/tools/harness.ps1

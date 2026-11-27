@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The help action of the Filler screen's top app bar (CONTEXT-HELP rule 2, S0028): the app.help glyph, always shown as
+     an action so it stands in the trailing corner before any overflow; its title is the accessible name and the tooltip,
+     and FillerActivity appends the key to the tooltip where a hardware keyboard is attached. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/ic_app_help"
+        android:title="@string/help"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,89 @@
+{
+  "$comment": "How each surface of docs/SPECIFICATION_POSITIONING.md says each pillar (S0040). One entry per surface file the document names in its section Surfaces; anchors lists the pillar ids in the document's order, each with the one phrase that marks the pillar on that surface. scope is a regular expression whose match is the part of the file the surface lists the pillars in. match is 'text' (the phrase occurs exactly once in the scope, white space collapsed, so a hard-wrapped line still matches) or 'line' (the phrase is a whole line of the scope). tools/site/check-positioning.ps1 checks that every anchor occurs once and the anchors occur in the document's order. A pillar is reworded on a surface by editing its phrase here in the same edit; the order is changed in the document first.",
+  "surfaces": [
+    {
+      "file": "site/index.html",
+      "scope": "<section aria-labelledby=\"what-title\">[\\s\\S]*?</section>",
+      "match": "text",
+      "anchors": {
+        "choose": "<h3>Choose where, keep room</h3>",
+        "follow": "<h3>Follow a run, stop at any moment</h3>",
+        "cleanup": "<h3>Clean up after a pulled card</h3>",
+        "schedule": "<h3>Fill on a schedule</h3>",
+        "watch": "<h3>Fill from a watch</h3>"
+      }
+    },
+    {
+      "file": "site/index-ru.html",
+      "scope": "<section aria-labelledby=\"what-title\">[\\s\\S]*?</section>",
+      "match": "text",
+      "anchors": {
+        "choose": "<h3>Выберите место и оставьте запас</h3>",
+        "follow": "<h3>Следите за заполнением, остановите в любой момент</h3>",
+        "cleanup": "<h3>Уберите остаток после извлечённой карты</h3>",
+        "schedule": "<h3>Заполняйте по расписанию</h3>",
+        "watch": "<h3>Заполняйте с часов</h3>"
+      }
+    },
+    {
+      "file": "site/index-uk.html",
+      "scope": "<section aria-labelledby=\"what-title\">[\\s\\S]*?</section>",
+      "match": "text",
+      "anchors": {
+        "choose": "<h3>Виберіть місце й залиште запас</h3>",
+        "follow": "<h3>Стежте за заповненням, зупиніть будь-коли</h3>",
+        "cleanup": "<h3>Приберіть залишок після виймання картки</h3>",
+        "schedule": "<h3>Заповнюйте за розкладом</h3>",
+        "watch": "<h3>Заповнюйте з годинника</h3>"
+      }
+    },
+    {
+      "file": "README.md",
+      "scope": "^[\\s\\S]*?(?=\\r?\\n## )",
+      "match": "text",
+      "anchors": {
+        "choose": "You choose built-in storage or a memory card",
+        "follow": "the percentage and the time left",
+        "cleanup": "deletes every file it wrote",
+        "schedule": "runs on a schedule",
+        "watch": "Wear OS app"
+      }
+    },
+    {
+      "file": "docs/play/PLAY_LISTING.md",
+      "scope": "(?m)^## Full description\\r?\\n[\\s\\S]*?(?=^## |\\z)",
+      "match": "line",
+      "anchors": {
+        "choose": "Choose where",
+        "follow": "Fill and follow it",
+        "cleanup": "Clean up, always",
+        "schedule": "On a schedule",
+        "watch": "Any device, and the watch"
+      }
+    },
+    {
+      "file": "docs/play/PLAY_LISTING-ru.md",
+      "scope": "(?m)^## Full description\\r?\\n[\\s\\S]*?(?=^## |\\z)",
+      "match": "line",
+      "anchors": {
+        "choose": "Где заполнять",
+        "follow": "Заполнение на виду",
+        "cleanup": "Уборка всегда",
+        "schedule": "По расписанию",
+        "watch": "Любое устройство и часы"
+      }
+    },
+    {
+      "file": "docs/play/PLAY_LISTING-uk.md",
+      "scope": "(?m)^## Full description\\r?\\n[\\s\\S]*?(?=^## |\\z)",
+      "match": "line",
+      "anchors": {
+        "choose": "Де заповнювати",
+        "follow": "Заповнення на виду",
+        "cleanup": "Прибирання завжди",
+        "schedule": "За розкладом",
+        "watch": "Будь-який пристрій і годинник"
+      }
+    }
+  ]
+}

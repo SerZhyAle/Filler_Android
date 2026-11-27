@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy - Filler</title>
-  <meta name="description" content="What Filler for Android and Wear OS reads, writes and stores on your device. It asks for no permission, has no internet access, and the developer receives none of your data.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-512.png">
+  <meta name="description" content="What Filler for Android and Wear OS reads, writes and stores on your device. It has no internet access, and the developer receives none of your data.">
   <meta name="theme-color" content="#0a0f1a">
   <link rel="canonical" href="https://serzhyale.github.io/Filler_Android/privacy.html">
   <link rel="alternate" hreflang="en" href="https://serzhyale.github.io/Filler_Android/privacy.html">
@@ -14,15 +16,18 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Filler">
   <meta property="og:title" content="Privacy Policy - Filler">
-  <meta property="og:description" content="What Filler for Android and Wear OS reads, writes and stores on your device. It asks for no permission, has no internet access, and the developer receives none of your data.">
+  <meta property="og:description" content="What Filler for Android and Wear OS reads, writes and stores on your device. It has no internet access, and the developer receives none of your data.">
   <meta property="og:url" content="https://serzhyale.github.io/Filler_Android/privacy.html">
-  <meta property="og:image" content="https://serzhyale.github.io/Filler_Android/assets/icon-512.png">
+  <meta property="og:image" content="https://serzhyale.github.io/Filler_Android/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Filler">
   <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://serzhyale.github.io/Filler_Android/assets/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://serzhyale.github.io/Filler_Android/assets/og-image-1200x630.png">
   <meta name="twitter:title" content="Privacy Policy - Filler">
-  <meta name="twitter:description" content="What Filler for Android and Wear OS reads, writes and stores on your device. It asks for no permission, has no internet access, and the developer receives none of your data.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy - Filler","description":"What Filler for Android and Wear OS reads, writes and stores on your device. It asks for no permission, has no internet access, and the developer receives none of your data.","url":"https://serzhyale.github.io/Filler_Android/privacy.html","inLanguage":"en","publisher":{"@type":"Person","name":"Serhii Zhyhunenko","url":"https://sza.od.ua"}}</script>
+  <meta name="twitter:description" content="What Filler for Android and Wear OS reads, writes and stores on your device. It has no internet access, and the developer receives none of your data.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy - Filler","description":"What Filler for Android and Wear OS reads, writes and stores on your device. It has no internet access, and the developer receives none of your data.","url":"https://serzhyale.github.io/Filler_Android/privacy.html","inLanguage":"en","publisher":{"@type":"Person","name":"Serhii Zhyhunenko","url":"https://sza.od.ua"}}</script>
   <!-- PAGE-STYLE section 7: theme and the touch profile are resolved before the first stylesheet, so nothing flashes.
        sza-theme holds exactly dark or light and is shared with every page of this origin. -->
   <script>
@@ -34,12 +39,14 @@
 }catch(e){}})();
   </script>
   <link rel="stylesheet" href="assets/sza-kit.css">
+  <link rel="stylesheet" href="assets/common.css">
   <link rel="stylesheet" href="assets/policy.css">
 </head>
 <body>
+<a class="btn btn-primary skip-link" href="#main"><span>Skip to main content</span></a>
 <div class="bg-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
 <header class="site-header">
-  <span class="brand">Filler<span class="dot">.</span></span>
+  <a class="brand" href="./" aria-label="Filler, home page">Filler<span class="dot">.</span></a>
   <div class="seg" role="group" aria-label="Language">
     <button type="button" data-lang="ru" aria-pressed="false">RU</button>
     <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -51,7 +58,7 @@
   <noscript><p class="lang-links"><a href="privacy.html" hreflang="en">English</a> &middot; <a href="privacy-ru.html" hreflang="ru">Русский</a> &middot; <a href="privacy-uk.html" hreflang="uk">Українська</a></p></noscript>
   <article class="policy-card">
 <h1 id="privacy-policy-for-filler">Privacy Policy for Filler</h1>
-<p><strong>Last updated: November 13, 2026</strong></p>
+<p><strong>Last updated: November 14, 2026</strong></p>
 <p>Filler fills the free space of a storage device with temporary files and then deletes them again, on an Android phone,
 tablet or other Android device and on a Wear OS watch. It is published by Serhii Zhyhunenko (SerZhyAle) on Google Play
 as one app with the identifier <code>com.sza.filler</code>, which covers the device app and the watch app. This policy
@@ -71,13 +78,13 @@ tracking library. The components it is built from are listed in section 8.</li>
 <li>It creates no account and asks you to sign in nowhere.</li>
 <li>It does not open, read, copy or change your own files, and it never deletes a file it did not write.</li>
 <li>It does not read your contacts, photos, messages, location or the data of other apps.</li>
-<li>It asks for no Android permission (section 5).</li>
+<li>The device app asks only for what lets a scheduled fill run on time with the app closed; the watch app asks only for what keeps a fill going while its screen is dark (section 5).</li>
 </ul>
 <h2 id="what-the-app-reads">2. What the app reads on your device</h2>
 <ul>
 <li><strong>The folder you choose.</strong> You pick a folder on built-in storage or on a memory card in the Android folder
 picker. Android then lets Filler write into that folder only. Without a choice, Filler uses its own folder on the
-device, which needs no access grant.</li>
+device, which needs no access grant. On the watch, Filler always uses its own folder.</li>
 <li><strong>Free space.</strong> The free and total space of the storage device that holds the folder, to show it to you, to
 keep a part of it free for the system, and to stop writing before that part.</li>
 <li><strong>Whether the storage is connected.</strong> A memory card can be removed during a run; Filler checks that the
@@ -91,15 +98,29 @@ amount you confirm, and deletes them when filling finishes or when you stop it. 
 storage. The list is what lets it delete every one of its files after a stop, a write error, a restart or a removed
 memory card, and only those files.</li>
 <li><strong>Settings:</strong> the folder you chose and the part of the free space kept for the system.</li>
+<li><strong>Schedules and their history.</strong> On the device, each schedule you save (its folder, time and how often it
+runs) and a list of its recent runs: when each started, how it ended and how much it wrote. Both stay in Filler's private
+storage.</li>
 <li>Android backup is switched off for Filler, so none of this is copied to your Google account.</li>
 </ul>
 <h2 id="what-leaves-the-device">4. What leaves the device</h2>
 <p>Nothing. Filler declares no internet permission, so it cannot send anything over a network: not to the developer, not
 to a server, not to another app. The temporary files stay on the storage device you chose until Filler deletes them.</p>
 <h2 id="permissions">5. Permissions</h2>
-<p>Filler asks for no Android permission. Access to a folder is something you grant yourself, one folder at a time,
-through the Android folder picker; Filler's own folder needs no grant. You can withdraw a grant by clearing Filler's
-storage in the Android settings or by uninstalling it.</p>
+<p>Access to a folder is something you grant yourself, one folder at a time, through the Android folder picker; Filler's
+own folder needs no grant. You can withdraw a grant by clearing Filler's storage in the Android settings or by
+uninstalling it.</p>
+<p>The device app asks for five permissions, all for one purpose: a fill you scheduled runs at its time with the app
+closed, and you see that it runs. Running at startup puts your schedules back in line after the phone restarts;
+keeping the processor awake holds it awake for the length of a scheduled fill only; running a foreground service, of
+the data-sync type, lets that fill run to its end; showing notifications shows it while it runs. Android asks you for
+the notification permission when you save a schedule, and the fill runs whether or not you allow it. None of the five
+gives access to your files, your data or a network.</p>
+<p>The watch app asks for four permissions, all for one purpose: a fill you started keeps going after the watch screen
+goes dark, and you see how far it is. Running a foreground service of the data-sync type keeps the fill writing;
+keeping the processor awake holds it awake for the length of that fill only; showing notifications shows the fill's
+progress and its Stop button. Android asks you for the notification permission at the first fill, and the fill runs
+whether or not you allow it. None of the four gives access to your files, your data or a network.</p>
 <h2 id="google">6. Google Play</h2>
 <p>Google Play, the store, may give the developer aggregated statistics such as installs and crash rates from devices
 whose owners share them with Google. The developer receives no device-level data from the app.</p>
@@ -132,7 +153,7 @@ published.</p>
 <footer class="site-footer"><div class="container">
   <div class="footer-bottom">
     <span>&copy; 2026 <a href="https://sza.od.ua" rel="noopener">Serhii Zhyhunenko</a></span>
-    <span><a href="https://sza.od.ua" rel="noopener">sza.od.ua</a> &middot; <a href="https://github.com/SerZhyAle" rel="noopener">GitHub</a> &middot; <a href="mailto:sza@ukr.net">sza@ukr.net</a></span>
+    <span><a href="https://sza.od.ua" rel="noopener">sza.od.ua</a> &middot; <a href="https://github.com/SerZhyAle" rel="noopener">GitHub</a> &middot; <a href="mailto:sza@ukr.net">sza@ukr.net</a> &middot; <a href="./#support">Support</a></span>
   </div>
 </div></footer>
 <button type="button" class="to-top" id="toTop" aria-label="Back to top"><span class="gi gi-top" aria-hidden="true"></span></button>

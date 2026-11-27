@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The body of the About window of the Filler screen (ABOUT-PAGE rules 2 to 4, FILLER-0075): the concise
+     product description (the screen's intro string reused, its one source), the running version read from
+     the build's own package metadata at runtime, and the author block - a localized label with the Latin
+     name, then the site address as text the browser opens only on a tap (autoLink; a device with no browser
+     still reads it), and the mention of the watch app (rule 7). No product-site row while this program's own
+     page does not answer (rule 5), so no row here leads nowhere.The sides take the dialog's preferred padding, which a custom view does not get by
+     itself; the column scrolls where a low window or a large font leaves too little height. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="?attr/dialogPreferredPadding"
+        android:paddingTop="@dimen/filler_spacing_16"
+        android:paddingEnd="?attr/dialogPreferredPadding">
+
+        <TextView
+            android:id="@+id/txtAboutDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/filler_intro"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <TextView
+            android:id="@+id/txtAboutVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/filler_spacing_16"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <TextView
+            android:id="@+id/txtAboutAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/filler_spacing_16"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <TextView
+            android:id="@+id/txtAboutSite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/filler_spacing_4"
+            android:autoLink="web"
+            android:text="@string/filler_about_site"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <!-- The watch version of this product (rule 7, FILLER-0076): plain text while neither its store listing
+             nor a page of its own answers. -->
+        <TextView
+            android:id="@+id/txtAboutWatchApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/filler_spacing_16"
+            android:text="@string/filler_about_watch_app"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+    </LinearLayout>
+</ScrollView>

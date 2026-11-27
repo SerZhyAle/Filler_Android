@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filler: Fill Storage Space - Android и Wear OS</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-512.png">
+  <meta name="description" content="Filler заполняет свободное место встроенной памяти или карты памяти временными файлами и затем удаляет их. Для Android и Wear OS. Без доступа в интернет.">
+  <meta name="theme-color" content="#0a0f1a">
+  <link rel="canonical" href="https://serzhyale.github.io/Filler_Android/index-ru.html">
+  <link rel="alternate" hreflang="en" href="https://serzhyale.github.io/Filler_Android/">
+  <link rel="alternate" hreflang="ru" href="https://serzhyale.github.io/Filler_Android/index-ru.html">
+  <link rel="alternate" hreflang="uk" href="https://serzhyale.github.io/Filler_Android/index-uk.html">
+  <link rel="alternate" hreflang="x-default" href="https://serzhyale.github.io/Filler_Android/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Filler">
+  <meta property="og:title" content="Filler: Fill Storage Space - Android и Wear OS">
+  <meta property="og:description" content="Filler заполняет свободное место встроенной памяти или карты памяти временными файлами и затем удаляет их. Для Android и Wear OS. Без доступа в интернет.">
+  <meta property="og:url" content="https://serzhyale.github.io/Filler_Android/index-ru.html">
+  <meta property="og:image" content="https://serzhyale.github.io/Filler_Android/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Filler">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://serzhyale.github.io/Filler_Android/assets/og-image-1200x630.png">
+  <meta name="twitter:title" content="Filler: Fill Storage Space - Android и Wear OS">
+  <meta name="twitter:description" content="Filler заполняет свободное место встроенной памяти или карты памяти временными файлами и затем удаляет их. Для Android и Wear OS. Без доступа в интернет.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Filler","description":"Filler заполняет свободное место встроенной памяти или карты памяти временными файлами и затем удаляет их. Для Android и Wear OS. Без доступа в интернет.","url":"https://serzhyale.github.io/Filler_Android/index-ru.html","installUrl":"https://play.google.com/store/apps/details?id=com.sza.filler","applicationCategory":"UtilitiesApplication","operatingSystem":"Android, Wear OS","inLanguage":"ru","license":"https://opensource.org/license/mit","image":"https://serzhyale.github.io/Filler_Android/assets/icon-512.png","author":{"@type":"Person","name":"Serhii Zhyhunenko","url":"https://sza.od.ua"}}</script>
+  <!-- PAGE-STYLE section 7: theme and the touch profile are resolved before the first stylesheet, so nothing flashes.
+       sza-theme holds exactly dark or light and is shared with every page of this origin. A locale page never forwards
+       (PAGE-STYLE 3.9 item 3). -->
+  <script>
+(function(){try{
+  var h=document.documentElement,t=localStorage.getItem('sza-theme');
+  if(t!=='dark'&&t!=='light')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+  h.setAttribute('data-theme',t);
+  h.setAttribute('data-ui-profile',matchMedia('(pointer: coarse)').matches?'touch':'pointer');
+}catch(e){}})();
+  </script>
+  <link rel="stylesheet" href="assets/sza-kit.css">
+  <link rel="stylesheet" href="assets/common.css">
+  <link rel="stylesheet" href="assets/landing.css">
+</head>
+<body>
+<a class="btn btn-primary skip-link" href="#main"><span>Перейти к основному содержимому</span></a>
+<div class="bg-blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+<header class="site-header">
+  <span class="brand">Filler<span class="dot">.</span></span>
+  <div class="seg" role="group" aria-label="Язык">
+    <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" data-lang="ua" aria-pressed="false">UA</button>
+  </div>
+  <button type="button" class="theme-btn" id="themeBtn" aria-label="Переключить на светлую тему"><span class="gi gi-theme" aria-hidden="true"></span><span>Тема</span></button>
+  <a class="btn" href="https://github.com/SerZhyAle/Filler_Android#readme" target="_blank" rel="noopener noreferrer"><span>Документация</span><span class="gi gi-external gi-mirror" aria-hidden="true"></span><span class="sr">, откроется в новом окне</span></a>
+  <a class="btn btn-primary" href="#get"><span>Установить</span></a>
+</header>
+<main class="container landing" id="main">
+  <noscript><p class="lang-links"><a href="./" hreflang="en">English</a> &middot; <a href="index-ru.html" hreflang="ru">Русский</a> &middot; <a href="index-uk.html" hreflang="uk">Українська</a></p></noscript>
+  <section class="hero">
+    <div class="identity">
+      <img class="product-icon" src="assets/icon-512.png" width="104" height="104" alt="">
+      <div>
+        <p class="product-name">Filler</p>
+        <p class="kicker">Заполнение накопителя для Android</p>
+      </div>
+    </div>
+    <h1 id="top">Заполните свободное место накопителя временными файлами, а затем удалите их.</h1>
+    <p class="lead">Выберите встроенную память или карту памяти, посмотрите, сколько свободного места измерил Filler и какую часть он оставляет свободной, и заполните остальное. Filler удаляет только файлы, которые записал сам, - ваши собственные файлы остаются как есть.</p>
+    <p class="whatfor">Filler - приложение для Android и Wear OS, которое заполняет свободное место накопителя временными файлами и снова удаляет их. Оно для случая, когда свободное место карты памяти или телефона нужно занять и вернуть, не тронув ваши файлы.</p>
+    <div class="demo"><code>Карта памяти</code><span class="arrow">&rarr; заполнить, оставить 1 ГБ свободным &rarr;</span><code class="out">удалены только файлы Filler</code></div>
+  </section>
+  <section class="get" id="get" aria-labelledby="get-title">
+    <h2 id="get-title">Установить Filler</h2>
+    <p>Один список в Google Play содержит приложение для Android и приложение для Wear OS.</p>
+    <div class="channels">
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.sza.filler" target="_blank" rel="noopener noreferrer"><span>Установить из Google Play</span><span class="gi gi-external gi-mirror" aria-hidden="true"></span><span class="sr">, откроется в новом окне</span></a>
+      <a class="btn btn-ghost" href="https://github.com/SerZhyAle/Filler_Android" target="_blank" rel="noopener noreferrer"><span>Исходный код</span><span class="gi gi-external gi-mirror" aria-hidden="true"></span><span class="sr">, откроется в новом окне</span></a>
+    </div>
+    <ol class="quickstart">
+      <li>Установите Filler из Google Play на телефон, планшет или часы Wear OS.</li>
+      <li>Откройте Filler. На телефоне или планшете нажмите «Выбрать папку», чтобы выбрать накопитель или папку, либо оставьте собственную папку Filler; проверьте свободное место и оставляемую свободной часть.</li>
+      <li>Нажмите «Начать заполнение» и подтвердите. Когда заполнение закончится или вы его остановите, Filler удалит свои файлы.</li>
+    </ol>
+    <div class="note"><span class="tag">Перед запуском</span><p>По умолчанию Filler оставляет свободным 1 ГБ. Если уменьшить эту часть, системе и другим приложениям остаётся меньше места на время заполнения, и подтверждение об этом сообщает.</p></div>
+  </section>
+  <section aria-labelledby="what-title">
+    <h2 id="what-title">Что делает Filler</h2>
+    <div class="grid">
+      <article class="card"><h3>Выберите место и оставьте запас</h3><p>Выберите встроенную память, карту памяти или папку на них в системном окне выбора папки Android - или начните сразу в собственной папке Filler. Часть свободного места Filler оставляет для системы: по умолчанию 1 ГБ, перед запуском её можно уменьшить до 10 МБ. Одно подтверждение называет папку, объём и оставляемую свободной часть, прежде чем что-либо будет записано.</p></article>
+      <article class="card"><h3>Следите за заполнением, остановите в любой момент</h3><p>Пока Filler пишет, видно, сколько записано, процент и оставшееся время. Остановить можно в любой момент: уже записанные файлы удаляются.</p></article>
+      <article class="card"><h3>Уберите остаток после извлечённой карты</h3><p>Filler удаляет только файлы, которые записал сам, и ведёт их список. После остановки, ошибки записи, перезапуска или извлечения карты памяти он предлагает удалить остаток, как только накопитель снова доступен.</p></article>
+      <article class="card"><h3>Заполняйте по расписанию</h3><p>На телефоне сохраните расписание, и Filler заполнит папку в заданное время при закрытом приложении, даже после перезапуска, а затем удалит файлы. Заполнение по расписанию оставляет свободным обычный 1 ГБ, выполняется не чаще раза в день, и каждый запуск виден со временем и результатом.</p></article>
+      <article class="card"><h3>Заполняйте с часов</h3><p>На часах Wear OS Filler заполняет собственную папку на часах и продолжает работу, когда экран погас. Уведомление показывает ход заполнения и кнопку «Остановить».</p></article>
+    </div>
+  </section>
+  <section aria-labelledby="more-title">
+    <h2 id="more-title">Подробности</h2>
+    <div class="btn-row groups-bar">
+      <button type="button" class="btn btn-ghost" id="expandAll"><span>Развернуть все</span></button>
+      <button type="button" class="btn btn-ghost" id="collapseAll"><span>Свернуть все</span></button>
+    </div>
+    <details class="sec" id="devices"><summary><span class="secnum">01</span><span>Любое устройство и часы</span></summary>
+      <p>Filler работает с касанием, клавиатурой, мышью и D-pad, в портретной и альбомной ориентации, на телефонах, планшетах и других Android-устройствах, а также на часах Wear OS. Один идентификатор приложения, <code>com.sza.filler</code>, охватывает приложение для Android и приложение для Wear OS. Интерфейс приложения для Android доступен на 13 языках.</p>
+    </details>
+    <details class="sec" id="privacy"><summary><span class="secnum">02</span><span>Конфиденциальность и разрешения</span></summary>
+      <p>У Filler нет доступа в интернет: ни учётной записи, ни аналитики, ни рекламы, ни отслеживания. Ничто не покидает ваше устройство, и разработчик не получает ваших данных. Доступ к папке вы даёте сами, по одной папке, в системном окне выбора папки Android.</p>
+      <p>Приложение для телефона запрашивает пять разрешений - все для того, чтобы заполнение по расписанию запускалось вовремя при закрытом приложении. Приложение для часов запрашивает четыре - все для того, чтобы заполнение продолжалось, пока экран погашен. Полный текст - <a href="privacy-ru.html">политика конфиденциальности</a>.</p>
+    </details>
+    <details class="sec" id="limits"><summary><span class="secnum">03</span><span>Чего Filler не делает</span></summary>
+      <ul>
+        <li>Он удаляет только файлы, которые записал сам; он никогда не открывает, не читает, не копирует и не меняет ваши собственные файлы.</li>
+        <li>Он не проверяет, соответствует ли карта памяти заявленному объёму.</li>
+        <li>Он не восстанавливает удалённые файлы и не гарантирует надёжного стирания данных.</li>
+        <li>Он работает с накопителями устройства и не заполняет сетевые или облачные хранилища.</li>
+      </ul>
+    </details>
+    <details class="sec" id="source"><summary><span class="secnum">04</span><span>Документация и исходный код</span></summary>
+      <ul>
+        <li><a rel="noopener" href="https://github.com/SerZhyAle/Filler_Android#readme">Документация</a>: README репозитория.</li>
+        <li><a rel="noopener" href="https://github.com/SerZhyAle/Filler_Android">Исходный код</a>: Filler - программа с открытым исходным кодом по лицензии MIT.</li>
+        <li><a rel="noopener" href="https://github.com/SerZhyAle/Filler_Android/blob/main/docs/INSTALL_TRUST-ru.md">Установка APK</a> с GitHub Releases или SourceForge: что значат запросы Android о неизвестных приложениях и Play Protect и что нажать.</li>
+        <li>Разработчик и издатель:Serhii Zhyhunenko (SerZhyAle).</li>
+      </ul>
+    </details>
+    <details class="sec" id="support"><summary><span class="secnum">05</span><span>Поддержка</span></summary>
+      <p>Сообщить о проблеме или задать вопрос можно в <a rel="noopener" href="https://github.com/SerZhyAle/Filler_Android/issues">трекере задач</a>. Полезное сообщение называет приложение (для телефона или планшета либо для часов Wear OS), версию Android и модель устройства, версию Filler, которую показывают настройки приложений Android, что вы делали, чего ждали и что произошло на самом деле.</p>
+      <p>Трекер задач открыт всем, поэтому не пишите в нём ничего личного. Filler никуда не отправляет журналы и диагностику, поэтому в сообщении есть только то, что вы напишете сами.</p>
+      <p>По личным вопросам и по проблемам безопасности пишите на <a href="mailto:sza@ukr.net">sza@ukr.net</a>.</p>
+      <p>Filler поддерживает один разработчик. Ответы приходят по мере возможности, срок ответа не установлен.</p>
+    </details>
+  </section>
+</main>
+<footer class="site-footer"><div class="container">
+  <nav class="tools-grid" aria-label="Другие инструменты SZA">
+    <a href="https://serzhyale.github.io/FastMediaSorter_mob_v2/" rel="noopener"><b>Fast Media Sorter &amp; Organizer</b><span>Сортировщик медиа для Android</span></a>
+    <a href="https://serzhyale.github.io/FastMediaSorter_Lite/" rel="noopener"><b>Fast Media Sorter &amp; Sharing for Windows</b><span>Менеджер медиа и файлов для Windows</span></a>
+    <a href="https://serzhyale.github.io/FastMediaSorter_WEB/" rel="noopener"><b>FastMediaSorter for Web</b><span>Сортировщик медиа в браузере</span></a>
+    <a href="https://serzhyale.github.io/CyrFlip/" rel="noopener"><b>CyrFlip</b><span>Исправление раскладки для Windows</span></a>
+    <a href="https://serzhyale.github.io/doc-html-translate/" rel="noopener"><b>doc-html-translate</b><span>Конвертер электронных книг для Windows</span></a>
+    <a href="https://serzhyale.github.io/FileDO/" rel="noopener"><b>FileDO</b><span>Утилита командной строки для накопителей Windows</span></a>
+    <a href="https://serzhyale.github.io/StreamsPlayer/" rel="noopener"><b>STREAMS Player</b><span>Проигрыватель потоков для Windows</span></a>
+    <a href="https://serzhyale.github.io/OneClickRunner/" rel="noopener"><b>OneClickRunner</b><span>Лаунчер в трее для Windows</span></a>
+    <a href="https://serzhyale.github.io/universal-agent-kit/" rel="noopener"><b>Universal Agent Kit</b><span>Методология AI-разработки</span></a>
+    <a href="https://serzhyale.github.io/DeviceInfo_Android/" rel="noopener"><b>DeviceInfo</b><span>Сведения об устройстве для Android и Wear OS</span></a>
+    <a href="https://serzhyale.github.io/Tourist_Android/" rel="noopener"><b>Tourist</b><span>Походный набор для Android и Wear OS</span></a>
+    <a href="https://sza.od.ua" rel="noopener"><b>SZA (hub)</b><span>Портфолио</span></a>
+  </nav>
+  <div class="footer-bottom">
+    <span>&copy; 2026 <a href="https://sza.od.ua" rel="noopener">Serhii Zhyhunenko</a></span>
+    <span><a href="https://sza.od.ua" rel="noopener">sza.od.ua</a> &middot; <a href="https://github.com/SerZhyAle" rel="noopener">GitHub</a> &middot; <a href="mailto:sza@ukr.net">sza@ukr.net</a> &middot; <a href="privacy-ru.html">Политика конфиденциальности</a> &middot; <a href="#support">Поддержка</a></span>
+  </div>
+</div></footer>
+<button type="button" class="to-top" id="toTop" aria-label="Наверх" title="Наверх"><span class="gi gi-top" aria-hidden="true"></span></button>
+<script>
+(function(){
+  var h=document.documentElement,urls={ru:'index-ru.html',en:'./',ua:'index-uk.html'};
+  var $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  var tb=document.getElementById('themeBtn'),labels={light:'Переключить на тёмную тему',dark:'Переключить на светлую тему'};
+  function sync(){tb.setAttribute('aria-label',labels[h.getAttribute('data-theme')==='light'?'light':'dark'])}
+  sync();
+  tb.addEventListener('click',function(){
+    var n=h.getAttribute('data-theme')==='light'?'dark':'light';
+    h.setAttribute('data-theme',n);
+    try{localStorage.setItem('sza-theme',n)}catch(e){}
+    sync();
+  });
+  $$('.seg button[data-lang]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.getAttribute('data-lang');
+      try{localStorage.setItem('sza-lang',k)}catch(e){}
+      if(b.getAttribute('aria-pressed')!=='true')location.href=urls[k];
+    });
+  });
+  var secs=$$('details.sec'),groupsKey='sec-state:'+(h.getAttribute('lang')||'en');
+  // COLLAPSIBLE-GROUP 1.3 section 4 (S0046): the page layer remembers the groups' expansion and the
+  // reading place. The group ids are the pages' stable section ids, the page id is the html lang, so
+  // no locale reads another locale's state; an unknown id, a retired group and a blocked storage
+  // area are tolerated and leave the page at its markup default. The viewport anchor is the last
+  // group header at or above the viewport top, remembered with its offset, so reopening lands on the
+  // reading place; a fragment in the address wins over the remembered viewport (explicit navigation).
+  function stateNow(){var o={},a=null;
+    secs.forEach(function(d){o[d.id]=d.open});
+    secs.forEach(function(d){if(d.getBoundingClientRect().top<=0)a=d});
+    if(!a&&secs.length)a=secs[0];
+    return{open:o,a:a?a.id:null,o:a?a.getBoundingClientRect().top:0,y:scrollY}}
+  function saveGroups(){try{localStorage.setItem(groupsKey,JSON.stringify(stateNow()))}catch(e){}}
+  function keepGroupsView(v){if(v&&v.a){var e=document.getElementById(v.a);if(e)scrollTo(0,e.getBoundingClientRect().top+scrollY-v.o)}}
+  var savedGroups=null;
+  try{savedGroups=JSON.parse(localStorage.getItem(groupsKey))}catch(e){}
+  if(savedGroups&&savedGroups.open)secs.forEach(function(d){var v=savedGroups.open[d.id];if(v===true||v===false)d.open=v});
+  if(savedGroups&&savedGroups.a&&savedGroups.y>0&&!location.hash){
+    var anchorEl=document.getElementById(savedGroups.a);
+    if(anchorEl){try{history.scrollRestoration='manual'}catch(e){}scrollTo(0,anchorEl.getBoundingClientRect().top+scrollY-savedGroups.o)}
+  }
+  document.addEventListener('toggle',saveGroups,true);
+  var saveQueued=false;
+  addEventListener('scroll',function(){if(saveQueued)return;saveQueued=true;requestAnimationFrame(function(){saveQueued=false;saveGroups()})},{passive:true});
+  addEventListener('pagehide',saveGroups);
+  function setAll(open){var v=stateNow();
+    secs.forEach(function(d){
+      // a focused body row moves to its group header before the group hides (section 4 rule 5)
+      if(!open&&d.open&&document.activeElement&&d.contains(document.activeElement)&&!document.activeElement.closest('summary')){var s=d.querySelector('summary');if(s)s.focus()}
+      d.open=open});
+    keepGroupsView(v);
+  }
+  document.getElementById('expandAll').addEventListener('click',function(){setAll(true)});
+  document.getElementById('collapseAll').addEventListener('click',function(){setAll(false)});
+  function openFromHash(){
+    var id=decodeURIComponent(location.hash.slice(1));
+    if(!id)return;
+    var el=document.getElementById(id);
+    if(!el)return;
+    var d=el.tagName==='DETAILS'?el:el.closest('details.sec');
+    if(d){d.open=true;el.scrollIntoView()}
+  }
+  openFromHash();
+  addEventListener('hashchange',openFromHash);
+  var top=document.getElementById('toTop');
+  addEventListener('scroll',function(){top.classList.toggle('show',scrollY>600)},{passive:true});
+  top.addEventListener('click',function(){scrollTo({top:0})});
+})();
+</script>
+</body>
+</html>

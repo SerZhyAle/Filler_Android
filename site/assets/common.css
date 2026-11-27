@@ -1,0 +1,9 @@
+/* Page layer shared by every page (S0038, 2026-11-14). Linked after the byte-identical family kit (sza-kit.css), which is
+   never edited, and before the layer of the page group (landing.css, policy.css). It holds the two rules every page needs
+   and the kit has no component for: the skip link past the header to the main content (SITE-EXPERIENCE rule 15) and the
+   header brand as a link to the landing. The skip link is a kit button, so its size, colour and focus ring are the kit's;
+   this layer only keeps it off screen until it takes focus. */
+.skip-link{position:fixed;top:.6rem;inset-inline-start:var(--gutter);z-index:60;transform:translateY(-300%)}
+.skip-link:focus{transform:none}
+a.brand{display:inline-flex;align-items:center;min-height:var(--ui-target)}
+a.brand:hover{color:var(--text)}

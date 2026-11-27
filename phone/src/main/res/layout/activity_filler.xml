@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ported from FastMediaSorter release 48 (layout/activity_filler.xml, S4521), portrait host. One scrollable
+     column in the READY order: place, space, reserve, reserve slider (owner order of 2026-11-13, S0005), Start;
+     progress, the keep-open line (S0049) and Stop replace Start during a run, and the cleanup block appears only while an
+     earlier run left files, offering - on a connected storage (S0049) - to fill the rest next to deleting them
+     files. The landscape file carries the same ids in the same order. Deliberate differences: a Material
+     toolbar with the app name instead of the source's own toolbar widget - the source's ic_arrow_back is not
+     inherited, because the one phone screen is the launcher entry with no parent (S0005), while the source's
+     ic_storage title glyph is inherited as the toolbar logo beside the unchanged app name (S0050) - this app's spacing dimensions instead of the source's tokens, the reserve slider, and
+     (S0027) the Filler button styles - rectangular corners of radius 4, 16 dp padding, an ICON-SET glyph on each of
+     the four commands, a neutral Stop - instead of the stock Material 3 button styles (docs/SPECIFICATION_UI_SIZE_PROFILE.md). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fillerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- (S0050, FILLER-0067) Ported StandardToolbar with Widget.Filler.Toolbar.Flat and the inherited Filler
+         block glyph via app:stbTitleIcon (8 dp logo-to-title gap, matching app_v2 layout/activity_filler.xml). -->
+    <com.sza.filler.ui.common.widget.StandardToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Filler.Toolbar.Flat"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:stbTitleIcon="@drawable/ic_storage"
+        app:title="@string/app_name" />
+
+    <ScrollView
+        android:id="@+id/fillerScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/filler_spacing_16">
+
+            <TextView
+                android:id="@+id/txtFillerIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filler_intro"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <TextView
+                android:id="@+id/txtFillerLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFillerChooseFolder"
+                style="@style/Widget.Filler.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_8"
+                android:nextFocusDown="@id/sliderFillerReserve"
+                android:text="@string/filler_choose_folder"
+                app:icon="@drawable/ic_action_choose_folder" />
+
+            <TextView
+                android:id="@+id/txtFillerFreeSpace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+            <TextView
+                android:id="@+id/txtFillerReserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_4"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderFillerReserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_4"
+                android:contentDescription="@string/filler_reserve_slider_description"
+                android:nextFocusUp="@id/btnFillerChooseFolder"
+                android:nextFocusDown="@id/btnFillerStart"
+                android:stepSize="1"
+                android:value="6"
+                android:valueFrom="0"
+                android:valueTo="6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFillerStart"
+                style="@style/Widget.Filler.Button.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:nextFocusUp="@id/sliderFillerReserve"
+                android:text="@string/filler_start"
+                app:icon="@drawable/ic_action_fill_space" />
+
+            <LinearLayout
+                android:id="@+id/fillerRunGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressFiller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/txtFillerProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:accessibilityLiveRegion="polite"
+                    android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+                <TextView
+                    android:id="@+id/txtFillerEstimate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_4"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <TextView
+                    android:id="@+id/txtFillerKeepOpen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_4"
+                    android:text="@string/filler_keep_open"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFillerCancel"
+                    style="@style/Widget.Filler.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:text="@string/filler_cancel"
+                    app:icon="@drawable/ic_action_cancel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fillerCleanupGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtFillerCleanupStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFillerResume"
+                    style="@style/Widget.Filler.Button.Filled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:text="@string/filler_resume"
+                    android:visibility="gone"
+                    app:icon="@drawable/ic_action_fill_space" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFillerRetryCleanup"
+                    style="@style/Widget.Filler.Button.Tonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:text="@string/filler_retry_cleanup"
+                    app:icon="@drawable/ic_action_delete" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtFillerResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:accessibilityLiveRegion="polite"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

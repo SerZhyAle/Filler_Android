@@ -17,3 +17,5 @@ dependencyResolutionManagement {
 rootProject.name = "Filler"
 
 include(":phone")
+include(":wear")
+include(":filler-core")

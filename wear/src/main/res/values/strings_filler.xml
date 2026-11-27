@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The watch Filler screen (S0019): authored in English, Russian and Ukrainian with the feature; the other locales of
+     the phone fan out at the release boundary. The wording follows the phone's strings_filler.xml where the meaning
+     is the same, and names the watch where the phone names a folder or a storage device. -->
+<resources>
+    <string name="filler_intro">Fills the watch\'s free space with temporary files, then deletes them. Your own files stay as they are.</string>
+    <string name="filler_watch_storage">watch storage</string>
+    <string name="filler_location">Writes to: %1$s</string>
+    <string name="filler_no_place">The watch storage is not available now.</string>
+    <string name="filler_free_space">Free space: %1$s</string>
+    <string name="filler_free_space_unknown">Free space: not measured</string>
+    <string name="filler_reserve">Kept free for the system: %1$s</string>
+    <string name="filler_reserve_less">Keep less free</string>
+    <string name="filler_reserve_more">Keep more free</string>
+    <string name="filler_reserve_less_glyph" translatable="false">-</string>
+    <string name="filler_reserve_more_glyph" translatable="false">+</string>
+    <string name="filler_start">Start filling</string>
+    <string name="filler_cancel">Stop and delete files</string>
+    <string name="filler_progress">Written %1$s of %2$s</string>
+    <string name="filler_estimate">%1$d%% done, time left: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% done, time left: calculating..</string>
+    <string name="filler_confirm_title">Fill free space?</string>
+    <string name="filler_confirm_message">About %1$s of temporary files will be written to the watch storage, and %2$s stays free. The files are deleted when filling finishes or stops.</string>
+    <string name="filler_confirm_reserve_lowered">This is less than the usual %1$s, so the system and other apps have less room while the run lasts.</string>
+    <string name="filler_confirm_positive">Fill</string>
+    <string name="filler_retry_cleanup">Delete remaining files</string>
+    <string name="filler_pending_cleanup">Temporary files from an earlier run are still on the watch. Tap Delete remaining files before filling again.</string>
+    <string name="filler_result_done">Done: %1$s written and deleted again.</string>
+    <string name="filler_result_cancelled">Filling stopped. The temporary files were deleted.</string>
+    <string name="filler_result_failed">Writing stopped because the storage reported an error. The temporary files were deleted.</string>
+    <string name="filler_result_cleanup_incomplete">Some temporary files could not be deleted yet. Tap Delete remaining files to try again.</string>
+    <string name="filler_result_cleanup_done">The remaining temporary files were deleted.</string>
+    <string name="filler_result_no_place">The watch storage is not available now. Restart the watch, then open Filler again.</string>
+    <string name="filler_result_no_access">Writing to the watch storage is not allowed now. Restart the watch, then open Filler again.</string>
+    <string name="filler_result_measurement_unavailable">Free space could not be measured. Open Filler again in a moment.</string>
+    <string name="filler_result_insufficient_space">There is no free space above the part kept for the system. Free up space on the watch or keep less free.</string>
+    <string name="filler_result_busy">Filling is already running.</string>
+    <string name="filler_result_not_started">The watch did not allow filling to start. Open Filler and try again.</string>
+    <string name="filler_notification_channel">Filling</string>
+    <string name="filler_notification_title">Filling free space</string>
+    <string name="filler_notification_stop">Stop</string>
+    <!-- The About view (ABOUT-PAGE 1.0, FILLER-0075): the author label is localized, the name stays in Latin and the
+         site address is text in every locale (rules 3, 4 and 6). The phone app line (rule 7, FILLER-0076) names the
+         parent app and holds no address while none answers. The product has no watch face to name. -->
+    <string name="filler_about">About</string>
+    <string name="filler_about_version">Version: %1$s</string>
+    <string name="filler_about_author">Author: %1$s</string>
+    <string name="filler_about_author_name" translatable="false">Serhii Zhyhunenko</string>
+    <string name="filler_about_site" translatable="false">https://sza.od.ua</string>
+    <string name="filler_about_phone_app">There is also a Filler app for Android phones. It fills the phone storage or a memory card.</string>
+    <string name="filler_about_close">Close</string>
+</resources>

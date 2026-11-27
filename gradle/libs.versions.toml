@@ -10,15 +10,44 @@ agp = "9.2.1"
 compile-sdk = "37"
 target-sdk = "37"
 min-sdk = "26"
+# The watch app's floor is Wear OS 2 (API 28), the value of the FastMediaSorter watch module and of the sibling
+# watch apps (StreamsPlayer_mob, Tourist_mob); the shared filler-core (minSdk 26) sits below it. A named entry,
+# not a suffix of min-sdk, so the two accessors do not nest.
+wear-min-sdk = "28"
 
+androidx-activity-ktx = "1.10.1"
 androidx-appcompat = "1.7.1"
+androidx-core-ktx = "1.13.0"
+# The lifecycle pins follow the upstream screen of the ported Filler flow (FastMediaSorter release 48, S0005).
+androidx-lifecycle = "2.8.7"
 google-material = "1.14.0"
 junit = "4.13.2"
+# Coroutines and Robolectric follow the upstream pins of the ported Filler code (FastMediaSorter release 48).
+kotlinx-coroutines = "1.7.3"
+robolectric = "4.16.1"
+# The ongoing activity of a watch run (S0019, Wear OS quality rule WO-V4): the pin of the sibling watch apps
+# (StreamsPlayer_mob, Tourist_mob) and of the FastMediaSorter watch module.
+androidx-wear-ongoing = "1.0.0"
+# The scheduler of the scheduled fill (S0025, owner decision 2026-11-13 Q1): the pin of the FastMediaSorter scheduler
+# the run semantics are ported from (its gradle/libs.versions.toml, read-only, 2026-11-14). WorkManager needs API 23;
+# the floor here is 26, so no reach shrinks.
+androidx-work = "2.10.1"
 
 [libraries]
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidx-activity-ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-savedstate = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
 google-material = { group = "com.google.android.material", name = "material", version.ref = "google-material" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "androidx-work" }
+androidx-wear-ongoing = { group = "androidx.wear", name = "wear-ongoing", version.ref = "androidx-wear-ongoing" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The schedule screen of the scheduled fill (S0025, upgraded in FILLER-0067): StandardToolbar with 8 dp title-icon
+     gap, intro, API 33+ notification-permission prompt button when denied, inline editor, Add schedule + Pause/Resume
+     all action row, CardView schedule rows (item_fill_schedule) with Run now / Edit / Delete, and History with Clear
+     history. One file serves both orientations. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scheduleRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sza.filler.ui.common.widget.StandardToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.Filler.Toolbar.Flat"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationContentDescription="@string/schedule_back"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:stbTitleIcon="@drawable/ic_app_schedule"
+        app:title="@string/schedule_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/filler_spacing_16">
+
+            <TextView
+                android:id="@+id/txtScheduleIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScheduleNotifications"
+                style="@style/Widget.Filler.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_8"
+                android:text="@string/schedule_notifications_enable"
+                android:visibility="gone"
+                app:icon="@drawable/ic_system_notification" />
+
+            <LinearLayout
+                android:id="@+id/scheduleEditor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtScheduleEditorTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:accessibilityHeading="true"
+                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+                <TextView
+                    android:id="@+id/txtScheduleEditorPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScheduleChooseFolder"
+                    style="@style/Widget.Filler.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:text="@string/filler_choose_folder"
+                    app:icon="@drawable/ic_action_choose_folder" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScheduleTime"
+                    style="@style/Widget.Filler.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_4" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScheduleRepeat"
+                    style="@style/Widget.Filler.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_4" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/filler_spacing_8"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnScheduleSave"
+                        style="@style/Widget.Filler.Button.Filled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule_editor_save" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnScheduleCancel"
+                        style="@style/Widget.Filler.Button.Outlined"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/filler_spacing_8"
+                        android:text="@string/schedule_editor_cancel" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.sza.filler.ui.common.widget.FlowRowLayout
+                android:id="@+id/scheduleActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScheduleAdd"
+                    style="@style/Widget.Filler.Button.Filled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_add"
+                    app:icon="@drawable/ic_action_add" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSchedulePauseAll"
+                    style="@style/Widget.Filler.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_pause_all"
+                    android:visibility="gone"
+                    app:icon="@drawable/ic_media_pause" />
+            </com.sza.filler.ui.common.widget.FlowRowLayout>
+
+            <TextView
+                android:id="@+id/txtScheduleEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:text="@string/schedule_empty"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <LinearLayout
+                android:id="@+id/scheduleList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/txtScheduleHistoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_16"
+                android:accessibilityHeading="true"
+                android:text="@string/schedule_history_title"
+                android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScheduleClearHistory"
+                style="@style/Widget.Filler.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_8"
+                android:text="@string/schedule_history_clear"
+                android:visibility="gone"
+                app:icon="@drawable/ic_action_clear_all" />
+
+            <TextView
+                android:id="@+id/txtScheduleHistoryEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/filler_spacing_8"
+                android:text="@string/schedule_history_empty"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+            <LinearLayout
+                android:id="@+id/historyList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

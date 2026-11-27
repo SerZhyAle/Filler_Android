@@ -1,0 +1,24 @@
+/* Page layer of the landing pages (S0031, owner's order of 2026-11-13). Linked after the byte-identical family kit
+   (sza-kit.css), which is never edited; everything here only styles what the kit has no component for: the section
+   headings, the card text, the what-for line and the group text. The page spans the viewport less the kit's gutter and no
+   wrapper of the page is capped; only running prose inside a card or a group is capped for reading (PAGE-CONTENT
+   "Layout contract", PAGE-STYLE section 5 "Width"). */
+.landing h2{font-size:1.35rem;margin:2.2rem 0 .9rem}
+.hero .whatfor{color:var(--text-2);font-size:1rem;margin:0 0 1.2rem}
+.hero .demo{margin:0 0 .5rem}
+.get h2{font-size:1.35rem;margin:0}
+.get p{color:var(--text-2)}
+.get .channels{margin:.2rem 0}
+.get .note{margin:.4rem 0 0}
+.card h3{font-size:1.05rem;margin-bottom:.5rem}
+.card p{color:var(--text-2);font-size:.92rem;max-width:78ch}
+.groups-bar{margin:0 0 var(--ui-gap)}
+details.sec p,details.sec li{color:var(--text-2);max-width:78ch}
+details.sec ul{padding-inline-start:1.3rem}
+details.sec li{margin:.35rem 0}
+details.sec code{font-size:.88em;overflow-wrap:anywhere}
+details.sec a{overflow-wrap:anywhere}
+.lang-links{margin:.5rem 0;color:var(--muted)}
+/* The kit's overflow policy hides the header commands under 481 px. PAGE-CONTENT asks the documentation link and the
+   link to #get to stay in the header at 360 px, so this layer keeps them; the header wraps to a second row instead. */
+@media(max-width:480px){.site-header .btn{display:inline-flex}}

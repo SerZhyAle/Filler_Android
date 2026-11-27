@@ -1,4 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Aligned with FastMediaSorter's blue Light/Dark base theme and six custom accent overlays (FILLER-0067;
+     source app_v2/src/main/res/values/themes.xml). Deliberate differences:
+     - keeps ThemeOverlay.Filler.MaterialAlertDialog (BUTTONS 2.2 rectangular text dialog answers, S0033 / FILLER-0067 Q2)
+       instead of FastMediaSorter's green/pink dialog confirm/cancel buttons;
+     - omits FastMediaSorter-only host attributes (launcher*, player controls, MaterialSwitch/overflow overrides);
+     - Base.Theme.Filler is the parent of values-v31/themes.xml so API 31+ keeps both the branded splash screen
+       (FILLER-0062) and the day/night blue brand palette. -->
 <resources>
-    <style name="Theme.Filler" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="Base.Theme.Filler" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryVariant">@color/blue_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnBackground">@color/black</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorSurfaceVariant">@color/m3_surface_variant</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+        <item name="colorOnSurfaceVariant">#FF655E6A</item>
+        <item name="android:textColorSecondary">#FF655E6A</item>
+        <item name="colorOutline">#FF6F6875</item>
+        <item name="colorOutlineVariant">#FF8A8391</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Filler.MaterialAlertDialog</item>
+    </style>
+
+    <style name="Theme.Filler" parent="Base.Theme.Filler" />
+
+    <!-- Six custom accent theme overlays ported from FastMediaSorter (S0569 / S0611). Applied via
+         ColorThemePrefs.applyThemeOverlay() before view inflation. -->
+    <style name="ThemeOverlay.Filler.DarkGreen" parent="">
+        <item name="colorPrimary">@color/theme_dark_green_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_dark_green_primary_variant</item>
+        <item name="colorOnPrimary">@color/theme_dark_green_on_primary</item>
+        <item name="android:colorBackground">@color/theme_dark_green_background</item>
+        <item name="colorSurface">@color/theme_dark_green_surface</item>
+        <item name="colorOnSurface">@color/theme_dark_green_on_surface</item>
+        <item name="android:windowBackground">@color/theme_dark_green_background</item>
+        <item name="colorSurfaceContainerLowest">@color/theme_dark_green_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/theme_dark_green_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/theme_dark_green_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/theme_dark_green_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/theme_dark_green_surface_container_highest</item>
+        <item name="colorSurfaceVariant">@color/theme_dark_green_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/theme_dark_green_on_surface_variant</item>
+        <item name="android:textColorSecondary">@color/theme_dark_green_on_surface_variant</item>
+        <item name="colorOutline">@color/theme_dark_green_outline</item>
+        <item name="colorOutlineVariant">@color/theme_dark_green_outline_variant</item>
+        <item name="colorPrimaryContainer">@color/theme_dark_green_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/theme_dark_green_on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/theme_dark_green_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/theme_dark_green_on_secondary_container</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+    </style>
+
+    <style name="ThemeOverlay.Filler.DarkBlue" parent="">
+        <item name="colorPrimary">@color/theme_dark_blue_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_dark_blue_primary_variant</item>
+        <item name="colorOnPrimary">@color/theme_dark_blue_on_primary</item>
+        <item name="android:colorBackground">@color/theme_dark_blue_background</item>
+        <item name="colorSurface">@color/theme_dark_blue_surface</item>
+        <item name="colorOnSurface">@color/theme_dark_blue_on_surface</item>
+        <item name="android:windowBackground">@color/theme_dark_blue_background</item>
+        <item name="colorSurfaceContainerLowest">@color/theme_dark_blue_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/theme_dark_blue_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/theme_dark_blue_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/theme_dark_blue_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/theme_dark_blue_surface_container_highest</item>
+        <item name="colorSurfaceVariant">@color/theme_dark_blue_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/theme_dark_blue_on_surface_variant</item>
+        <item name="android:textColorSecondary">@color/theme_dark_blue_on_surface_variant</item>
+        <item name="colorOutline">@color/theme_dark_blue_outline</item>
+        <item name="colorOutlineVariant">@color/theme_dark_blue_outline_variant</item>
+        <item name="colorPrimaryContainer">@color/theme_dark_blue_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/theme_dark_blue_on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/theme_dark_blue_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/theme_dark_blue_on_secondary_container</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+    </style>
+
+    <style name="ThemeOverlay.Filler.DarkRed" parent="">
+        <item name="colorPrimary">@color/theme_dark_red_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_dark_red_primary_variant</item>
+        <item name="colorOnPrimary">@color/theme_dark_red_on_primary</item>
+        <item name="android:colorBackground">@color/theme_dark_red_background</item>
+        <item name="colorSurface">@color/theme_dark_red_surface</item>
+        <item name="colorOnSurface">@color/theme_dark_red_on_surface</item>
+        <item name="android:windowBackground">@color/theme_dark_red_background</item>
+        <item name="colorSurfaceContainerLowest">@color/theme_dark_red_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/theme_dark_red_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/theme_dark_red_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/theme_dark_red_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/theme_dark_red_surface_container_highest</item>
+        <item name="colorSurfaceVariant">@color/theme_dark_red_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/theme_dark_red_on_surface_variant</item>
+        <item name="android:textColorSecondary">@color/theme_dark_red_on_surface_variant</item>
+        <item name="colorOutline">@color/theme_dark_red_outline</item>
+        <item name="colorOutlineVariant">@color/theme_dark_red_outline_variant</item>
+        <item name="colorPrimaryContainer">@color/theme_dark_red_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/theme_dark_red_on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/theme_dark_red_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/theme_dark_red_on_secondary_container</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+    </style>
+
+    <style name="ThemeOverlay.Filler.LightGreen" parent="">
+        <item name="colorPrimary">@color/theme_light_green_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_light_green_primary_variant</item>
+        <item name="colorOnPrimary">@color/theme_light_green_on_primary</item>
+        <item name="android:colorBackground">@color/theme_light_green_background</item>
+        <item name="colorSurface">@color/theme_light_green_surface</item>
+        <item name="colorOnSurface">@color/theme_light_green_on_surface</item>
+        <item name="android:windowBackground">@color/theme_light_green_background</item>
+        <item name="colorSurfaceContainerLowest">@color/theme_light_green_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/theme_light_green_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/theme_light_green_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/theme_light_green_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/theme_light_green_surface_container_highest</item>
+        <item name="colorSurfaceVariant">@color/theme_light_green_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/theme_light_green_on_surface_variant</item>
+        <item name="android:textColorSecondary">@color/theme_light_green_on_surface_variant</item>
+        <item name="colorOutline">@color/theme_light_green_outline</item>
+        <item name="colorOutlineVariant">@color/theme_light_green_outline_variant</item>
+        <item name="colorPrimaryContainer">@color/theme_light_green_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/theme_light_green_on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/theme_light_green_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/theme_light_green_on_secondary_container</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+    </style>
+
+    <style name="ThemeOverlay.Filler.LightBlue" parent="">
+        <item name="colorPrimary">@color/theme_light_blue_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_light_blue_primary_variant</item>
+        <item name="colorOnPrimary">@color/theme_light_blue_on_primary</item>
+        <item name="android:colorBackground">@color/theme_light_blue_background</item>
+        <item name="colorSurface">@color/theme_light_blue_surface</item>
+        <item name="colorOnSurface">@color/theme_light_blue_on_surface</item>
+        <item name="android:windowBackground">@color/theme_light_blue_background</item>
+        <item name="colorSurfaceContainerLowest">@color/theme_light_blue_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/theme_light_blue_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/theme_light_blue_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/theme_light_blue_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/theme_light_blue_surface_container_highest</item>
+        <item name="colorSurfaceVariant">@color/theme_light_blue_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/theme_light_blue_on_surface_variant</item>
+        <item name="android:textColorSecondary">@color/theme_light_blue_on_surface_variant</item>
+        <item name="colorOutline">@color/theme_light_blue_outline</item>
+        <item name="colorOutlineVariant">@color/theme_light_blue_outline_variant</item>
+        <item name="colorPrimaryContainer">@color/theme_light_blue_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/theme_light_blue_on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/theme_light_blue_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/theme_light_blue_on_secondary_container</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+    </style>
+
+    <style name="ThemeOverlay.Filler.LightRed" parent="">
+        <item name="colorPrimary">@color/theme_light_red_primary</item>
+        <item name="colorPrimaryVariant">@color/theme_light_red_primary_variant</item>
+        <item name="colorOnPrimary">@color/theme_light_red_on_primary</item>
+        <item name="android:colorBackground">@color/theme_light_red_background</item>
+        <item name="colorSurface">@color/theme_light_red_surface</item>
+        <item name="colorOnSurface">@color/theme_light_red_on_surface</item>
+        <item name="android:windowBackground">@color/theme_light_red_background</item>
+        <item name="colorSurfaceContainerLowest">@color/theme_light_red_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/theme_light_red_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/theme_light_red_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/theme_light_red_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/theme_light_red_surface_container_highest</item>
+        <item name="colorSurfaceVariant">@color/theme_light_red_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/theme_light_red_on_surface_variant</item>
+        <item name="android:textColorSecondary">@color/theme_light_red_on_surface_variant</item>
+        <item name="colorOutline">@color/theme_light_red_outline</item>
+        <item name="colorOutlineVariant">@color/theme_light_red_outline_variant</item>
+        <item name="colorPrimaryContainer">@color/theme_light_red_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/theme_light_red_on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/theme_light_red_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/theme_light_red_on_secondary_container</item>
+        <item name="colorSecondary">@color/teal_700</item>
+        <item name="colorTertiary">@color/m3_tertiary</item>
+        <item name="colorError">@color/m3_error</item>
+    </style>
+
+    <!-- The dialog answers of every product dialog (BUTTONS 2.2 section 3 rules 2 and 4, section 8 rule 3; S0033).
+         Material's overlay gives each answer a full pill with a one-line caption that is cut with an ellipsis, so each
+         button-bar role points at the product answer style in styles.xml. Deliberate difference from the stock dialog;
+         the record is docs/SPECIFICATION_UI_SIZE_PROFILE.md section 8. -->
+    <style name="ThemeOverlay.Filler.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Filler.Button.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Filler.Button.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Filler.Button.Dialog.Flush</item>
+    </style>
+
+    <!-- The window of the help layer (CONTEXT-HELP rule 6, S0028): full size over the live screen, its own scrim instead
+         of the platform dim, so the screen stays visible under the markers. -->
+    <style name="Theme.Filler.HelpLayer">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

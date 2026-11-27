@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inherited from FastMediaSorter (S0050): the Filler block icon, upstream
+     app_v2/src/main/res/drawable/ic_storage.xml - the title icon of its activity_filler.xml toolbar and
+     the route icon of the storage_filler block. The single path's data equals the upstream file byte for
+     byte. Deliberate difference: the upstream fill @color/white reads @android:color/white here (this
+     app defines no colour named white); the upstream colorControlNormal tint is kept, so the glyph draws
+     in the toolbar's theme ink as it does there.
+     Written by tools/store/render-store-assets.ps1 from the master (PRODUCT-IDENTITY,
+     FILLER-0060): a render target, never edited by hand. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M2,20h20v-4H2V20zM4,17h2v2H4V17zM2,4v4h20V4H2zM6,7H4V5h2V7zM2,14h20v-4H2V14zM4,11h2v2H4V11z" />
+</vector>

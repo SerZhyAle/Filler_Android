@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Заполняет свободное место часов временными файлами, затем удаляет их. Ваши файлы остаются как есть.</string>
+    <string name="filler_watch_storage">память часов</string>
+    <string name="filler_location">Куда: %1$s</string>
+    <string name="filler_no_place">Память часов сейчас недоступна.</string>
+    <string name="filler_free_space">Свободно: %1$s</string>
+    <string name="filler_free_space_unknown">Свободно: не измерено</string>
+    <string name="filler_reserve">Остаётся свободным для системы: %1$s</string>
+    <string name="filler_reserve_less">Оставить меньше свободного места</string>
+    <string name="filler_reserve_more">Оставить больше свободного места</string>
+    <string name="filler_start">Начать заполнение</string>
+    <string name="filler_cancel">Остановить и удалить файлы</string>
+    <string name="filler_progress">Записано %1$s из %2$s</string>
+    <string name="filler_estimate">%1$d%% выполнено, осталось: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% выполнено, осталось: считается..</string>
+    <string name="filler_confirm_title">Заполнить свободное место?</string>
+    <string name="filler_confirm_message">В память часов будет записано около %1$s временных файлов, свободными останутся %2$s. Файлы удаляются, когда заполнение завершится или будет остановлено.</string>
+    <string name="filler_confirm_reserve_lowered">Это меньше обычных %1$s, поэтому у системы и других приложений остаётся меньше места, пока идёт заполнение.</string>
+    <string name="filler_confirm_positive">Заполнить</string>
+    <string name="filler_retry_cleanup">Удалить оставшиеся файлы</string>
+    <string name="filler_pending_cleanup">Временные файлы прошлого запуска ещё лежат в памяти часов. Нажмите «Удалить оставшиеся файлы», прежде чем заполнять снова.</string>
+    <string name="filler_result_done">Готово: записано и снова удалено %1$s.</string>
+    <string name="filler_result_cancelled">Заполнение остановлено. Временные файлы удалены.</string>
+    <string name="filler_result_failed">Запись остановлена: накопитель сообщил об ошибке. Временные файлы удалены.</string>
+    <string name="filler_result_cleanup_incomplete">Часть временных файлов пока не удалось удалить. Нажмите «Удалить оставшиеся файлы», чтобы попробовать снова.</string>
+    <string name="filler_result_cleanup_done">Оставшиеся временные файлы удалены.</string>
+    <string name="filler_result_no_place">Память часов сейчас недоступна. Перезапустите часы и снова откройте Filler.</string>
+    <string name="filler_result_no_access">Запись в память часов сейчас недоступна. Перезапустите часы и снова откройте Filler.</string>
+    <string name="filler_result_measurement_unavailable">Не удалось измерить свободное место. Откройте Filler ещё раз чуть позже.</string>
+    <string name="filler_result_insufficient_space">Сверх места, оставляемого системе, свободного места нет. Освободите место на часах или оставьте меньше свободного места.</string>
+    <string name="filler_result_busy">Заполнение уже идёт.</string>
+    <string name="filler_result_not_started">Часы не разрешили начать заполнение. Откройте Filler и попробуйте снова.</string>
+    <string name="filler_notification_channel">Заполнение</string>
+    <string name="filler_notification_title">Заполнение свободного места</string>
+    <string name="filler_notification_stop">Остановить</string>
+    <string name="filler_about">О программе</string>
+    <string name="filler_about_version">Версия: %1$s</string>
+    <string name="filler_about_author">Автор: %1$s</string>
+    <string name="filler_about_phone_app">Есть и приложение Filler для телефонов Android. Оно заполняет память телефона или карту памяти.</string>
+    <string name="filler_about_close">Закрыть</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notification small icon and watch-face ongoing-activity icon of Filler (FILLER-0059): the inherited
+     FastMediaSorter Filler block - the one path of the upstream app_v2/src/main/res/drawable/ic_storage.xml,
+     path data byte for byte - on its own 24-unit grid, so the status bar and the watch face draw the block at
+     full size instead of the launcher canvas with its 108-unit margins. A single-colour, alpha-only silhouette
+     (ICON-RENDER section 3 rule 9): white fill, no theme tint, because the system tints it and resolves no
+     attribute of this app's theme.
+     Written by tools/store/render-store-assets.ps1 from the master (PRODUCT-IDENTITY,
+     FILLER-0060): a render target, never edited by hand. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2,20h20v-4H2V20zM4,17h2v2H4V17zM2,4v4h20V4H2zM6,7H4V5h2V7zM2,14h20v-4H2V14zM4,11h2v2H4V11z" />
+</vector>

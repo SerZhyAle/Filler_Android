@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The inset that keeps the column inside a round display: about 15 percent of a 192 dp screen on each side, the
+         share of the platform's round-screen guidance; a square display gets the smaller values of values-notround. -->
+    <dimen name="watch_inset_horizontal">28dp</dimen>
+    <dimen name="watch_inset_vertical">24dp</dimen>
+    <dimen name="watch_gap">6dp</dimen>
+    <!-- UI-SIZING rule: a touch target is at least 48 by 48 units. -->
+    <dimen name="watch_touch_target">48dp</dimen>
+</resources>

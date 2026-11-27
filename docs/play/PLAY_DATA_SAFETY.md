@@ -6,9 +6,11 @@ financial and sign-in declarations, the target audience and the IARC questionnai
 the web console: the Play Developer API has no endpoint for them. Decide **here**, then answer in the console; never
 decide inside the console.
 
-Reconciled on 2026-11-13 against the tree of that day: the one source manifest (`phone/src/main/AndroidManifest.xml`,
-the only source set; no permission, no `INTERNET`, `allowBackup="false"`), `gradle/libs.versions.toml` (AndroidX
-AppCompat and Material Components, no network, analytics, ads or Firebase library), and the upstream Filler that the
+Reconciled on 2026-11-13 against the tree of that day: the source manifests (`phone/src/main/AndroidManifest.xml`,
+no permission, no `INTERNET`, `allowBackup="false"`; and, since S0019 on the same day, `wear/src/main/AndroidManifest.xml`:
+`FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_DATA_SYNC`, `WAKE_LOCK` and `POST_NOTIFICATIONS` for the run's foreground service,
+no `INTERNET`, `allowBackup="false"`), `gradle/libs.versions.toml` (AndroidX
+AppCompat, Material Components and the watch's wear-ongoing, no network, analytics, ads or Firebase library), and the upstream Filler that the
 port tickets carry (FastMediaSorter S4521 as shipped in its package 48: the folder comes from the system folder picker
 `OpenDocumentTree` with a persistable grant, the default destination is the app-specific external files directory,
 free space is read with `StatFs`, no service, no network code). When a port ticket (S0003 to S0005, S0008, S0009, the
@@ -16,12 +18,24 @@ watch tickets S0017 to S0020) adds a permission, a library, a service or a netwo
 `site/privacy*.html` and the permission list change in the same edit (canon invariant 14), and the merged release
 manifest is read again at the release.
 
+Reconciled again on 2026-11-14 for the scheduled fill (S0025, owner decision Q1 of 2026-11-13): the phone manifest now
+declares `RECEIVE_BOOT_COMPLETED`, `WAKE_LOCK`, `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_DATA_SYNC` and
+`POST_NOTIFICATIONS`, removes the `ACCESS_NETWORK_STATE` that WorkManager merges, and still has no `INTERNET`; the catalog
+gains AndroidX WorkManager (`work-runtime-ktx`), a local job scheduler with no network, analytics or ads code. The
+schedules and their history live in an app-private file in `noBackupFilesDir` and never leave the device.
+
 ## The set that must say the same thing
 
 - the privacy pages `site/privacy.html`, `site/privacy-ru.html`, `site/privacy-uk.html`
   (`https://serzhyale.github.io/Filler_Android/privacy.html`), hand-written, section 5 the permission statement;
-- the source manifests of every source set (today `phone/src/main`; `wear` when S0018 creates it);
+- the source manifests of every source set (`phone/src/main` with the five of the scheduled fill, S0025, and
+  `wear/src/main` with the four of the watch run, S0019);
 - the listing texts [PLAY_LISTING.md](PLAY_LISTING.md) and their translations.
+
+The permission counts in these, the application id and the interface-language sentence are compared with their sources by
+`tools/site/check-site-facts.ps1` (S0039): the two manifests, `publishedApplicationId` and the `res/values*` folders of the
+phone app. The addresses of the site that this record and the other holders carry are listed in
+`docs/site-held-addresses.jsonl` and resolved against the pages by `tools/site/check-site.ps1`.
 
 ## What leaves the device, to whom, and the decision
 
@@ -35,6 +49,9 @@ disclosed.
 | The list of the run's temporary files, the settings (folder, reserve) | nothing: app-private storage, Android backup off | nobody | Nothing to declare |
 | Free space and mount state of the chosen storage | nothing: read and shown on the device | nobody | Nothing to declare |
 | Analytics, crash reports, advertising | nothing: none in the build, no `AD_ID`, no Firebase, no `INTERNET` | nobody | Nothing to declare |
+| The watch run's foreground service, wake lock and progress notification (S0019) | nothing: they keep a user-started fill writing on the watch and show its progress there | nobody | Nothing to declare |
+| The schedules of the scheduled fill and the history of their runs (S0025) | nothing: app-private storage, Android backup off | nobody | Nothing to declare |
+| The scheduled fill's boot re-queue, wake lock, foreground service and notification (S0025) | nothing: they run a fill the user scheduled at its time on the device and show it there | nobody | Nothing to declare |
 
 The facts allow one reading only: no data collected, no data shared (owner's acceptance of the recommendations table,
 2026-11-13).
@@ -53,6 +70,38 @@ The facts allow one reading only: no data collected, no data shared (owner's acc
 | Target audience | 18 and over (owner decision of 2026-11-13) |
 | Data safety - collects or shares | No: "No data collection declared / No data shared with third parties" |
 | Content rating | fresh IARC questionnaire, category All Other App Types, contact `sza@ukr.net`, every answer No (below) |
+
+## Foreground service declaration (App content)
+
+FILLER-0022 observed App content on 2026-11-17 and 2026-11-20. Both reads found the ten saved declarations
+and no Foreground service permissions row. The answers below describe the two uses of `dataSync`.
+Before an API upload, save and confirm the applicable declaration for both uses and record the evidence in
+the [release record](PLAY_RELEASE_RECORD.md). If App content cannot show or save the declaration, stop before the
+API write sequence and follow `GOOGLE-PLAY` 0.4 section 8C. Saving a Console form invalidates active edits.
+
+Google Play asks an app that targets Android 14 or higher to declare each foreground-service type on the App content
+page, with a description, the impact of interruption or deferral, and a demonstration video for each use.
+The watch app declares one (S0019 and S0017 research note section 4). The answer to enter, with the console step
+itself belonging to the publication steps (S0022):
+
+| Item | Answer |
+| --- | --- |
+| Type | `dataSync` (`FOREGROUND_SERVICE_DATA_SYNC`) |
+| Task | Local file processing: a fill of the watch's free space with temporary files, started by the user's tap on a
+  confirmation, which keeps writing while the watch screen is dark and deletes the files when it finishes or is stopped |
+| User impact if deferred or interrupted | the fill stops and its files are deleted; the user has to start it again |
+| Started by | the user, from the app's confirmation screen; never by the system or another app (the service is not exported) |
+
+The phone app declares the same type for the scheduled fill (S0025), on WorkManager's own foreground service. The second
+answer, entered in the same console step:
+
+| Item | Answer |
+| --- | --- |
+| Type | `dataSync` (`FOREGROUND_SERVICE_DATA_SYNC`) |
+| Task | Local file processing: a fill of a folder's free space with temporary files at a time the user saved in a schedule
+  and confirmed, which runs with the app closed and deletes the files when it finishes or is stopped |
+| User impact if deferred or interrupted | the run is late or stops, its files are deleted and the history says so; the next slot runs as scheduled |
+| Started by | the app's own scheduled job at the time the user chose; never by another app (no component is exported for it) |
 
 ## IARC answers
 

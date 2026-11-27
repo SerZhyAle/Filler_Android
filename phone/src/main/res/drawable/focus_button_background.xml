@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ported from FastMediaSorter (drawable/focus_button_background.xml, S0289; FILLER-0067 here):
+     transparent default foreground that adds a 2 dp focus/hover ring on schedule cards and controls
+     without hiding the host card background or ripple. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="true" android:state_window_focused="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/focus_button_stroke" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <item android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/focus_button_stroke" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+</selector>

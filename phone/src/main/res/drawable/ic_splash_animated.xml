@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    FILLER-0062: splash icon entrance - the mark scales into place, the wordmark and then the
+    slogan rise to their resting positions. Target names match tools/store/generate-splash-brand.ps1.
+-->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_splash_app_brand">
+    <target
+        android:name="mark"
+        android:animation="@animator/splash_mark_scale" />
+    <target
+        android:name="wordmark"
+        android:animation="@animator/splash_text_enter" />
+    <target
+        android:name="slogan"
+        android:animation="@animator/splash_slogan_enter" />
+</animated-vector>

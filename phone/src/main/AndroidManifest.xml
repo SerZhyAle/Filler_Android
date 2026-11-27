@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- The permissions of the scheduled fill (S0025, owner decision 2026-11-13 Q1), each with the sentence the privacy
+         pages and docs/play/PLAY_DATA_SAFETY.md repeat. None reads, collects or sends data, and none implies a hardware
+         feature. -->
+    <!-- Puts the saved schedules back in line after the phone restarts, so a scheduled fill still runs on time. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Keeps the phone awake while a scheduled fill writes and deletes its temporary files. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Lets a scheduled fill run to its end with the app closed, shown by an ongoing notification. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- The kind of that run on Android 14 and later: it moves data to and from the device's storage. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- Shows the notification of a running scheduled fill on Android 13 and later; asked when a schedule is saved. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Merged by WorkManager for network constraints; a fill writes to local storage only and never uses the network. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
+
+    <!-- Device reach (S0021, the reach table in that ticket): the Filler runs on a phone, a tablet, a foldable, a
+         device with no touchscreen driven by a keyboard, a mouse, a D-pad or a remote, and a flat app in an Android
+         XR panel. It needs no hardware beyond the storage it fills, so no feature is required. The permissions above
+         imply no feature either (S0025); these entries only stop the store from
+         assuming a touchscreen and a fixed orientation. They are the Filler's share of the FastMediaSorter list,
+         entry for entry, and the ticket records each entry left out. -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.faketouch" android:required="false" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+    <uses-feature android:name="android.software.xr.api.spatial" android:required="false" />
+
+    <!-- Every screen size and density; the same floor as FastMediaSorter (compact devices, smallest width 320 dp). -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:requiresSmallestWidthDp="320"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
+        android:name=".FillerApplication"
         android:allowBackup="false"
+        android:banner="@drawable/tv_banner"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -10,12 +51,36 @@
         android:theme="@style/Theme.Filler">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.filler.FillerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <!-- TV launcher: the app appears in the Android TV and Google TV grid, as FastMediaSorter does. -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- The schedules of the scheduled fill and their history (S0025), opened from the Filler screen. -->
+        <activity
+            android:name=".ui.schedule.ScheduleActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.filler.FillerActivity" />
+
+        <!-- The boot re-queue of the scheduled fill (S0025): after a restart or an update, the next slots are queued. -->
+        <receiver
+            android:name=".run.FillScheduleBootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- The foreground service WorkManager runs a scheduled fill in declares its type, which Android 14 requires. -->
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
     </application>
 </manifest>

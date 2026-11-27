@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Заповнює вільне місце накопичувача тимчасовими файлами, потім видаляє їх. Ваші файли залишаються як є.</string>
+    <string name="filler_choose_folder">Вибрати теку</string>
+    <string name="filler_no_folder">Теку не вибрано. Виберіть теку у вбудованій пам\'яті або на картці пам\'яті.</string>
+    <string name="filler_location">Тека %1$s на носії %2$s</string>
+    <string name="filler_free_space">Вільно: %1$s</string>
+    <string name="filler_free_space_unknown">Вільно: не виміряно</string>
+    <string name="filler_reserve">Залишається вільним для системи: %1$s</string>
+    <string name="filler_start">Почати заповнення</string>
+    <string name="filler_cancel">Зупинити й видалити файли</string>
+    <string name="filler_progress">Записано %1$s з %2$s</string>
+    <string name="filler_estimate">%1$d%% виконано, залишилось: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% виконано, залишилось: рахується..</string>
+    <string name="filler_keep_open">Тримайте застосунок відкритим, поки йде заповнення. Якщо закрити застосунок, заповнення зупиниться, а файли залишаться, доки застосунок не відкриють знову.</string>
+    <string name="filler_confirm_title">Заповнити вільне місце?</string>
+    <string name="filler_confirm_message">У теку %2$s на носії %3$s буде записано близько %1$s тимчасових файлів, вільними залишаться %4$s. Файли видаляються, коли заповнення завершиться або буде зупинено.</string>
+    <string name="filler_confirm_positive">Заповнити</string>
+    <string name="filler_resume">Заповнити решту</string>
+    <string name="filler_retry_cleanup">Видалити залишені файли</string>
+    <string name="filler_pending_cleanup">Тимчасові файли минулого запуску ще лежать на носії %1$s. Під\'єднайте його й натисніть «Видалити залишені файли», перш ніж заповнювати знову.</string>
+    <string name="filler_pending_resume">Минуще заповнення на носії %1$s не завершилося, його тимчасові файли ще там. Заповніть решту або натисніть «Видалити залишені файли».</string>
+    <string name="filler_result_done">Готово: записано й знову видалено %1$s.</string>
+    <string name="filler_result_cancelled">Заповнення зупинено. Тимчасові файли видалено.</string>
+    <string name="filler_result_failed">Запис зупинено: накопичувач повідомив про помилку. Тимчасові файли видалено.</string>
+    <string name="filler_result_cleanup_incomplete">Частину тимчасових файлів поки не вдалося видалити. Під\'єднайте накопичувач і натисніть «Видалити залишені файли».</string>
+    <string name="filler_result_cleanup_done">Залишені тимчасові файли видалено.</string>
+    <string name="filler_result_not_local">Ця тека не на накопичувачі цього телефона. Виберіть теку у вбудованій пам\'яті або на картці пам\'яті.</string>
+    <string name="filler_result_no_access">Запис у цю теку зараз недоступний. Перевірте, що накопичувач під\'єднано, і виберіть теку знову.</string>
+    <string name="filler_result_measurement_unavailable">Не вдалося виміряти вільне місце. Перевірте, що накопичувач під\'єднано, і виберіть теку знову.</string>
+    <string name="filler_result_insufficient_space">Понад місце, що залишається системі, вільного місця немає. Звільніть місце або виберіть інший накопичувач.</string>
+    <string name="filler_result_busy">Заповнення вже триває.</string>
+    <string name="filler_reserve_slider_description">Місце, що залишається вільним для системи</string>
+    <string name="filler_confirm_reserve_lowered">Це менше за звичні %1$s, тому в системи й інших застосунків залишається менше місця, поки триває заповнення.</string>
+    <string name="help">Довідка</string>
+    <string name="help_with_key">Довідка (F1)</string>
+    <string name="filler_help_heading">Що робить кожна частина екрана</string>
+    <string name="filler_help_entry">%1$d. %2$s</string>
+    <string name="filler_help_place_label">Тека і накопичувач</string>
+    <string name="filler_help_place_text">Показує теку, до якої записуються тимчасові файли, і накопичувач, на якому вона розташована.</string>
+    <string name="filler_help_choose_folder_text">Вибирає іншу теку, наприклад на карті пам\'яті, щоб заповнити цей накопичувач. Недоступно під час заповнення.</string>
+    <string name="filler_help_free_space_label">Вільне місце</string>
+    <string name="filler_help_free_space_text">Скільки місця на накопичувачі вільно зараз. Заповнення записує тимчасові файли в це місце, крім частини, що залишається вільною.</string>
+    <string name="filler_help_reserve_text">Повзунок задає, скільки місця залишається вільним для системи та інших застосунків під час заповнення. Звичайний обсяг - остання поділка повзунка. Менший обсяг заповнює більше, але залишає менше місця і діє лише на наступний запуск. Під час заповнення повзунок прихований.</string>
+    <string name="filler_help_start_text">Просить підтвердження, потім заповнює вільне місце понад частину, що залишається вільною. Доступно, коли теку вибрано, її вільне місце виміряно і воно більше за цю частину, і немає файлів попереднього запуску, що чекають на видалення.</string>
+    <string name="filler_help_confirmation_label">Підтвердження</string>
+    <string name="filler_help_confirmation_text">Перед заповненням питання показує, скільки буде записано, до якої теки і на який накопичувач та скільки залишиться вільним. Якщо ви зменшили вільний залишок, окремий абзац каже про це: системі та іншим застосункам на час запуску залишається менше місця. «Заповнити» починає, «Скасувати» нічого не змінює.</string>
+    <string name="filler_help_progress_label">Хід заповнення</string>
+    <string name="filler_help_progress_text">Під час заповнення: скільки записано із запланованого, яка частка готова і скільки часу залишилося.</string>
+    <string name="filler_help_keep_open_label">Тримайте застосунок відкритим</string>
+    <string name="filler_help_keep_open_text">Поки йде заповнення, просить тримати застосунок відкритим. Якщо закрити застосунок, заповнення зупиниться і файли залишаться на накопичувачі; відкрийте застосунок знову, щоб заповнити решту або видалити їх.</string>
+    <string name="filler_help_stop_text">Одразу зупиняє заповнення і видаляє всі тимчасові файли, які записав цей запуск. Ваші файли не зачіпаються.</string>
+    <string name="filler_help_resume_text">Заповнює решту заповнення, яке зупинилося, коли застосунок закрився: пише в ту саму папку і на той самий носій, а в кінці видаляє всі тимчасові файли як завжди. Пропонується поруч із кнопкою «Видалити залишені файли», поки залишені файли лежать на під\'єднаному накопичувачі.</string>
+    <string name="filler_help_cleanup_text">З\'являється, коли файли незавершеного заповнення ще лежать на накопичувачі, наприклад після його від\'єднання або закриття застосунку. Під\'єднайте цей накопичувач і натисніть кнопку: видаляються лише файли, які записав застосунок. Заповнення чекає, доки їх не буде видалено.</string>
+    <string name="filler_help_result_label">Підсумок</string>
+    <string name="filler_help_result_text">Після запуску каже, чим він завершився: готово, зупинено або що пішло не так і що робити далі.</string>
+    <string name="filler_help_watch_label">Екран годинника</string>
+    <string name="filler_help_watch_text">Той самий застосунок працює на годинниках Wear OS, на власному екрані. У екрана годинника немає кнопки довідки, тому це пояснення є його довідкою також. Його кнопка «Про програму» показує запущену версію і автора та називає застосунок для телефона. Годинник записує тимчасові файли лише в пам\'ять годинника, без вибору папки. Заповнення триває у фоні з повідомленням; кнопка «Зупинити» в повідомленні зупиняє заповнення і видаляє файли.</string>
+    <string name="filler_help_help_text">Відкриває це пояснення. Закривається кнопкою «Назад», дотиком поза списком, клавішею Esc або F1.</string>
+    <!-- Color theme picker (FILLER-0067). -->
+    <string name="filler_theme">Колірна тема</string>
+    <string name="filler_help_theme_text">Перемикає оформлення між Авто (за пристроєм), Світлою, Темною та шістьма кольоровими темами.</string>
+    <string-array name="color_theme_options">
+        <item>Авто (за пристроєм)</item>
+        <item>Світла</item>
+        <item>Темна</item>
+        <item>Темно-зелена</item>
+        <item>Темно-синя</item>
+        <item>Темно-червона</item>
+        <item>Світло-зелена</item>
+        <item>Світло-синя</item>
+        <item>Світло-червона</item>
+    </string-array>
+    <!-- The About window (ABOUT-PAGE 1.0, FILLER-0075): the label, the version line and the author label;
+         the name and the site address are translatable="false" in the base file. -->
+    <string name="filler_about">Про програму</string>
+    <string name="filler_about_version">Версія: %1$s</string>
+    <string name="filler_about_author">Автор: %1$s</string>
+    <string name="filler_about_watch_app">Є також застосунок Filler для годинників Wear OS. Він заповнює вільне місце в пам\'яті годинника.</string>
+    <string name="filler_help_about_text">Відкриває вікно про цей застосунок: що він робить, яка версія запущена, хто його зробив, адреса сайту автора та відомості про версію для годинника.</string>
+</resources>

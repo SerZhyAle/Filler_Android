@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- A Wear OS app: Play serves this package to watches only, beside the phone package of the same id. -->
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <!-- The permissions of a watch run (S0019, S0017 research note section 4), each with its reason. They are the
+         watch app's only permissions; the phone app declares none. The privacy pages (section 5), the Data safety
+         record and this list say the same thing (canon invariant 14).
+         - FOREGROUND_SERVICE and FOREGROUND_SERVICE_DATA_SYNC: a fill keeps writing after the wrist drops and the
+           screen goes dark, as a foreground service of type dataSync started from the confirmation the user tapped.
+         - WAKE_LOCK: keeps the processor awake for the length of that run only, with a timeout backstop.
+         - POST_NOTIFICATIONS: shows the run's progress and its Stop action in the ongoing notification; asked at
+           the first Fill, and the run goes on if it is refused. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".FillerWearApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <!-- The watch Filler fills the watch's own storage and works without the phone. -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- The host of a fill: started only by the app itself, never by another app. -->
+        <service
+            android:name=".run.FillerRunService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+</manifest>

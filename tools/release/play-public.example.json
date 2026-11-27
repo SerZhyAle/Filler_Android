@@ -1,0 +1,12 @@
+{
+  "applicationId": "com.sza.filler",
+  "expectedVersion": "versionName of the approved build",
+  "observedVersion": "versionName read from the public page",
+  "observedOn": "YYYY-MM-DD",
+  "updatedOn": "YYYY-MM-DD",
+  "descriptionExcerpt": "first lines observed on the public listing",
+  "imageEvidence": "which served image was compared and how it matched",
+  "evidenceFile": "path to the retained public-page observation",
+  "observer": "person who inspected the page",
+  "confirmed": false
+}

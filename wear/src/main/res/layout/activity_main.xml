@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The watch Filler screen (S0019): one scrolling column that the rotary input scrolls, inset for a round display.
+     The start view, the confirmation, the run view and the About view share the column; MainActivity shows them. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollFiller"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbarStyle="insideOverlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/watch_inset_horizontal"
+        android:paddingTop="@dimen/watch_inset_vertical"
+        android:paddingEnd="@dimen/watch_inset_horizontal"
+        android:paddingBottom="@dimen/watch_inset_vertical">
+
+        <!-- The inherited Filler block above the name, as the phone toolbar shows it beside the name (FILLER-0059);
+             decorative, the name beside it is the label. -->
+        <TextView
+            android:id="@+id/txtFillerTitle"
+            style="@style/FillerWatch.Title"
+            android:drawablePadding="@dimen/watch_gap"
+            android:drawableTint="?android:attr/textColorPrimary"
+            android:drawableTop="@drawable/ic_storage"
+            android:text="@string/app_name" />
+
+        <!-- Start view -->
+        <LinearLayout
+            android:id="@+id/fillerStartGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtFillerIntro"
+                style="@style/FillerWatch.Body"
+                android:text="@string/filler_intro" />
+
+            <TextView
+                android:id="@+id/txtFillerLocation"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                android:id="@+id/txtFillerFreeSpace"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                android:id="@+id/txtFillerReserve"
+                style="@style/FillerWatch.Body" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnFillerReserveLess"
+                    style="@style/FillerWatch.StepButton"
+                    android:contentDescription="@string/filler_reserve_less"
+                    android:text="@string/filler_reserve_less_glyph" />
+
+                <Button
+                    android:id="@+id/btnFillerReserveMore"
+                    style="@style/FillerWatch.StepButton"
+                    android:contentDescription="@string/filler_reserve_more"
+                    android:text="@string/filler_reserve_more_glyph" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnFillerStart"
+                style="@style/FillerWatch.Button"
+                android:text="@string/filler_start" />
+
+            <Button
+                android:id="@+id/btnFillerAbout"
+                style="@style/FillerWatch.Button"
+                android:text="@string/filler_about" />
+        </LinearLayout>
+
+        <!-- About (ABOUT-PAGE rules 1 to 7, FILLER-0075 and FILLER-0076): the description, the running version, the
+             author block and the mention of the phone app; the site address is text only and opens nothing. -->
+        <LinearLayout
+            android:id="@+id/fillerAboutGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FillerWatch.Heading"
+                android:text="@string/filler_about" />
+
+            <TextView
+                style="@style/FillerWatch.Body"
+                android:text="@string/filler_intro" />
+
+            <TextView
+                android:id="@+id/txtFillerAboutVersion"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                android:id="@+id/txtFillerAboutAuthor"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                style="@style/FillerWatch.Body"
+                android:text="@string/filler_about_site" />
+
+            <!-- The phone app of this product (rule 7, FILLER-0076): plain text while neither its store listing nor
+                 a page of its own answers. -->
+            <TextView
+                android:id="@+id/txtFillerAboutPhoneApp"
+                style="@style/FillerWatch.Body"
+                android:text="@string/filler_about_phone_app" />
+
+            <Button
+                android:id="@+id/btnFillerAboutClose"
+                style="@style/FillerWatch.Button"
+                android:text="@string/filler_about_close" />
+        </LinearLayout>
+
+        <!-- Confirmation -->
+        <LinearLayout
+            android:id="@+id/fillerConfirmGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/FillerWatch.Heading"
+                android:text="@string/filler_confirm_title" />
+
+            <TextView
+                android:id="@+id/txtFillerConfirmMessage"
+                style="@style/FillerWatch.Body" />
+
+            <Button
+                android:id="@+id/btnFillerConfirm"
+                style="@style/FillerWatch.Button"
+                android:text="@string/filler_confirm_positive" />
+
+            <Button
+                android:id="@+id/btnFillerConfirmCancel"
+                style="@style/FillerWatch.Button"
+                android:text="@android:string/cancel" />
+        </LinearLayout>
+
+        <!-- Run view -->
+        <LinearLayout
+            android:id="@+id/fillerRunGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressFiller"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/watch_gap"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/txtFillerProgress"
+                style="@style/FillerWatch.Body" />
+
+            <TextView
+                android:id="@+id/txtFillerEstimate"
+                style="@style/FillerWatch.Body" />
+
+            <Button
+                android:id="@+id/btnFillerCancel"
+                style="@style/FillerWatch.Button"
+                android:text="@string/filler_cancel" />
+        </LinearLayout>
+
+        <!-- Cleanup of an earlier run -->
+        <LinearLayout
+            android:id="@+id/fillerCleanupGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtFillerCleanupStatus"
+                style="@style/FillerWatch.Body"
+                android:text="@string/filler_pending_cleanup" />
+
+            <Button
+                android:id="@+id/btnFillerRetryCleanup"
+                style="@style/FillerWatch.Button"
+                android:text="@string/filler_retry_cleanup" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtFillerResult"
+            style="@style/FillerWatch.Body"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

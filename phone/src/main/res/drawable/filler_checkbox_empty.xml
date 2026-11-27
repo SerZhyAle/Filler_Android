@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The empty square of the schedule's enabled checkbox (BOOLEAN-OPTION 2.2 section 2, S0045). Material 3 1.14 draws
+     its checkbox face at 18 dp inside a 32 dp canvas, below the 24 dp touch minimum, so the face is this product's
+     square stated at the minimum size. The stroke and fill are the theme's text role on the row's surface colour, so
+     every theme recolours them together and the contrast is the measured pair of docs/SPECIFICATION_UI_SIZE_PROFILE.md
+     section 6 (16.23 light, 14.35 dark); no black or white is baked into the artwork. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/filler_checkbox_square"
+    android:height="@dimen/filler_checkbox_square"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M1,1 H23 V23 H1 Z"
+        android:strokeColor="?attr/colorOnSurface"
+        android:strokeWidth="2" />
+</vector>

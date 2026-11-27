@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android TV and Google TV launcher banner (S0021): the launcher glyph centred on the launcher background colour.
+     It reuses both launcher resources, so it follows the glyph when the glyph changes and no render target needs
+     a second edit. A layer list cannot draw text, so the banner carries no app name. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/ic_launcher_background" />
+    <item
+        android:width="180dp"
+        android:height="180dp"
+        android:gravity="center"
+        android:drawable="@drawable/ic_launcher_foreground" />
+</layer-list>

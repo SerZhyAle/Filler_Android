@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The spacing steps of the ported Filler screen, the values of the source's spacing tokens (S0005). -->
+    <dimen name="filler_spacing_4">4dp</dimen>
+    <dimen name="filler_spacing_8">8dp</dimen>
+    <dimen name="filler_spacing_12">12dp</dimen>
+    <dimen name="filler_spacing_16">16dp</dimen>
+    <dimen name="filler_content_padding_horizontal_land">48dp</dimen>
+
+    <!-- The boolean-option token of BOOLEAN-OPTION 2.2 section 2 (S0045): the visible square of the schedule's
+         enabled checkbox, at the 24 dp touch minimum the contract asks and Material 3 1.14's 18 dp face does not
+         reach. The checkbox-to-caption gap is filler_spacing_8 below and the row's Edit and Delete buttons keep
+         their own tokens; the record is docs/SPECIFICATION_UI_SIZE_PROFILE.md. -->
+    <dimen name="filler_checkbox_square">24dp</dimen>
+
+    <!-- The touch-profile tokens of BUTTONS section 3 (S0027), the ordinary baseline of the product's one interface
+         scale, not fixed literals anywhere else: the baseline corner radius, the horizontal padding per side, the
+         caption glyph tier and the glyph-to-caption gap. The 48 dp hit target stays Material's 40 dp face plus the
+         4 dp inset above and below it. The record is docs/SPECIFICATION_UI_SIZE_PROFILE.md. -->
+    <dimen name="filler_button_corner_radius">4dp</dimen>
+    <dimen name="filler_button_padding_horizontal">16dp</dimen>
+    <dimen name="filler_button_glyph_size">20dp</dimen>
+    <dimen name="filler_button_glyph_gap">8dp</dimen>
+
+    <!-- Ported from FastMediaSorter (values/dimens.xml, S4460; FILLER-0067): gap between the toolbar title glyph
+         and the screen title on StandardToolbar. -->
+    <dimen name="toolbar_title_icon_gap">8dp</dimen>
+</resources>

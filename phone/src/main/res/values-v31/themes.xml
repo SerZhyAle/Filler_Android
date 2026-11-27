@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Inherits Base.Theme.Filler so API 31+ keeps both the branded splash screen (FILLER-0062) and the
+         FastMediaSorter day/night blue brand palette (FILLER-0067). -->
+    <style name="Theme.Filler" parent="Base.Theme.Filler">
+        <item name="android:windowDisablePreview">false</item>
+        <item name="android:windowSplashScreenBackground">@color/splash_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash_animated</item>
+        <item name="android:windowSplashScreenAnimationDuration">700</item>
+    </style>
+</resources>

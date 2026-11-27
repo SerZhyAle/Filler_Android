@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The button styles of the Filler screen (S0027, BUTTONS 2.2 section 3 and UI-SIZING 1.2 section 2). Material 3 1.14
+     fixes the shape of every button style to a full pill and its horizontal padding to 24 dp, so a theme attribute
+     cannot reach them and each of the three forms is restated here: a rectangle with the baseline radius 4, 16 dp
+     of padding per side, the 20 dp caption glyph at reading start with an 8 dp gap, the width staying the content's.
+     Deliberate difference from the FastMediaSorter screen, which uses the stock styles; the record and the ranks are
+     docs/SPECIFICATION_UI_SIZE_PROFILE.md. Heights, hit targets, text appearance and focus states stay Material's. -->
+<resources>
+    <style name="ShapeAppearance.Filler.Button" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/filler_button_corner_radius</item>
+    </style>
+
+    <!-- Primary rank: the accent face with its own ink; at most one per task surface (Start). -->
+    <style name="Widget.Filler.Button.Filled" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.Filler.Button</item>
+        <item name="android:paddingLeft">@dimen/filler_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/filler_button_padding_horizontal</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">@dimen/filler_button_glyph_size</item>
+        <item name="iconPadding">@dimen/filler_button_glyph_gap</item>
+    </style>
+
+    <!-- Ordinary rank: the transparent face with the neutral border and the neutral ink, glyph in the same ink. Used
+         by Choose folder and by the Cancel-type Stop command, which carries no danger hue. -->
+    <style name="Widget.Filler.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Filler.Button</item>
+        <item name="android:paddingLeft">@dimen/filler_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/filler_button_padding_horizontal</item>
+        <item name="android:textColor">@color/filler_button_ink_neutral</item>
+        <item name="iconTint">@color/filler_button_ink_neutral</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">@dimen/filler_button_glyph_size</item>
+        <item name="iconPadding">@dimen/filler_button_glyph_gap</item>
+    </style>
+
+    <!-- Ordinary rank with a face: the secondary-container role with its own ink (Delete remaining files). -->
+    <style name="Widget.Filler.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.Filler.Button</item>
+        <item name="android:paddingLeft">@dimen/filler_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/filler_button_padding_horizontal</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">@dimen/filler_button_glyph_size</item>
+        <item name="iconPadding">@dimen/filler_button_glyph_gap</item>
+    </style>
+
+    <!-- Dialog answer (S0033, BUTTONS 2.2 section 3 rules 2 and 4): the stock dialog answer is a full pill with one line and a
+         caption cut with an ellipsis. This style has no parent, so none of those one-line attributes is inherited. It restates the
+         minimum width and the 8 dp start margin of Material's dialog answer and keeps the base button's padding and height.
+         The empty parent is explicit on purpose: without the attribute AAPT2 takes the name up to the last dot as the
+         parent, Widget.Filler.Button, which does not exist, and linking fails. -->
+    <style name="Widget.Filler.Button.Dialog" parent="">
+        <item name="shapeAppearance">@style/ShapeAppearance.Filler.Button</item>
+        <item name="android:minWidth">@dimen/m3_btn_dialog_btn_min_width</item>
+        <item name="android:layout_marginLeft">@dimen/m3_btn_dialog_btn_spacing</item>
+        <item name="android:layout_marginStart">@dimen/m3_btn_dialog_btn_spacing</item>
+    </style>
+
+    <!-- Neutral dialog answer: the flush form, with no start margin as in Material's neutral answer. -->
+    <style name="Widget.Filler.Button.Dialog.Flush" parent="Widget.Filler.Button.Dialog">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+
+    <!-- Toolbar title and Flat toolbar styles ported from FastMediaSorter (S3248 / S4460; FILLER-0067). -->
+    <style name="TextAppearance.Filler.Bar.Title" parent="TextAppearance.Material3.TitleLarge" />
+
+    <style name="Widget.Filler.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:elevation">0dp</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Filler.Bar.Title</item>
+    </style>
+
+    <style name="Widget.Filler.Toolbar.Flat" parent="Widget.Filler.Toolbar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="navigationIconTint">?attr/colorControlNormal</item>
+        <item name="stbTitleIconTint">?attr/colorControlNormal</item>
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+{
+  "include": [
+    "app_v2/src/**/filler/**",
+    "app_v2/src/main/res/**/activity_filler.xml",
+    "app_v2/src/main/res/**/strings_filler.xml",
+    "app_v2/src/**/*ScheduledFill*.kt",
+    "app_v2/src/main/java/com/sza/fastmediasorter/domain/model/ScheduledRunReason.kt",
+    "app_v2/src/main/res/**/strings_scheduled.xml"
+  ],
+  "exclude": [
+    {
+      "glob": "app_v2/src/test/java/com/sza/fastmediasorter/domain/usecase/ExecuteScheduledFillDispatchTest.kt",
+      "reason": "FastMediaSorter S4522: tests the FILL_FREE_SPACE branch of ExecuteScheduledOperationUseCase, the dispatcher shared by every scheduled operation type, which is not ported; this product's own scheduler replaces it (S0025 section 3.1)"
+    }
+  ]
+}

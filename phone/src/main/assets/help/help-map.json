@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "product": "Filler",
+  "fallbackLocale": "en",
+  "surfaces": [
+    { "id": "FillerActivity", "name": "Filler", "form": "layer", "help": "filler" },
+    { "id": "FillerConfirmDialog", "name": "Fill free space?", "form": "none",
+      "reason": "A confirmation whose text is the whole explanation: how much is written, where, and how much stays free (CONTEXT-HELP rule 4); the screen's help explains it under Confirmation." },
+    { "id": "FillerThemeDialog", "name": "Color theme", "form": "none",
+      "reason": "A single-choice list of colour themes whose items are the whole explanation (CONTEXT-HELP rule 4); the screen's help explains it under Color theme." },
+    { "id": "FillerAboutDialog", "name": "About Filler", "form": "none",
+      "reason": "A window whose content is the whole explanation: what the app does, the running version and the author with the site address (CONTEXT-HELP rule 4); its Help button opens the screen's help, which explains it under About Filler." },
+    { "id": "SystemFolderPicker", "name": "Choose folder", "form": "none",
+      "reason": "The operating system's folder picker, a common dialog the app does not draw (CONTEXT-HELP rule 4)." },
+    { "id": "ScheduleActivity", "name": "Scheduled fills", "form": "layer", "help": "schedule" },
+    { "id": "ScheduleConfirmDialog", "name": "Schedule filling?", "form": "none",
+      "reason": "A confirmation whose text is the whole explanation: the folder, the storage, the space kept free and the daily limit (CONTEXT-HELP rule 4); the screen's help explains it under Editor." },
+    { "id": "ScheduleDeleteDialog", "name": "Delete this schedule?", "form": "none",
+      "reason": "A confirmation whose text is the whole explanation: which schedule stops and that its history stays (CONTEXT-HELP rule 4)." },
+    { "id": "ScheduleClearHistoryDialog", "name": "Clear run history?", "form": "none",
+      "reason": "A confirmation whose text is the whole explanation: all recorded run history is removed while saved schedules stay (CONTEXT-HELP rule 4)." },
+    { "id": "ScheduleRepeatDialog", "name": "Repeat", "form": "none",
+      "reason": "A single-choice list of intervals whose items are the whole explanation (CONTEXT-HELP rule 4); the screen's help explains it under Editor." },
+    { "id": "SystemTimePicker", "name": "Time", "form": "none",
+      "reason": "The operating system's time picker, a common dialog the app does not draw (CONTEXT-HELP rule 4)." },
+    { "id": "SystemNotificationPermission", "name": "Allow notifications", "form": "none",
+      "reason": "The operating system's permission prompt for the notification of a running fill, a common dialog the app does not draw; the phone asks when a schedule is saved and the watch at the first Fill (CONTEXT-HELP rule 4)." },
+    { "id": "WearMainActivity", "name": "Filler (watch)", "form": "inherit", "parent": "FillerActivity", "anchor": "watch",
+      "reason": "The watch screen has no top-right corner and no keyboard, so it carries no help button; the phone and the watch share one application id and its help is the Filler screen's, whose entry 'watch' names the watch screen (CONTEXT-HELP item L)." }
+  ]
+}

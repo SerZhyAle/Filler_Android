@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The square-state pair of the schedule's enabled checkbox (BOOLEAN-OPTION 2.2 section 2, S0045), bound as the
+     MaterialCheckBox buttonCompat of item_fill_schedule.xml. It replaces the MaterialSwitch of S0025, which differed
+     from the checkbox pattern the contract requires of a product-owned boolean option; the press, activation and
+     focus states stay Material's control background, and no theme tint is applied on top of the pair. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/filler_checkbox_checked" android:state_checked="true" />
+    <item android:drawable="@drawable/filler_checkbox_empty" />
+</selector>

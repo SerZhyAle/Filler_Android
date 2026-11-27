@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filler_intro">Fills the free space of a storage device with temporary files, then deletes them. Your own files stay as they are.</string>
+    <string name="filler_choose_folder">Choose folder</string>
+    <string name="filler_no_folder">No folder chosen. Choose a folder on built-in storage or on a memory card.</string>
+    <string name="filler_location">Folder %1$s on %2$s</string>
+    <string name="filler_free_space">Free space: %1$s</string>
+    <string name="filler_free_space_unknown">Free space: not measured</string>
+    <string name="filler_reserve">Kept free for the system: %1$s</string>
+    <string name="filler_start">Start filling</string>
+    <string name="filler_cancel">Stop and delete files</string>
+    <string name="filler_progress">Written %1$s of %2$s</string>
+    <string name="filler_estimate">%1$d%% done, time left: %2$s</string>
+    <string name="filler_estimate_calculating">%1$d%% done, time left: calculating..</string>
+    <string name="filler_keep_open">Keep the app open while filling runs. If the app closes, the fill stops and the files stay until the app is opened again.</string>
+    <string name="filler_confirm_title">Fill free space?</string>
+    <string name="filler_confirm_message">About %1$s of temporary files will be written to the folder %2$s on %3$s, and %4$s stays free. The files are deleted when filling finishes or stops.</string>
+    <string name="filler_confirm_positive">Fill</string>
+    <string name="filler_resume">Fill the rest</string>
+    <string name="filler_retry_cleanup">Delete remaining files</string>
+    <string name="filler_pending_cleanup">Temporary files from an earlier run are still on %1$s. Connect that storage, then tap Delete remaining files before filling again.</string>
+    <string name="filler_pending_resume">The last fill on %1$s did not finish, and its temporary files are still there. Fill the rest, or tap Delete remaining files.</string>
+    <string name="filler_result_done">Done: %1$s written and deleted again.</string>
+    <string name="filler_result_cancelled">Filling stopped. The temporary files were deleted.</string>
+    <string name="filler_result_failed">Writing stopped because the storage reported an error. The temporary files were deleted.</string>
+    <string name="filler_result_cleanup_incomplete">Some temporary files could not be deleted yet. Connect the storage, then tap Delete remaining files.</string>
+    <string name="filler_result_cleanup_done">The remaining temporary files were deleted.</string>
+    <string name="filler_result_not_local">This folder is not on a storage device of this phone. Choose a folder on built-in storage or on a memory card.</string>
+    <string name="filler_result_no_access">Writing to this folder is not allowed now. Check that the storage is connected, then choose the folder again.</string>
+    <string name="filler_result_measurement_unavailable">Free space could not be measured. Check that the storage is connected, then choose the folder again.</string>
+    <string name="filler_result_insufficient_space">There is no free space above the part kept for the system. Free up space or choose another storage device.</string>
+    <string name="filler_result_busy">Filling is already running.</string>
+    <string name="filler_reserve_slider_description">Space kept free for the system</string>
+    <string name="filler_confirm_reserve_lowered">This is less than the usual %1$s, so the system and other apps have less room while the run lasts.</string>
+    <!-- The help of the Filler screen (CONTEXT-HELP, S0028): the help action, the heading of the layer, one entry per
+         element in marker order (the label, then the fuller text). -->
+    <string name="help">Help</string>
+    <string name="help_with_key">Help (F1)</string>
+    <string name="filler_help_heading">What each part of this screen does</string>
+    <string name="filler_help_entry">%1$d. %2$s</string>
+    <string name="filler_help_place_label">Folder and storage</string>
+    <string name="filler_help_place_text">Shows the folder the temporary files are written to and the storage device it is on.</string>
+    <string name="filler_help_choose_folder_text">Picks another folder, for example on a memory card, to fill that storage device instead. Not available while filling runs.</string>
+    <string name="filler_help_free_space_label">Free space</string>
+    <string name="filler_help_free_space_text">How much space the storage device has free right now. Filling writes temporary files into this space, except for the part kept free.</string>
+    <string name="filler_help_reserve_text">The slider sets how much space stays free for the system and other apps while filling runs. The usual amount is the last stop of the slider. A smaller amount fills more but leaves less room, and it applies to the next run only. Hidden while filling runs.</string>
+    <string name="filler_help_start_text">Asks for confirmation, then fills the free space above the part kept free. Available when a folder is chosen, its free space is measured and larger than the part kept free, and no files of an earlier run wait to be deleted.</string>
+    <string name="filler_help_confirmation_label">Confirmation</string>
+    <string name="filler_help_confirmation_text">Before filling, a question shows how much will be written, to which folder and storage, and how much stays free. If you lowered the space kept free, an extra paragraph says so, because the system and other apps then have less room while the run lasts. Fill starts; Cancel changes nothing.</string>
+    <string name="filler_help_progress_label">Progress</string>
+    <string name="filler_help_progress_text">While filling runs: how much is written of the planned amount, the share done and the time left.</string>
+    <string name="filler_help_keep_open_label">Keep the app open</string>
+    <string name="filler_help_keep_open_text">While filling runs, asks you to keep the app open. When the app closes, the fill stops and the files stay on the storage; open the app again to fill the rest or to delete them.</string>
+    <string name="filler_help_stop_text">Stops filling at once and deletes every temporary file this run wrote. Your own files are not touched.</string>
+    <string name="filler_help_resume_text">Fills the rest of a fill that stopped when the app closed: it writes to the same folder and storage, then deletes every temporary file as always. Offered next to Delete remaining files while the leftover files are on a connected storage.</string>
+    <string name="filler_help_cleanup_text">Appears when the files of a fill that did not finish are still on a storage device, for example after the storage was disconnected or the app closed. Connect that storage, then tap it: only the files the app wrote are deleted. Filling waits until they are gone.</string>
+    <string name="filler_help_result_label">Result</string>
+    <string name="filler_help_result_text">After a run, says how it ended: done, stopped, or what went wrong and what to do next.</string>
+    <string name="filler_help_watch_label">Watch screen</string>
+    <string name="filler_help_watch_text">The same app runs on a Wear OS watch, on a screen of its own. The watch screen has no help button; this explanation is its help too. Its About button shows the running version and the author, and names the phone app. The watch writes temporary files to the watch storage only, with no folder choice. Filling runs in the background with a notification, and the notification\'s Stop button stops filling and deletes the files.</string>
+    <string name="filler_help_help_text">Opens this explanation. Close it with Back, a tap outside the list, Esc or F1.</string>
+    <!-- Color theme picker (FILLER-0067). -->
+    <string name="filler_theme">Color theme</string>
+    <string name="filler_help_theme_text">Switches between Auto (follow device), Light, Dark, and six custom accent colour themes.</string>
+    <string-array name="color_theme_options">
+        <item>Auto (follow device)</item>
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Dark Green</item>
+        <item>Dark Blue</item>
+        <item>Dark Red</item>
+        <item>Light Green</item>
+        <item>Light Blue</item>
+        <item>Light Red</item>
+    </string-array>
+    <!-- The About window of the toolbar's About action (ABOUT-PAGE 1.0, FILLER-0075): the window's title and
+         the action's label, the version line read from the build's own package metadata at runtime, the
+         author block (rule 3: a localized label; the name in Latin and the site address
+         translatable="false" in every locale; one credit, once; no e-mail, profile or phone), and the help
+         entry text of the action. No product-site row while this program's own page does not answer
+         (rule 5), so no row leads nowhere (rule 2). The watch app line (rule 7, FILLER-0076) says that the watch
+         version exists; it holds no address while none answers. The product has no watch face to name. -->
+    <string name="filler_about">About Filler</string>
+    <string name="filler_about_version">Version: %1$s</string>
+    <string name="filler_about_author">Author: %1$s</string>
+    <string name="filler_about_author_name" translatable="false">Serhii Zhyhunenko</string>
+    <string name="filler_about_site" translatable="false">https://sza.od.ua</string>
+    <string name="filler_about_watch_app">There is also a Filler app for Wear OS watches. It fills the free space of the watch storage.</string>
+    <string name="filler_help_about_text">Opens a window about this app: what it does, which version is running, who made it, the author\'s site address and the watch version.</string>
+</resources>
