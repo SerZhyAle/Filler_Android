@@ -53,15 +53,16 @@ and native symbols, if present. A bundle is never treated as absent merely becau
 
 | Date observed | Family | versionCode | Track and status | Bundle archive and SHA-256 |
 | --- | --- | --- | --- | --- |
-| No later observation recorded | - | - | - | - |
+| 2026-11-27 | phone | `261127225` (`2.61.1272.253`) | `internal`: `PUBLISHED` / `completed` (available to internal testers; staged via API edit `16821956092468387989` with `held=0`, promoted from draft in Console on owner's 2026-11-27 go) | `P:\ANDROID\Filler_credentials\releases\filler-phone-2.61.1272.253-261127225.aab`, SHA-256 `75d87238545c192c1ce81874a74871bf9716da76f6e345afcc453dce43c23910` |
+| 2026-11-27 | wear | `261127229` (`2.61.1272.253`) | `wear:internal`: `PUBLISHED` / `completed` (available to internal testers; staged via API edit `16821956092468387989` with `held=0`, promoted from draft in Console on owner's 2026-11-27 go) | `P:\ANDROID\Filler_credentials\releases\filler-wear-2.61.1272.253-261127229.aab`, SHA-256 `a066bada785910520004d0e422302e0940256b51464f6009efc756ae289d586a` |
 
 ### First-use and access evidence
 
 | Prerequisite | Recorded observation | Evidence required to proceed |
 | --- | --- | --- |
-| Accepted prior artifact for `com.sza.filler` | Empty tracks on 2026-11-17. Accepted artifact history unverified. | Dated artifact acceptance, or a documented and separately authorized bootstrap for the exact release. |
-| Saved App content declaration covering both `dataSync` uses | Foreground service permissions was absent on 2026-11-17 and 2026-11-20. | Merged manifest comparison and the dated read-back of the saved declaration covering phone scheduled fill and Wear OS run. |
-| Filler API permissions and track IDs | Service-account file available outside a Git worktree on 2026-11-22. App-scoped write permissions and exact target tracks unverified. | Console permission read-back for the requested operation and track discovery for this app. |
+| Accepted prior artifact for `com.sza.filler` | Satisfied for first-use bootstrap on `2026-11-27` (`FILLER-0056`): owner authorized one-time internal bootstrap; phone `261127225` and wear `261127229` uploaded via API edit `16821956092468387989`, promoted from `draft` to `completed` in Play Console, and read back `PUBLISHED` on `internal` and `wear:internal` via `release-ledger probe`. | Resolved for `2.61.1272.253` internal tracks; keep durable `.aab` archives for future `previous` comparison. |
+| Saved App content declaration covering both `dataSync` uses | Unlocked in Play Console `Need attention (1)` after `internal` + `wear:internal` tracks became `Available to internal testers` (`2026-11-27`). Form `app-content/foreground-services` requires selecting `Local processing -> Other` plus a required **Video link** demonstrating `FOREGROUND_SERVICE_DATA_SYNC`; Save stays disabled until the owner supplies a video URL. | Demonstration video URL and saved `dataSync` declaration read-back before sending Production for review. |
+| Filler API permissions and track IDs | Verified write access on `2026-11-27` for `fastmediasorter-publisher@fastmediasorter.iam.gserviceaccount.com` (`C:\Users\serzh\.sza\secrets\play-publisher.json`): committed edit `16821956092468387989` (13 listing languages, store icon 512x512, feature graphic 1024x500, 12 phone + 9 wear screenshots, `internal` @ `261127225` + `wear:internal` @ `261127229` draft, `held=0`), receipt SHA-256 `66c5b62521e17a96445bbeb5b615a9728a5b71aec8199c1f0f4330f2b1fa7100` under `SZA\play-publishing`. (`play-release-ledger-reader.json` is read-only and answered HTTP 403 at `validate`.) | Confirmed for API tracks and 13-language listing; `Store settings` website URL (holder `H03` in `docs/site-held-addresses.jsonl`) saved in Console on `2026-11-27`. |
 
 The first two rows stop API writes under `GOOGLE-PLAY` 0.7 section 8C while evidence is missing.
 The owner kept the API-only upload order on 2026-11-22 (FILLER-0063). A Console bootstrap has no current

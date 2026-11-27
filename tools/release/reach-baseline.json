@@ -1,0 +1,21 @@
+{
+  "version": "2.61.1272.253",
+  "source": "commit bcc682cf08e349e3623194ae11feb4512dc93de0",
+  "packages": {
+    "phone": {
+      "minSdk": 26,
+      "targetSdk": 37,
+      "nativeCode": [],
+      "requiredFeatures": []
+    },
+    "wear": {
+      "minSdk": 28,
+      "targetSdk": 37,
+      "nativeCode": [],
+      "requiredFeatures": [
+        "android.hardware.faketouch",
+        "android.hardware.type.watch"
+      ]
+    }
+  }
+}
