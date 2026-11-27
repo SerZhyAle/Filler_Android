@@ -73,11 +73,7 @@ The facts allow one reading only: no data collected, no data shared (owner's acc
 
 ## Foreground service declaration (App content)
 
-FILLER-0022 observed App content on 2026-11-17 and 2026-11-20. Both reads found the ten saved declarations
-and no Foreground service permissions row. The answers below describe the two uses of `dataSync`.
-Before an API upload, save and confirm the applicable declaration for both uses and record the evidence in
-the [release record](PLAY_RELEASE_RECORD.md). If App content cannot show or save the declaration, stop before the
-API write sequence and follow `GOOGLE-PLAY` 0.4 section 8C. Saving a Console form invalidates active edits.
+On `2026-11-27`, after `internal` (`261127225`) and `wear:internal` (`261127229`) became available on internal testing, Play Console surfaced `Foreground service permissions` (`App content -> app-content/foreground-services`). The `FOREGROUND_SERVICE_DATA_SYNC` declaration was submitted and saved on `2026-11-27` (`Local processing -> Other`), with the demonstration clip [Filler - dataSync foreground service demo.mp4](https://drive.google.com/file/d/19Zz3iUMuKYdQbRl1KzWvs0fECoRbKBq9/view?usp=drivesdk) covering both the phone scheduled fill and the Wear OS fill; `App content` read back `"You're all caught up"` (`Need attention: 0`), and `Publishing overview` included `'Foreground services' declaration updated` in the review batch submitted on `2026-11-27`.
 
 Google Play asks an app that targets Android 14 or higher to declare each foreground-service type on the App content
 page, with a description, the impact of interruption or deferral, and a demonstration video for each use.
